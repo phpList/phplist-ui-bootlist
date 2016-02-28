@@ -33,7 +33,8 @@ TABLE OF CONTENT
 
 
 /* # login */
+body.login form{margin-top:40px}
 body.login form input{max-width:300px}
 body.login form span.general{margin-top:20px;display:block}
-
+#
 /* End of /lists/admin/ui/bootlist/css/style.css */
