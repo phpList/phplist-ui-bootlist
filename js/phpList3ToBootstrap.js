@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 /* MAIN MENU */
     $('#menuTop').addClass('collapse navbar-collapse navbar-left');
     $('#menuTop ul li ul').parent().parent().addClass('nav navbar-nav');
@@ -15,9 +14,6 @@ $(document).ready(function() {
     $('.submit').addClass('btn btn-primary');
     $('.button').addClass('btn btn-default');
     $('.action-button').addClass('btn btn-lg btn-primary');
-    $('body').removeClass('invisible');
-
-
 
 /* FORMS */
     $('input[type=text],input[type=password]').addClass('form-control');
@@ -34,5 +30,9 @@ $(document).ready(function() {
 
 /* typography */
     $('.pagetitle').addClass('page-header');
+
+
+/* show page after loading */
+    $('body').removeClass('invisible');
 
  });
