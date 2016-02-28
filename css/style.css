@@ -1,0 +1,39 @@
+/* File:/lists/admin/ui/bootlist/css/style.css */
+
+/******************************* 
+
+TABLE OF CONTENT 
+
+# generals 
+    ## bootstrap
+    ## phpList
+
+# header
+
+# login
+
+
+
+*******************************/
+
+/* # generals */
+
+/* ## bootstrap */
+.btn{margin:10px 0}
+.btn-default{background:#DDD}
+/* ## phpList */
+#container{margin-bottom:50px}
+
+
+
+/* # header */
+#navigation{padding:10px 0;}
+#navigation #menuTop{overflow:hidden;max-height: 30px}
+#navigation .navbar-brand{padding:0 15px}
+
+
+/* # login */
+body.login form input{max-width:300px}
+body.login form span.general{margin-top:20px;display:block}
+
+/* End of /lists/admin/ui/bootlist/css/style.css */
