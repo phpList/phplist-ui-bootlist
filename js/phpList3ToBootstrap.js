@@ -24,6 +24,32 @@ $(document).ready(function() {
     $('#login-form input[type=submit]').addClass('btn-lg');
     $('#forgotpassword-form input[type=submit]').addClass('btn-sm');
 
+/* COLLAPSIBLE */
+    $('.accordion').addClass('panel-group');
+    $('.accordion').attr('aria-multiselectable','true');
+    $('.accordion').attr('id','accordion');
+    $('.accordion').attr('role','tablist');
+    $('.accordion h3').addClass('panel-title');
+    $('.accordion h3').each(function(){ $(this).next('div').andSelf().wrapAll('<div class="panel panel-default"/>'); });
+    $('.accordion h3 a').addClass('collapsed');
+    $('.accordion h3 a').attr('data-toggle','collapse');
+    $('.accordion h3 a').attr('aria-controls',function(i) { return 'collapse'+(i+1); });
+    $('.accordion h3 a').attr('aria-expanded','false');
+    $('.accordion h3 a').attr('href', function(i) { return '#collapse'+(i+1); });
+    $('.accordion h3 a').attr('data-parent','#accordion');
+    $('.accordion h3 a').attr('role','button');
+    $('.accordion .panel-default:first h3 a').attr('aria-expanded','true');
+    $('.accordion .panel-default div').not('.accordion .panel-default div div').addClass('panel-collapse collapse');
+    $('.accordion .panel-default:first .panel-collapse').addClass(' in ');
+    $('.accordion .panel-default .panel-collapse').wrapInner('<div class="panel-body"/>');
+    $('.accordion .panel-default .panel-collapse').attr('id', function(i) { return 'collapse'+(i+1); });
+    $('.accordion .panel-default .panel-collapse').attr('aria-labelledby',function(i) { return 'heading'+(i+1); });
+    $('.accordion .panel-default .panel-collapse').attr('role','tabpanel');
+    $('.accordion h3').wrap('<div class="panel-heading"/>');
+    $('.accordion .panel-heading').attr('id', function(i) { return 'heading'+(i+1); });
+    $('.accordion .panel-heading').attr('role','tab');
+
+
 /* ALERTS */
     $('div.note').addClass('alert alert-warning');
     $('div.result').addClass('alert alert-danger');
