@@ -23,7 +23,7 @@ TABLE OF CONTENT
 /* ## bootstrap */
 .btn{margin:10px 0}
 .btn-default{background:#DDD}
-.btn.btn-info span{margin-right:5px}
+span.glyphicon{margin:5px}
 /* ## phpList */
 #container{margin-bottom:50px}
 .navbar-brand{padding-top:7px}

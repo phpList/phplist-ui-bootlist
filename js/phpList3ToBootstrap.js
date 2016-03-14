@@ -11,6 +11,7 @@ $(document).ready(function() {
 /* BUTTONS */
     $('.submit').addClass('btn btn-primary');
     $('.button').addClass('btn btn-default');
+    $('table .button').addClass('btn-xs');
     $('.action-button').addClass('btn btn-lg btn-primary');
 
 /* FORMS */
@@ -48,7 +49,7 @@ $(document).ready(function() {
 
 /* icons */
     /* dashboard */
-    $('span.listingname a').addClass('btn btn-info');
+    $('span.listingname a').addClass('btn btn-xs btn-info');
     $('.send-campaign span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
     $('.manage-campaigns span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-cog"/>');
     $('.manage-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
@@ -74,7 +75,14 @@ $(document).ready(function() {
     $('.setup span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-wrench"/>');
     $('.dbcheck span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tasks"/>');
     $('.view-log span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>');
-    
+    /*buttons*/
+    $('span.edit a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
+    $('.configEdit a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
+    $('span.delete a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
+    $('a.del').prepend('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
+    $('span.view a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
+    $('a.opendialog span.view').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
+     
 /* tables*/
     $('table.listing').not('.home table.listing').addClass('table table-striped');
     
