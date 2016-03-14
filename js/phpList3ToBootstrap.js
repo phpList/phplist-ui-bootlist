@@ -74,7 +74,9 @@ $(document).ready(function() {
     $('.dbcheck span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-tasks');
     $('.view-log span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-list-alt');
     
-
+/* tables*/
+    $('table.listing').not('.home table.listing').addClass('table table-striped');
+    
 /* show page after loading */
     $('body').removeClass('invisible');
 
