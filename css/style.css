@@ -10,13 +10,15 @@ TABLE OF CONTENT
 
 # header
 
-# login
-
-
+# Special pages
+    ## login
+    ## dashboard
 
 *******************************/
 
-/* # generals */
+
+
+/* # generals *****************/
 
 /* ## bootstrap */
 .btn{margin:10px 0}
@@ -26,22 +28,28 @@ TABLE OF CONTENT
 .navbar-brand{padding-top:7px}
 
 
-/* # header */
+
+/* # header *******************/
+
 #navigation #menuTop a.dropdown-toggle{padding-top:22px;padding-bottom:27px}
 
-/* # login */
+
+
+/* # special pages ************/
+
+/* ## login */
 body.login form{margin-top:40px}
 body.login form input{max-width:300px}
 body.login form span.general{margin-top:20px;display:block}
 
-/* # dashboard */
-.home table.listing *{white-space: normal}
-.home td.listingname {width:200px}
-.home td.listingelement{padding-right:20px;padding-left:20px}
-.home .listingname a{font-size: 14px;display: block;font-family: "genlight";color: rgb(255, 255, 255);}
-.home span.listingname{font-size: 40px;width: 180px}
-.home .custom-attribute span.listingname{font-size: 30px;width: 150px;}
-.home .custom-attribute td.listingname{padding-left:30px}
+/* ## dashboard */
+body.home table.listing *{white-space: normal}
+body.home td.listingname {width:200px}
+body.home td.listingelement{padding-right:20px;padding-left:20px}
+body.home .listingname a{font-size: 14px;display: block;font-family: "genlight";color: rgb(255, 255, 255);}
+body.home span.listingname{font-size: 40px;width: 180px}
+body.home .custom-attribute span.listingname{font-size: 30px;width: 150px;}
+body.home .custom-attribute td.listingname{padding-left:30px}
 
 
 
