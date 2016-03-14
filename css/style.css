@@ -23,18 +23,23 @@ TABLE OF CONTENT
 .btn-default{background:#DDD}
 /* ## phpList */
 #container{margin-bottom:50px}
-
+.navbar-brand{padding-top:7px}
 
 
 /* # header */
-#navigation{padding:10px 0;}
-#navigation #menuTop{overflow:hidden;max-height: 30px}
-#navigation .navbar-brand{padding:0 15px}
-
+#navigation #menuTop a.dropdown-toggle{padding-top:22px;padding-bottom:27px}
 
 /* # login */
 body.login form{margin-top:40px}
 body.login form input{max-width:300px}
 body.login form span.general{margin-top:20px;display:block}
-#
+
+/* # dashboard */
+.home .listingname a{font-size: 14px;display: block;font-family: "genlight";color: rgb(255, 255, 255);}
+.home span.listingname{font-size: 40px;min-width: 180px;}
+
+
+
+
+
 /* End of /lists/admin/ui/bootlist/css/style.css */

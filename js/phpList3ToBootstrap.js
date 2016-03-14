@@ -46,6 +46,14 @@ $(document).ready(function() {
 /* typography */
     $('.pagetitle').addClass('page-header');
 
+/* icons */
+    /* dashboard */
+    $('.send-campaign span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-send');
+    $('.manage-campaigns span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-cog');
+    $('.manage-users span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-user');
+    $('.view-statistics span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-signal');
+    $('.manage-lists span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-th-list');
+    $('.manage-users span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-user');
 
 /* show page after loading */
     $('body').removeClass('invisible');
