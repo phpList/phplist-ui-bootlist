@@ -51,9 +51,29 @@ $(document).ready(function() {
     $('.send-campaign span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-send');
     $('.manage-campaigns span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-cog');
     $('.manage-users span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-user');
-    $('.view-statistics span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-signal');
+    $('.view-statistics span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-stats');
     $('.manage-lists span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-th-list');
-    $('.manage-users span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-user');
+    $('.list-users span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-user');
+    $('.import-users span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-import');
+    $('.export-users span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-export');
+    $('.reconcileusers span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-heart');
+    $('.configure span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-cog');
+    $('.configure-attributes span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-tags');
+    $('.custom-attribute span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-tag');
+    $('.spage span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-pencil');
+    $('.admins span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-king');
+    $('.adminattributes span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-equalizer');
+    $('.send-message span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-envelope');
+    $('.templates span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-modal-window');
+    $('.list-all-msg span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-list');
+    $('.processqueue span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-time');
+    $('.processbounces span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-hourglass');
+    $('.bounces span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-ban-circle');
+    $('.plugin span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-pushpin');
+    $('.setup span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-wrench');
+    $('.dbcheck span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-tasks');
+    $('.view-log span.listingname').addClass('btn btn-lg btn-info glyphicon glyphicon-list-alt');
+    
 
 /* show page after loading */
     $('body').removeClass('invisible');

@@ -36,8 +36,10 @@ body.login form span.general{margin-top:20px;display:block}
 
 /* # dashboard */
 .home .listingname a{font-size: 14px;display: block;font-family: "genlight";color: rgb(255, 255, 255);}
-.home span.listingname{font-size: 40px;min-width: 180px;}
-
+.home span.listingname{font-size: 40px;width: 180px;white-space:normal}
+.home .custom-attribute span.listingname{font-size: 30px;width: 150px;}
+.home .custom-attribute td.listingname{padding-left:30px}
+.home .listingelement{white-space: normal}
 
 
 
