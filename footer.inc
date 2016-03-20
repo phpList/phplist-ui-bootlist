@@ -1,7 +1,7 @@
 	    </div>
     </div> <!-- end #content -->
 
-    <div id="right-bar" class="grid_4 four columns">
+    <div id="right-bar" class="col-md-3">
     <?php echo $firstInstallButton?>
         <div id="context-menu" class="menutableright block">
             <h3>Navigation</h3>
@@ -23,10 +23,10 @@
 
 <div id="footer">
     <div class="container">
-            <a target="_blank" href="http://phplist.com">&copy; phpList ltd.</a> - v<?php echo VERSION?>
+            <a target="_blank" href="https://phplist.com">&copy; phpList ltd.</a> - v<?php echo VERSION?>
         <div class="right">
-            <a target="_blank" href="http://resources.phplist.com">Resources</a>&nbsp; |  
-            <a target="_blank" href="http://www.twitter.com/phplist"><img src="ui/bootlist/images/twitter.png" alt="phpList twitter" /></a>
+            <a target="_blank" href="https://resources.phplist.com">Resources</a>&nbsp; |  
+            <a target="_blank" href="http://twitter.com/phplist"><img src="ui/bootlist/images/twitter.png" alt="phpList twitter" /></a>
         </div>
     </div>
 </div>
@@ -35,4 +35,3 @@
 <script type="text/javascript" src="ui/bootlist/js/phpList3ToBootstrap.js"></script>
 <script type="text/javascript" src="ui/bootlist/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="ui/bootlist/js/jquery.tablednd.js"></script>
-
