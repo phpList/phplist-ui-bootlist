@@ -33,7 +33,7 @@ span.glyphicon{margin:5px}
 /* # header *******************/
 
 #navigation #menuTop a.dropdown-toggle{padding-top:22px;padding-bottom:27px}
-
+.navbar-inverse{min-height: 71px}
 
 
 /* # special pages ************/
