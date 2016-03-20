@@ -787,7 +787,7 @@ $(window).resize(function(){
     else if(matchMedia('only screen and (max-width: 967px)').matches){ tabs=4; starttab=currenttab-4;}
     else{ tabs=6; starttab=currenttab-6; }
 
-    $('#sendtabs').jCarouselLite({
+/*    $('#sendtabs').jCarouselLite({
         btnNext: '.nexttab',
         btnPrev: '.prevtab',
         circular: false,
@@ -797,6 +797,7 @@ $(window).resize(function(){
         scroll:1,
         start: starttab
     });
+*/
 });
 
 </script>
