@@ -40,6 +40,16 @@ $(document).ready(function() {
     $('.accordion h3').wrap('<div class="panel-heading"/>');
     $('.accordion .panel-heading').attr({ 'id':function(i) { return 'heading'+(i+1);}, 'role':'tab' });
 
+/* TABS*/
+    $('.tabbed ul').addClass('nav nav-tabs');
+    $('.tabbed ul').attr('role','tablist');
+    $('.tabbed ul li').attr('role','presentation');
+    $('.tabbed ul li a').attr({ 'role':'tab', 'data-toggle':'tab' });
+    $('.tabbed div').not('.tabbed ul div').wrapAll('<div class="tab-content"/>');
+    $('.tabbed .tab-content div').not('.tabbed .tab-content div div').addClass('tab-pane');
+    $('.tabbed .tab-pane').attr('role','tabpanel');
+    $('.tabbed ul.nav-tabs li a:first').tab('show');
+
 /* ALERTS */
     $('div.note').addClass('alert alert-warning');
     $('div.result').addClass('alert alert-danger');
