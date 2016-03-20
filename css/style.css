@@ -24,6 +24,7 @@ TABLE OF CONTENT
 /* # generals *****************/
 
 /* ## bootstrap */
+a:focus,button:focus{outline:none !important}
 .btn{margin:10px 0}
 .btn-default{background:#DDD}
 span.glyphicon{margin:5px}
