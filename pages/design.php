@@ -759,21 +759,6 @@ This hack use a javascript applied to the checkbox inside the <mark>#listselecti
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-
 $(document).ready(function() {
     var counttab = 6;
     var currenttab = $('.current').attr('id');
@@ -782,7 +767,7 @@ $(document).ready(function() {
     else if(matchMedia('only screen and (max-width: 967px)').matches){ tabs=4; starttab=currenttab-4;}
     else{ tabs=6; starttab=currenttab-6; }
 
-    $('#sendtabs').jCarouselLite({
+/*    $('#sendtabs').jCarouselLite({
         btnNext: '.nexttab',
         btnPrev: '.prevtab',
         circular: false,
@@ -792,7 +777,8 @@ $(document).ready(function() {
         scroll:1,
         start: starttab
     });
-});
+*/
+}); 
 $(window).resize(function(){
     var counttab = 6;
     var currenttab = $('.current').attr('id');
