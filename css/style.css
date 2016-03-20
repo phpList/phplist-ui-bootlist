@@ -30,7 +30,7 @@ span.glyphicon{margin:5px}
 /* ## phpList */
 #container{margin-bottom:50px}
 .navbar-brand{padding-top:7px}
-
+div.panel{padding:0px !important;background:none !important} /* FIX NEEDED BECAOUSE HELP PAGE (page=community) loads style.css from dressprow theme */
 
 
 /* # header *******************/
