@@ -14,6 +14,9 @@ TABLE OF CONTENT
     ## login
     ## dashboard
 
+# tabs
+
+
 *******************************/
 
 
@@ -53,7 +56,9 @@ body.home .custom-attribute .btn.btn-info span{font-size: 25px}
 body.home .custom-attribute td.listingname{padding-left:40px}
 
 
-
-
+/* # tabs ************/
+ul.nav-tabs{padding:0}
+div.tab-content{padding:20px;border:1px solid #CCC;background:#F6F6F6}
+.nav.nav-tabs .active a,.nav.nav-tabs .active a:focus{background-color:#E6E6E6;outline:none}
 
 /* End of /lists/admin/ui/bootlist/css/style.css */
