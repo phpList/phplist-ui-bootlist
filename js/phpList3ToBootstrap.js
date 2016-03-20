@@ -46,7 +46,7 @@ $(document).ready(function() {
     $('.tabbed ul.nav-tabs li').attr('role','presentation');
     $('.tabbed ul.nav-tabs li a').attr({ 'role':'tab', 'data-toggle':'tab' });
     $('.tabbed div').not('.tabbed ul div').wrapAll('<div class="tab-content"/>');
-    $('.tabbed .tab-content div').not('.tabbed .tab-content div div').addClass('tab-pane');
+    $('.tabbed .tab-content div').not('.tabbed .tab-content div div').addClass('tab-pane fade');
     $('.tabbed .tab-pane').attr('role','tabpanel');
     $('.tabbed ul.nav-tabs li a:first').tab('show');
 
