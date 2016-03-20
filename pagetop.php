@@ -13,7 +13,9 @@
 <html lang="<?php echo $_SESSION['adminlanguage']['iso']?>" dir="<?php echo $_SESSION['adminlanguage']['dir']?>" prefix="og: http://ogp.me/ns#">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 ,user-scalable=no" />
+<meta charset="utf-8" />
+<?php if (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false)) header('X-UA-Compatible: IE=edge'); ?>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="License" content="GNU Affero General Public License, http://www.gnu.org/licenses/agpl.html" />
 <meta name="Author" content="Michiel Dethmers - http://www.phplist.com" />
 <meta name="Copyright" content="Michiel Dethmers, phpList Ltd - http://phplist.com" />
@@ -27,29 +29,8 @@
 <link href='ui/bootlist/bootstrap/css/gen.css' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="ui/bootlist/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="ui/bootlist/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />
-<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui-1.8.1.all.min.js"></script>
-<script type="text/javascript" src="js/jquery.tools.scrollable.js"></script>
-<script type="text/javascript" src="js/phplistapp.js"></script>
-<link rel="stylesheet" href="css/reset.css" />
-<link href="css/jquery-ui-1.8.1.all.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="css/app.css" />
-<link rel="stylesheet" href="css/menu.css" />
 
 <!-- initial styles and JS from basic application -->
-
-<?php /* 
-<!-- now override the above with the styles and JS from the UI theme -->
-<script type="text/javascript" src="ui/dressprow/js/jquery.tablednd.js"></script>
-<script type="text/javascript" src="ui/dressprow/js/phplist.js"></script>
-<link rel="stylesheet" href="ui/dressprow/css/base.css" />
-<link rel="stylesheet" href="ui/dressprow/css/layout.css" />
-<link rel="stylesheet" href="ui/dressprow/css/skeleton.css" />
-<link rel="stylesheet" href="ui/dressprow/css/style.css" />
-<link rel="stylesheet" href="ui/dressprow/css/gray.css" />
-
-<!-- Style for rtl language <link rel="stylesheet" href="ui/dressprow/css/style_rtl.css" /> -->
-*/
 
 <?php
 if (isset($GLOBALS['config']['head'])) {

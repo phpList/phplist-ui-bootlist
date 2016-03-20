@@ -12,7 +12,8 @@
 <html lang="<?php echo $_SESSION['adminlanguage']['iso']?>" dir="<?php echo $_SESSION['adminlanguage']['dir']?>" prefix="og: http://ogp.me/ns#">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 ,user-scalable=no" />
+<?php if (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false)) header('X-UA-Compatible: IE=edge'); ?>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="License" content="GNU Affero General Public License, http://www.gnu.org/licenses/agpl.html" />
 <meta name="Author" content="Michiel Dethmers - http://www.phplist.com" />
 <meta name="Copyright" content="Michiel Dethmers, phpList Ltd - http://phplist.com" />
