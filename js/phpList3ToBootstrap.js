@@ -98,5 +98,12 @@ $(document).ready(function() {
     
 /* show page after loading */
     $('body').removeClass('invisible');
-
+    
  });
+
+
+/******** RESPONSIVE TABS *******/
+$.getScript("ui/bootlist/js/bootstrap-tabcollapse.js", function(){
+    $('.tabbed').tabCollapse();
+});
+
