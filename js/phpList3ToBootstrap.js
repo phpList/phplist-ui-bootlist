@@ -94,7 +94,6 @@ $(window).load(function() {
     $('a.opendialog span.view').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
      
 /* modals */
-//    var tmphref = $('.templates a.opendialog').attr('href');
     $('.templates a.opendialog').attr('href', $('.templates a.opendialog').attr('href') + '&embed=yes&omitall=yes' );
     $('a.opendialog').attr({ 'data-target':'#mymodal', 'data-toggle':'modal' });
 
