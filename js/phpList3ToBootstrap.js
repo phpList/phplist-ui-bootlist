@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).load(function() {
 
 /* MAIN MENU */
     $('#menuTop').addClass('collapse navbar-collapse navbar-left');
@@ -93,9 +93,17 @@ $(document).ready(function() {
     $('span.view a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('a.opendialog span.view').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
      
+/* modals */
+//    var tmphref = $('.templates a.opendialog').attr('href');
+    $('.templates a.opendialog').attr('href', $('.templates a.opendialog').attr('href') + '&embed=yes&omitall=yes' );
+    $('a.opendialog').attr({ 'data-target':'#mymodal', 'data-toggle':'modal' });
+
+
 /* tables*/
     $('table.listing').not('.home table.listing').addClass('table table-striped');
     
+
+
 /* show page after loading */
     $('body').removeClass('invisible');
     

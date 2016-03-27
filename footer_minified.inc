@@ -30,6 +30,19 @@
         </div>
     </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <button type="button" class="close externo" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+        <div class="modal-content row well">
+        </div><!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
 <script type="text/javascript" src="ui/bootlist/js/phpList3ToBootstrap.js"></script>
 <script type="text/javascript" src="ui/bootlist/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="ui/bootlist/js/jcarousellite_1.0.1.min.js"></script>
