@@ -35,7 +35,7 @@
 <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <button type="button" class="close externo" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-        <div class="modal-content row well">
+        <div class="modal-content well col-lg-12">
         </div><!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->

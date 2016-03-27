@@ -95,7 +95,7 @@ $(window).load(function() {
      
 /* modals */
     $('.templates a.opendialog').attr('href', $('.templates a.opendialog').attr('href') + '&embed=yes&omitall=yes' );
-    $('a.opendialog').attr({ 'data-target':'#mymodal', 'data-toggle':'modal' });
+    $('.opendialog').attr({ 'data-target':'#mymodal', 'data-toggle':'modal' });
 
 
 /* tables*/
