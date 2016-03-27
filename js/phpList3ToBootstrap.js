@@ -99,9 +99,12 @@ $(window).load(function() {
 
 
 /* tables*/
+//    $('.content').addClass('table-responsive');
     $('table.listing').not('.home table.listing').addClass('table table-striped');
-    
-
+    $('table.templateForm').addClass('table table-striped');
+    $('table.importadmin').addClass('table table-striped');
+    $('table.messageView').addClass('table table-bordered');
+    $('table.setupMain').addClass('table table-hover');
 
 /* show page after loading */
     $('body').removeClass('invisible');
