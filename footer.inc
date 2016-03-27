@@ -30,8 +30,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="ui/bootlist/js/jquery-1.12.1.min.js"></script>
-<script type="text/javascript" src="ui/bootlist/js/phplist.js?v=<?php echo filemtime(dirname(__FILE__).'/js/phplist.js'); ?>"></script>
 <script type="text/javascript" src="ui/bootlist/js/phpList3ToBootstrap.js"></script>
 <script type="text/javascript" src="ui/bootlist/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="ui/bootlist/js/jquery.tablednd.js"></script>
+<script type="text/javascript" src="ui/bootlist/js/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript" src="ui/bootlist/js/phplist.js?v=<?php echo filemtime(dirname(__FILE__).'/js/phplist.js'); ?>"></script>

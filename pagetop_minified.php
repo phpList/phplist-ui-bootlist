@@ -24,6 +24,14 @@
 <link rel="icon" href="./images/phplist.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" href="./images/phplist-touch-icon.png" />
 <link rel="apple-touch-icon-precomposed" href="./images/phplist-touch-icon.png" />
+
+<!-- initial styles and JS from basic application -->
+<script type="text/javascript" src="ui/bootlist/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.tools.scrollable.js"></script>
+<script type="text/javascript" src="js/phplistapp.js"></script>
+<link rel="stylesheet" href="css/app.css" />
+
+<!-- now override the above with the styles and JS from the UI theme -->
 <link href='ui/bootlist/bootstrap/css/gen.css' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="ui/bootlist/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="ui/bootlist/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />
