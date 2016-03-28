@@ -36,9 +36,15 @@ div.panel{padding:0px !important;background:none !important} /* FIX NEEDED BECAO
 
 /* # header *******************/
 
-#navigation #menuTop a.dropdown-toggle{padding-top:22px;padding-bottom:27px}
+@media only screen and (min-width:768px){ 
+    #navigation #menuTop a.dropdown-toggle{padding-top:22px;padding-bottom:27px}     
+}
+@media only screen and (max-width:768px){ 
+   #logged{right: 80px; position: absolute; top: 15px;} 
+   .navbar-brand > img{width:150px}
+}
 .navbar-inverse{min-height: 71px}
-
+.navbar-collapse{box-shadow:none;border-top:0;margin-top:10px;}
 
 /* # special pages ************/
 
