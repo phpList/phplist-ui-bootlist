@@ -36,15 +36,25 @@ div.panel{padding:0px !important;background:none !important} /* FIX NEEDED BECAO
 
 /* # header *******************/
 
+#logged{margin-right: 0px;margin-top: 20px;} 
 @media only screen and (min-width:768px){ 
-    #navigation #menuTop a.dropdown-toggle{padding-top:22px;padding-bottom:27px}     
+    #navigation #menuTop a.dropdown-toggle{padding-top:22px;padding-bottom:27px}    
 }
-@media only screen and (max-width:768px){ 
-   #logged{right: 80px; position: absolute; top: 15px;} 
-   .navbar-brand > img{width:150px}
+@media only screen and (min-width:768px) and (max-width:991px) { 
+    #navigation .container{padding:0}
+    .navbar-collapse{padding:0}
+    #navigation #menuTop a.dropdown-toggle{padding-left:10px;padding-right:10px}
+}
+@media only screen and (max-width:991px){ 
+    .navbar-brand > img{width:150px}
+}
+@media only screen and (max-width:767px){ 
+    .navbar-collapse{box-shadow:none;border-top:0;margin-top:10px;}
+    #logged{right: 80px; position: absolute; top: 15px;margin-top:0} 
 }
 .navbar-inverse{min-height: 71px}
-.navbar-collapse{box-shadow:none;border-top:0;margin-top:10px;}
+
+
 
 /* # special pages ************/
 
