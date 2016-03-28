@@ -92,6 +92,11 @@ $(window).load(function() {
     $('a.del').prepend('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
     $('span.view a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('a.opendialog span.view').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
+    $('a.hide').html('x');$('a.hide').addClass('close');$('a.hide.close').removeClass('hide');
+
+
+
+    
      
 /* modals */
     $('.templates a.opendialog').attr('href', $('.templates a.opendialog').attr('href') + '&embed=yes&omitall=yes' );
