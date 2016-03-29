@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="css/app.css" />
 
 <!-- now override the above with the styles and JS from the UI theme -->
-<link href='ui/bootlist/bootstrap/css/gen.css' rel='stylesheet' type='text/css'>
+<link href='ui/bootlist/bootstrap/css/gen.css' rel='stylesheet' />
 <link rel="stylesheet" href="ui/bootlist/bootstrap/css/bootstrap.min.css" />
 <link rel="stylesheet" href="ui/bootlist/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />
 

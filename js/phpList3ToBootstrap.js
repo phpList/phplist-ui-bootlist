@@ -98,9 +98,11 @@ var myfunction = function() {
 
      
 /* modals */
-    $('.templates a.opendialog').attr('href', $('.templates a.opendialog').attr('href') + '&embed=yes&omitall=yes' );
-    $('.opendialog').attr({ 'data-target':'#mymodal', 'data-toggle':'modal', 'href': $('.opendialog').attr('href') + '&embed=yes&omitall=yes'  });
-
+    $('.opendialog').each(function(k,val){
+        var value = $(this).attr('href');
+        $(this).attr({ 'data-target':'#mymodal'+k, 'data-toggle':'modal', 'href':value + '&embed=yes&omitall=yes'});
+        $('#footer').append('<div class="modal fade" id="mymodal'+k+'" tabindex="-1" role="dialog" aria-labelledby="mymodalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close externo" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button><div class="modal-content well col-lg-12"></div></div></div>');
+    });
 
 /* tables*/
 //    $('.content').addClass('table-responsive');
