@@ -9,7 +9,8 @@ $(window).load(function() {
     $('#menuTop ul li ul').parent().find('a:first').attr({ 'data-toggle':'dropdown','aria-haspopup':'true','aria-expanded':'false' });
 
 /* BUTTONS */
-    $('.submit').addClass('btn btn-primary');
+    $('.submit').not('p.submit').addClass('btn btn-primary');
+    $('input[type=submit]').addClass('btn btn-primary');
     $('.button').addClass('btn btn-default');
     $('table .button').addClass('btn-xs');
     $('.action-button').addClass('btn btn-lg btn-primary');
@@ -94,9 +95,6 @@ $(window).load(function() {
     $('a.opendialog span.view').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('a.hide').html('x');$('a.hide').addClass('close');$('a.hide.close').removeClass('hide');
 
-
-
-    
      
 /* modals */
     $('.templates a.opendialog').attr('href', $('.templates a.opendialog').attr('href') + '&embed=yes&omitall=yes' );
@@ -105,11 +103,12 @@ $(window).load(function() {
 
 /* tables*/
 //    $('.content').addClass('table-responsive');
-    $('table.listing').not('.home table.listing').addClass('table table-striped');
-    $('table.templateForm').addClass('table table-striped');
-    $('table.importadmin').addClass('table table-striped');
-    $('table.messageView').addClass('table table-bordered');
-    $('table.setupMain').addClass('table table-hover');
+    $('table').not('.home table').addClass('table');
+    $('table.listing').not('.home table.listing').addClass('table-striped');
+    $('table.templateForm').addClass('table-striped');
+    $('table.importadmin').addClass('table-striped');
+    $('table.messageView').addClass('table-bordered');
+    $('table.setupMain').addClass('table-hover');
 
 /* show page after loading */
     $('body').removeClass('invisible');
