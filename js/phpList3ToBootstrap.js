@@ -1,4 +1,5 @@
-$(window).load(function() {
+
+var myfunction = function() {
 
 /* MAIN MENU */
     $('#menuTop').addClass('collapse navbar-collapse navbar-left');
@@ -46,8 +47,8 @@ $(window).load(function() {
     $('.tabbed ul.nav-tabs').attr('role','tablist');
     $('.tabbed ul.nav-tabs li').attr('role','presentation');
     $('.tabbed ul.nav-tabs li a').attr({ 'role':'tab', 'data-toggle':'tab' });
-    $('.tabbed div').not('.tabbed ul div').wrapAll('<div class="tab-content"/>');
-    $('.tabbed .tab-content div').not('.tabbed .tab-content div div').addClass('tab-pane fade');
+    $('.tabbed div[id]').not('.tabbed ul div').wrapAll('<div class="tab-content"/>');
+    $('.tabbed .tab-content div[id]').addClass('tab-pane fade');
     $('.tabbed .tab-pane').attr('role','tabpanel');
     $('.tabbed ul.nav-tabs li a:first').tab('show');
 
@@ -113,7 +114,8 @@ $(window).load(function() {
 /* show page after loading */
     $('body').removeClass('invisible');
     
- });
+ }
+
 
 
 /******** RESPONSIVE TABS *******/
@@ -121,3 +123,4 @@ $.getScript("ui/bootlist/js/bootstrap-tabcollapse.js", function(){
     $('.tabbed').tabCollapse();
 });
 
+$( window ).load(myfunction);
