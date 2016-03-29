@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon-precomposed" href="./images/phplist-touch-icon.png" />
 
 <!-- initial styles and JS from basic application -->
-<script type="text/javascript" src="ui/bootlist/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.tools.scrollable.js"></script>
 <script type="text/javascript" src="js/phplistapp.js"></script>
 <link rel="stylesheet" href="css/app.css" />
