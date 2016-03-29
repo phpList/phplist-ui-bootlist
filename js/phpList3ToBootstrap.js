@@ -103,7 +103,7 @@ $(window).load(function() {
 
 /* tables*/
 //    $('.content').addClass('table-responsive');
-    $('table').not('.home table').addClass('table');
+    $('table').not('.home table, table.loginPassUpdate').addClass('table');
     $('table.listing').not('.home table.listing').addClass('table-striped');
     $('table.templateForm').addClass('table-striped');
     $('table.importadmin').addClass('table-striped');
