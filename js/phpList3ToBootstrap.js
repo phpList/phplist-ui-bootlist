@@ -87,18 +87,18 @@ $(window).load(function() {
     $('.dbcheck span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tasks"/>');
     $('.view-log span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>');
     /*buttons*/
-    $('span.edit a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
+    $('span.edit a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
     $('.configEdit a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
-    $('span.delete a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
-    $('a.del').prepend('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
-    $('span.view a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
+    $('span.delete a').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
+    $('a.del').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
+    $('span.view a').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('a.opendialog span.view').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('a.hide').html('x');$('a.hide').addClass('close');$('a.hide.close').removeClass('hide');
 
      
 /* modals */
     $('.templates a.opendialog').attr('href', $('.templates a.opendialog').attr('href') + '&embed=yes&omitall=yes' );
-    $('.opendialog').attr({ 'data-target':'#mymodal', 'data-toggle':'modal' });
+    $('.opendialog').attr({ 'data-target':'#mymodal', 'data-toggle':'modal', 'href': $('.opendialog').attr('href') + '&embed=yes&omitall=yes'  });
 
 
 /* tables*/
