@@ -17,7 +17,8 @@ var myfunction = function() {
     $('.button').addClass('btn btn-default');
     $('table .button').addClass('btn-xs');
     $('.action-button').addClass('btn btn-lg btn-primary');
-
+    $('.reset').addClass('btn btn-link');
+    
 /* FORMS */
     $('input[type=text],input[type=password]').addClass('form-control');
     $('#login-form td').addClass('input-group input-group-lg');
