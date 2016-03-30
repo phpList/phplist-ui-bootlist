@@ -65,6 +65,7 @@ var myfunction = function() {
 /* icons */
     /* dashboard */
     $('span.listingname a').addClass('btn btn-xs btn-info');
+    $('span.listingelement a').addClass('btn btn-xs btn-warning');
     $('.send-campaign span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
     $('.manage-campaigns span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-cog"/>');
     $('.manage-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
@@ -91,10 +92,12 @@ var myfunction = function() {
     $('.dbcheck span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tasks"/>');
     $('.view-log span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>');
     /*buttons*/
-    $('span.edit a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
+    $('span.edit a, .edit-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
+    $('.send-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
+    $('.add_member a').html('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
     $('.configEdit a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
     $('span.delete a').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
-    $('a.del').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
+    $('a.del, a[title=Del]').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
     $('span.view a').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('a.opendialog span.view').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('a.hide').html('x');$('a.hide').addClass('close');$('a.hide.close').removeClass('hide');

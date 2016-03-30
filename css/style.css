@@ -26,7 +26,9 @@ TABLE OF CONTENT
 /* ## bootstrap */
 a:focus,button:focus{outline:none !important}
 .btn{margin:10px 0}
-.btn-default{background:#DDD}
+.btn-xs{margin:2px}
+.btn-default:not(.btn-warning){background:#DDD}
+.btn-warning{color:#333;background-color:#FDA}
 .btn-link{border-color:#CCC;border-radius:4px}
 .btn-link:link{border-color:#666}
 span.glyphicon{margin:5px}
