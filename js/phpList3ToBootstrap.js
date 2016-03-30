@@ -10,9 +10,10 @@ var myfunction = function() {
     $('#menuTop ul li ul').parent().find('a:first').attr({ 'data-toggle':'dropdown','aria-haspopup':'true','aria-expanded':'false' });
 
 /* BUTTONS */
+    $('button').addClass('btn');
     $('.submit').not('p.submit').addClass('btn btn-primary');
     $('input[type=submit]').addClass('btn btn-primary');
-    $('button[type=submit]').addClass('btn btn-primary');
+    $('button[type=submit]').addClass('btn-primary');
     $('.button').addClass('btn btn-default');
     $('table .button').addClass('btn-xs');
     $('.action-button').addClass('btn btn-lg btn-primary');
