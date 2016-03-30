@@ -12,6 +12,7 @@ var myfunction = function() {
 /* BUTTONS */
     $('.submit').not('p.submit').addClass('btn btn-primary');
     $('input[type=submit]').addClass('btn btn-primary');
+    $('button[type=submit]').addClass('btn btn-primary');
     $('.button').addClass('btn btn-default');
     $('table .button').addClass('btn-xs');
     $('.action-button').addClass('btn btn-lg btn-primary');
