@@ -34,7 +34,6 @@
 
 <!-- /.modal -->
 <script type="text/javascript" src="ui/bootlist/js/jquery-1.12.1.min.js"></script>
-<!--script type="text/javascript" src="ui/bootlist/js/jquery-ui-1.9.2.custom.min.js"></script-->
 <script type="text/javascript" src="ui/bootlist/js/phpList3ToBootstrap.js"></script>
 <script type="text/javascript" src="ui/bootlist/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="ui/bootlist/js/jcarousellite_1.0.1.min.js"></script>
