@@ -118,6 +118,7 @@ var myfunction = function() {
     
  }
 
+$( window ).load(myfunction);
 
 
 /******** RESPONSIVE TABS *******/
@@ -125,4 +126,23 @@ $.getScript("ui/bootlist/js/bootstrap-tabcollapse.js", function(){
     $('.tabbed').tabCollapse();
 });
 
-$( window ).load(myfunction);
+
+/******** modals instead of dialog *******/
+
+function openHelpDialog(url) {
+    $("#dialog").html('<div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close externo" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button><div class="modal-content well col-lg-12"><div class="openhelpimage">'+busyImage+'</div></div></div></div>');
+    var destpage = urlParameter('page',url);
+    url = url.replace(/page=/,'origpage=');
+    $("#dialog .modal-content").load(url+'&ajaxed=true&page=pageaction&action='+destpage);
+    $("#dialog #mymodal").modal('show');
+}
+
+function initialiseTranslation(text) {
+    $("#dialog").html('<div class="modal fade" id="mymodaltrans" tabindex="-1" role="dialog" aria-labelledby="mymodaltransLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close externo" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button><div class="modal-content well col-lg-12"><div class="openhelpimage">'+text+'<br />'+busyImage+'</div></div></div></div>');
+    $("#dialog .modal-content").load('./?ajaxed=true&page=pageaction&action=initlanguage');
+    $("#dialog #mymodaltrans").modal('show');
+    $('#dialog #mymodaltrans').bind("DOMSubtreeModified",function(){ $('#dialog #mymodaltrans').modal('hide'); });
+}
+
+
+
