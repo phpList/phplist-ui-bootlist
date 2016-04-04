@@ -54,6 +54,10 @@ var myfunction = function() {
     $('.tabbed .tab-content div[id]').addClass('tab-pane fade');
     $('.tabbed .tab-pane').attr('role','tabpanel');
     $('.tabbed ul.nav-tabs li a:first').tab('show');
+/* #sendtabs */
+    $('#sendtabs ul li').css({'height':'100px'});
+    $('#sendtabs ul li a').not('li.current a').addClass('btn btn-default');
+    $('#sendtabs ul li.current a').addClass('btn btn-danger');
 
 /* ALERTS */
     $('div.note').addClass('alert alert-warning');
