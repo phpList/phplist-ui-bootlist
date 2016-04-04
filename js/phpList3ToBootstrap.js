@@ -65,7 +65,7 @@ var myfunction = function() {
 /* icons */
     /* dashboard */
     $('span.listingname a').addClass('btn btn-xs btn-info');
-    $('span.listingelement a').addClass('btn btn-xs btn-warning');
+    $('span.listingelement a').not('.home span.listingelement a').addClass('btn btn-xs btn-warning');
     $('.send-campaign span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
     $('.manage-campaigns span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-cog"/>');
     $('.manage-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
