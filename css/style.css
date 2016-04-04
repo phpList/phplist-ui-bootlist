@@ -36,6 +36,7 @@ span.glyphicon{margin:5px}
 #container{margin-bottom:50px}
 .navbar-brand{padding-top:7px}
 div.panel{padding:0px !important;background:none !important} /* FIX NEEDED BECAOUSE HELP PAGE (page=community) loads style.css from dressprow theme */
+body.plugins a.ajaxable button{background:inherit;padding:0;margin:0;font-size:inherit}
 
 
 /* # header *******************/

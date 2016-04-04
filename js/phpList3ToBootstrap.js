@@ -96,7 +96,7 @@ var myfunction = function() {
     $('.view-log span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>');
     /*buttons*/
     $('span.listingname a').addClass('btn btn-xs btn-info');
-    $('span.listingelement a, div.configEdit a').not('.home span.listingelement a').addClass('btn btn-xs btn-warning');    
+    $('span.listingelement a, div.configEdit a').not('.home span.listingelement a,a[name]').addClass('btn btn-xs btn-warning');    
     $('span.edit a, .edit-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
     $('.send-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
     $('.add_member a').html('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
