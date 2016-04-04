@@ -28,7 +28,7 @@ a:focus,button:focus{outline:none !important}
 .btn{margin:10px 5px 10px 0px}
 .btn-xs{margin:2px}
 .btn-default{background:#DDD}
-.btn-warning{color:#333;background-color:#FDA}
+.btn-warning{color:#333;background-color:#FF9}
 .btn-link:not(.btn-warning):not(.btn-danger):not(.btn-primary):not(.btn-default):not(.btn-success){border-color:#CCC;border-radius:4px}
 .btn-link:link{border-color:#666}
 span.glyphicon{margin:5px}
