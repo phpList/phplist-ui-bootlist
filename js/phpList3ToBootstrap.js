@@ -103,6 +103,8 @@ var myfunction = function() {
     $('span.delete a').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
     $('a.del, a[title=Del]').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
     $('span.view a').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
+    $('span.resend a').html('<span aria-hidden="true" class="glyphicon glyphicon-repeat"/>');
+    $('span.suspend a').html('<span aria-hidden="true" class="glyphicon glyphicon-pause"/>');
     $('a.opendialog span.view').prepend('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('a.hide').html('x');$('a.hide').addClass('close');$('a.hide.close').removeClass('hide');
 
