@@ -13,6 +13,7 @@ TABLE OF CONTENT
 # Special pages
     ## login
     ## dashboard
+    ## send
 
 # tabs
 # modals
@@ -29,7 +30,7 @@ a:focus,button:focus{outline:none !important}
 .btn-xs{margin:2px}
 .btn-default{background:#DDD}
 .btn-warning{color:#333;background-color:#FF9}
-.btn-link:not(.btn-warning):not(.btn-danger):not(.btn-primary):not(.btn-default):not(.btn-success){border-color:#CCC;border-radius:4px}
+.btn-link{border-color:#CCC;border-radius:4px}
 .btn-link:link{border-color:#666}
 span.glyphicon{margin:5px}
 /* ## phpList */
@@ -37,6 +38,7 @@ span.glyphicon{margin:5px}
 .navbar-brand{padding-top:7px}
 div.panel{padding:0px !important;background:none !important} /* FIX NEEDED BECAOUSE HELP PAGE (page=community) loads style.css from dressprow theme */
 body.plugins a.ajaxable button{background:inherit;padding:0;margin:0;font-size:inherit}
+
 
 
 /* # header *******************/
@@ -81,10 +83,14 @@ body.home .custom-attribute td.listingname{padding-left:40px}
 body.send #sendtabs .btn {margin:0px;padding:5px}
 #sendtabs ul li a{width:100px}
 
+
+
 /* # tabs ************/
 ul.nav-tabs{padding:0}
 div.tab-content {padding:20px;border:1px solid #CCC}
 .nav.nav-tabs .active a,.nav.nav-tabs .active a:focus{background-color:#f5f5f5;outline:none}
+
+
 
 /* # modals ************/
 .modal .modal-dialog .close.externo{z-index: 999999;position: absolute;right: 10px;top: 10px;border:1px solid #000;padding:0 8px 4px;border-radius:5px;background-color:#CCC}
