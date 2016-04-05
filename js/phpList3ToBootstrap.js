@@ -132,7 +132,7 @@ var myfunction = function() {
  }
 
 $( window ).load(myfunction);
-
+$('#dialog').on('shown.bs.modal', myfunction);
 
 /******** RESPONSIVE TABS *******/
 $.getScript("ui/bootlist/js/bootstrap-tabcollapse.js", function(){
