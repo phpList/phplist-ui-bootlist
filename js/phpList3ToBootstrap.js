@@ -29,6 +29,7 @@ var myfunction = function() {
     $('#login-form input[type=submit]').addClass('btn-lg');
     $('#forgotpassword-form input[type=submit]').addClass('btn-sm');
 
+
 /* COLLAPSIBLE */
     $('.accordion').addClass('panel-group');
     $('.accordion').attr({ 'aria-multiselectable':'true', 'id':'accordion','role':'tablist' });
@@ -128,11 +129,13 @@ var myfunction = function() {
 
 /* show page after loading */
     $('body').removeClass('invisible');
-    
  }
 
+
 $( window ).load(myfunction);
-$('#dialog').on('shown.bs.modal', myfunction);
+$('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
+
+
 
 /******** RESPONSIVE TABS *******/
 $.getScript("ui/bootlist/js/bootstrap-tabcollapse.js", function(){
