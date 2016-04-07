@@ -17,13 +17,13 @@ TABLE OF CONTENT
 
 # tabs
 # modals
-
+# progressbar
 *******************************/
 
 
 
 /* # generals *****************/
-
+iframe{border:0px}
 /* ## bootstrap */
 a:focus,button:focus{outline:none !important}
 .btn{margin:10px 5px 10px 0px}
@@ -38,8 +38,11 @@ span.glyphicon{margin:5px}
 .navbar-brand{padding-top:7px}
 div.panel{padding:0px !important;background:none !important} /* FIX NEEDED BECAOUSE HELP PAGE (page=community) loads style.css from dressprow theme */
 body.plugins a.ajaxable button{background:inherit;padding:0;margin:0;font-size:inherit}
-
-
+.output:last-child{font-weight:bold}
+#processqueueoutput .well{background:none}
+#progresscount{margin-bottom:10px}
+#processqueueprogress{min-height:100px;border-color:#e3e3e3}
+#processqueuesummary{border-color:#e3e3e3;margin-top:40px;height:200px}
 
 /* # header *******************/
 
@@ -54,6 +57,7 @@ body.plugins a.ajaxable button{background:inherit;padding:0;margin:0;font-size:i
 }
 @media only screen and (max-width:991px){ 
     .navbar-brand > img{width:150px}
+    #right-bar{margin-top:40px}
 }
 @media only screen and (max-width:767px){ 
     .navbar-collapse{box-shadow:none;border-top:0;margin-top:10px;}
@@ -95,6 +99,7 @@ div.tab-content {padding:20px;border:1px solid #CCC}
 /* # modals ************/
 .modal .modal-dialog .close.externo{z-index: 999999;position: absolute;right: 10px;top: 10px;border:1px solid #000;padding:0 8px 4px;border-radius:5px;background-color:#CCC}
 .modal #navigation{display:none}
+
 
 
 

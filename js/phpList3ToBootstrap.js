@@ -1,6 +1,9 @@
 
 var myfunction = function() {
-
+    /* fix elements using .hidden class */
+    $("#resumequeue").hide(); 
+    $("#resumequeue").removeClass('hidden'); 
+    
 /* MAIN MENU */
     $('#menuTop').addClass('collapse navbar-collapse navbar-left');
     $('#menuTop ul li ul').parent().parent().addClass('nav navbar-nav');
@@ -29,6 +32,17 @@ var myfunction = function() {
     $('#login-form input[type=submit]').addClass('btn-lg');
     $('#forgotpassword-form input[type=submit]').addClass('btn-sm');
 
+/* PROGRESSBAR */
+    $('#progressbar').wrap('<div class="progress"/>');
+    $('#progressbar').addClass('progress-bar progress-bar-striped active');
+    $('#progressbar').attr({"role":"progressbar","aria-valuemin":"0"});
+    $('.progress').hide();
+
+/* process output */
+    $('#processqueueprogress').addClass('text-info well');
+    $('#processqueuesummary').addClass('text-dagner well');
+    $('#progresscount').addClass('text-warning');
+    $('#processqueuecontrols a').addClass('btn-xs');
 
 /* COLLAPSIBLE */
     $('.accordion').addClass('panel-group');
@@ -105,6 +119,7 @@ var myfunction = function() {
     $('span.delete a').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
     $('a.del, a[title=Del]').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
     $('span.view a').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
+    $('span.marksent a').html('<span aria-hidden="true" class="glyphicon glyphicon-ok"/>');
     $('span.resend a').html('<span aria-hidden="true" class="glyphicon glyphicon-repeat"/>');
     $('span.suspend a').html('<span aria-hidden="true" class="glyphicon glyphicon-pause"/>');
     $('a.opendialog span.view').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
@@ -129,10 +144,13 @@ var myfunction = function() {
 
 /* show page after loading */
     $('body').removeClass('invisible');
- }
+}
 
 
-$( window ).load(myfunction);
+$( window ).load(function(){
+    if ( $('body').hasClass('invisible') ){ myfunction();}
+ });
+ 
 $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
 
 
@@ -162,3 +180,32 @@ function initialiseTranslation(text) {
 
 
 
+/********* progressbar ***********/
+
+$.fn.progressbar = function(ac){
+    if ( $('body').hasClass('invisible') ){ myfunction(); }
+    $('.progress').show();
+    if (ac == 'destroy'){ $('.progress').hide(); }
+}
+
+$.fn.updateProgress = function() {
+    if ( $('body').hasClass('invisible') ){ myfunction(); }
+    $('.progress').show();
+  if ($.isNumeric(arguments[0])) {
+    var total = parseInt(arguments[1]);
+    var done = parseInt(arguments[0]);
+  } else {
+    var args = arguments[0].split(',') || {}; 
+    var total = parseInt(args[1]);
+    var done = parseInt(args[0]);
+  }
+  var perc;
+  if (total == 0) {
+    perc = 0;
+  } else {
+    perc = parseInt((done / total) * 100);
+  }
+  $("#progresscount").html(done + ' / '+ total);
+  $("#progresscount").show();
+  $("#progressbar" ).css('width', perc+'%').attr({'aria-valuenow': perc,'aria-valuemax':done});   
+};

@@ -1,5 +1,6 @@
 </head>
 <body class="invisible <?php if(isset($GLOBALS['page'])) print $GLOBALS['page'];else print "home-not-auth"; ?>">
+<div id="dialog"></div><div id="hiddendiv"></div>
 
 <nav id="navigation" class="navbar navbar-inverse <?php /* navbar-fixed-top*/ ?>">
     <div class="container">
@@ -26,8 +27,6 @@
 </nav>
 
 <div id="container" class="container">
-    <div id="dialog"></div><div id="hiddendiv"></div>
-	<div class="clear"></div>
     <div id="globalhelp">
     <?php
       $globalhelp = $pageinfo->content();
@@ -41,6 +40,7 @@
         <div class="buttonhelp close"><?php echo s('HELP') ?></div>
     <?php } ?>
     </div>
+	<div class="clear"></div>
     <div id="content" class="col-md-9">
     <div id="wrapp">
     <div id="progressbar"></div>
