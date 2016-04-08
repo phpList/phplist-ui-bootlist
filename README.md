@@ -1,2 +1,2 @@
 # bootlist
-phpList 3 theme width bootstrap
+phpList 3 theme with bootstrap
