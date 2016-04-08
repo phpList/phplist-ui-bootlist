@@ -1,4 +1,3 @@
-
 var myfunction = function() {
     /* fix elements using .hidden class */
     $("#resumequeue").hide(); 
@@ -9,16 +8,14 @@ var myfunction = function() {
     $('#menuTop ul li ul').parent().parent().addClass('nav navbar-nav');
     $('#menuTop ul li ul').parent().addClass('dropdown');
     $('#menuTop ul li ul').addClass('dropdown-menu');
-    $('#menuTop ul li ul').parent().find('a:first').addClass('dropdown-toggle');
-    $('#menuTop ul li ul').parent().find('a:first').attr({ 'data-toggle':'dropdown','aria-haspopup':'true','aria-expanded':'false' });
+    $('#menuTop ul li ul').parent().find('a:first').addClass('dropdown-toggle').attr({ 'data-toggle':'dropdown','aria-haspopup':'true','aria-expanded':'false' });
 
 /* BUTTONS */
-    $('button').addClass('btn');
-    $('.submit').not('p.submit').addClass('btn btn-primary');
-    $('input[type=submit]').addClass('btn btn-primary');
+    $('button, #prev.prevtab, #next.nexttab').addClass('btn');
+    $('.submit, input[type=submit]').not('p.submit').addClass('btn btn-primary');
     $('button[type=submit]').addClass('btn-primary');
     $('.button').addClass('btn btn-default');
-    $('table .button').addClass('btn-xs');
+    $('table .button, #prev.prevtab, #next.nexttab').addClass('btn-xs');
     $('.action-button').addClass('btn btn-lg btn-primary');
     $('.reset').addClass('btn btn-link');
     $('span.button a.opendialog span.view').parent().parent().parent().find('span.button').removeClass('btn-default');
@@ -33,9 +30,7 @@ var myfunction = function() {
     $('#forgotpassword-form input[type=submit]').addClass('btn-sm');
 
 /* PROGRESSBAR */
-    $('#progressbar').wrap('<div class="progress"/>');
-    $('#progressbar').addClass('progress-bar progress-bar-striped active');
-    $('#progressbar').attr({"role":"progressbar","aria-valuemin":"0"});
+    $('#progressbar').wrap('<div class="progress"/>').addClass('progress-bar progress-bar-striped active').attr({"role":"progressbar","aria-valuemin":"0"});
     $('.progress').hide();
 
 /* process output */
@@ -45,19 +40,13 @@ var myfunction = function() {
     $('#processqueuecontrols a').addClass('btn-xs');
 
 /* COLLAPSIBLE */
-    $('.accordion').addClass('panel-group');
-    $('.accordion').attr({ 'aria-multiselectable':'true', 'id':'accordion','role':'tablist' });
-    $('.accordion h3').addClass('panel-title');
-    $('.accordion h3').each(function(){ $(this).next('div').andSelf().wrapAll('<div class="panel panel-default"/>'); });
-    $('.accordion h3 a').addClass('collapsed');
-    $('.accordion h3 a').attr({ "role":"button", "data-toggle":"collapse", "data-parent":"#accordion", "aria-expanded":"false",
-        "aria-controls":function(i) { return 'collapse'+(i+1); }, "href":function(i) { return '#collapse'+(i+1);} });
+    $('.accordion').addClass('panel-group').attr({ 'aria-multiselectable':'true', 'id':'accordion','role':'tablist' });
+    $('.accordion h3').addClass('panel-title').each(function(){ $(this).next('div').andSelf().wrapAll('<div class="panel panel-default"/>'); });
+    $('.accordion h3 a').addClass('collapsed').attr({ "role":"button", "data-toggle":"collapse", "data-parent":"#accordion", "aria-expanded":"false", "aria-controls":function(i) { return 'collapse'+(i+1); }, "href":function(i) { return '#collapse'+(i+1);} });
     $('.accordion .panel-default:first h3 a').attr('aria-expanded','true');
     $('.accordion .panel-default div').not('.accordion .panel-default div div').addClass('panel-collapse collapse');
     $('.accordion .panel-default:first .panel-collapse').addClass(' in ');
-    $('.accordion .panel-default .panel-collapse').wrapInner('<div class="panel-body"/>');
-    $('.accordion .panel-default .panel-collapse').attr({ 'role':'tabpanel', 'id':function(i) { return 'collapse'+(i+1); },
-        'aria-labelledby':function(i) { return 'heading'+(i+1); } });
+    $('.accordion .panel-default .panel-collapse').wrapInner('<div class="panel-body"/>').attr({ 'role':'tabpanel', 'id':function(i) { return 'collapse'+(i+1); },'aria-labelledby':function(i) { return 'heading'+(i+1); } });
     $('.accordion h3').wrap('<div class="panel-heading"/>');
     $('.accordion .panel-heading').attr({ 'id':function(i) { return 'heading'+(i+1);}, 'role':'tab' });
 
@@ -85,15 +74,13 @@ var myfunction = function() {
 /* icons */
     /* dashboard */
     $('.send-campaign span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
-    $('.manage-campaigns span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-cog"/>');
-    $('.manage-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
+    $('.manage-campaigns span.listingname a, .configure span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-cog"/>');
+    $('.manage-users span.listingname a, .list-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
     $('.view-statistics span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-stats"/>');
     $('.manage-lists span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-th-list"/>');
-    $('.list-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
     $('.import-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-import"/>');
     $('.export-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-export"/>');
     $('.reconcileusers span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-heart"/>');
-    $('.configure span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-cog"/>');
     $('.configure-attributes span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tags"/>');
     $('.custom-attribute span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tag"/>');
     $('.spage span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-pencil"/>');
@@ -112,20 +99,17 @@ var myfunction = function() {
     /*buttons*/
     $('span.listingname a').addClass('btn btn-xs btn-info');
     $('span.listingelement a, div.configEdit a').not('.home span.listingelement a,a[name]').addClass('btn btn-xs btn-warning');    
-    $('span.edit a, .edit-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
+    $('span.edit a, .edit-list a, .configEdit a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
     $('.send-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
     $('.add_member a').html('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
-    $('.configEdit a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
-    $('span.delete a').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
-    $('a.del, a[title=Del]').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
-    $('span.view a').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
+    $('span.delete a, a.del, a[title=Del]').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
+    $('span.view a, a.opendialog span.view').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('span.marksent a').html('<span aria-hidden="true" class="glyphicon glyphicon-ok"/>');
     $('span.resend a').html('<span aria-hidden="true" class="glyphicon glyphicon-repeat"/>');
     $('span.suspend a').html('<span aria-hidden="true" class="glyphicon glyphicon-pause"/>');
-    $('a.opendialog span.view').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('a.hide').html('x');$('a.hide').addClass('close');$('a.hide.close').removeClass('hide');
+    $('a.helpdialog').html('<span class="glyphicon glyphicon-question-sign text-warning" />');
 
-     
 /* modals */
     $('.opendialog').each(function(k,val){
         var value = $(this).attr('href');
@@ -136,16 +120,13 @@ var myfunction = function() {
 /* tables*/
 //    $('.content').addClass('table-responsive');
     $('table').not('.home table, table.loginPassUpdate').addClass('table');
-    $('table.listing').not('.home table.listing').addClass('table-striped');
-    $('table.templateForm').addClass('table-striped');
-    $('table.importadmin').addClass('table-striped');
+    $('table.listing, table.templateForm, table.importadmin').not('.home table.listing').addClass('table-striped');
     $('table.messageView').addClass('table-bordered');
     $('table.setupMain').addClass('table-hover');
 
 /* show page after loading */
     $('body').removeClass('invisible');
 }
-
 
 $( window ).load(function(){
     if ( $('body').hasClass('invisible') ){ myfunction();}
@@ -159,6 +140,7 @@ $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
 $.getScript("ui/bootlist/js/bootstrap-tabcollapse.js", function(){
     $('.tabbed').tabCollapse();
 });
+
 
 
 /******** modals instead of dialog *******/
