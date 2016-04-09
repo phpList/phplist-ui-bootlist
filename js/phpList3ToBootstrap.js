@@ -4,7 +4,7 @@ var myfunction = function() {
     $("#resumequeue").removeClass('hidden'); 
     
 /* STRUCTURE */
-    $('.content').addClass('well');
+    $('.content').not('.accordion .content').addClass('well');
 
     
 /* MAIN MENU */
