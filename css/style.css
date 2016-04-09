@@ -34,6 +34,7 @@ a:focus,button:focus{outline:none !important}
 .btn-link:link{border-color:#666}
 span.glyphicon{margin:5px}
 .well{background-color:#FCFCFC}
+.btn-primary.disabled{opacity:0.2}
 /* ## phpList */
 #container{margin-bottom:50px}
 .navbar-brand{padding-top:7px}
