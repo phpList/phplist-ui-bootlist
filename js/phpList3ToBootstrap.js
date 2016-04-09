@@ -3,6 +3,10 @@ var myfunction = function() {
     $("#resumequeue").hide(); 
     $("#resumequeue").removeClass('hidden'); 
     
+/* STRUCTURE */
+    $('.content').addClass('well');
+
+    
 /* MAIN MENU */
     $('#menuTop').addClass('collapse navbar-collapse navbar-left');
     $('#menuTop ul li ul').parent().parent().addClass('nav navbar-nav');
@@ -15,7 +19,7 @@ var myfunction = function() {
     $('.submit, input[type=submit]').not('p.submit').addClass('btn btn-primary');
     $('button[type=submit]').addClass('btn-primary');
     $('.button').addClass('btn btn-default');
-    $('table .button, #prev.prevtab, #next.nexttab').addClass('btn-xs');
+    $('table .button').addClass('btn-xs');
     $('.action-button').addClass('btn btn-lg btn-primary');
     $('.reset').addClass('btn btn-link');
     $('span.button a.opendialog span.view').parent().parent().parent().find('span.button').removeClass('btn-default');
@@ -60,6 +64,7 @@ var myfunction = function() {
     $('.tabbed .tab-pane').attr('role','tabpanel');
     $('.tabbed ul.nav-tabs li a:first').tab('show');
 /* #sendtabs */
+    $('.sendtabs_container').addClass('text-center');
     $('#sendtabs ul li').css({'height':'100px'});
     $('#sendtabs ul li a').not('li.current a').addClass('btn btn-default');
     $('#sendtabs ul li.current a').addClass('btn btn-danger');
@@ -109,6 +114,8 @@ var myfunction = function() {
     $('span.suspend a').html('<span aria-hidden="true" class="glyphicon glyphicon-pause"/>');
     $('a.hide').html('x');$('a.hide').addClass('close');$('a.hide.close').removeClass('hide');
     $('a.helpdialog').html('<span class="glyphicon glyphicon-question-sign text-warning" />');
+    $('#prev.prevtab').replaceWith('<span class="pull-left prevtab btn btn-xs btn-primary glyphicon glyphicon-chevron-left" id="#prev" />');
+    $('#next.nexttab').replaceWith('<span class="pull-right nexttab btn btn-xs btn-primary glyphicon glyphicon-chevron-right" id="#next" />');
 
 /* modals */
     $('.opendialog').each(function(k,val){
