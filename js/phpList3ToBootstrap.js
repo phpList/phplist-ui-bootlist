@@ -116,7 +116,7 @@ var myfunction = function() {
     $('a.helpdialog').html('<span class="glyphicon glyphicon-question-sign text-warning" />');
     $('#prev.prevtab').replaceWith('<span class="pull-left prevtab btn btn-xs btn-danger glyphicon glyphicon-chevron-left" id="#prev" />');
     $('#next.nexttab').replaceWith('<span class="pull-right nexttab btn btn-xs btn-danger glyphicon glyphicon-chevron-right" id="#next" />');
-    $('.step-nav').first().addClass('text-right');
+    $('.step-nav').first().addClass('pull-right').css('margin-top','-40px');
     $('.step-nav .back').html('<span class="glyphicon glyphicon-hand-left" />');
     $('.step-nav .next').html('<span class="glyphicon glyphicon-hand-right" />');
 
