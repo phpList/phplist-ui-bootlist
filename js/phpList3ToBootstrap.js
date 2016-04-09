@@ -114,8 +114,8 @@ var myfunction = function() {
     $('span.suspend a').html('<span aria-hidden="true" class="glyphicon glyphicon-pause"/>');
     $('a.hide').html('x');$('a.hide').addClass('close');$('a.hide.close').removeClass('hide');
     $('a.helpdialog').html('<span class="glyphicon glyphicon-question-sign text-warning" />');
-    $('#prev.prevtab').replaceWith('<span class="pull-left prevtab btn btn-xs btn-primary glyphicon glyphicon-chevron-left" id="#prev" />');
-    $('#next.nexttab').replaceWith('<span class="pull-right nexttab btn btn-xs btn-primary glyphicon glyphicon-chevron-right" id="#next" />');
+    $('#prev.prevtab').replaceWith('<span class="pull-left prevtab btn btn-xs btn-danger glyphicon glyphicon-chevron-left" id="#prev" />');
+    $('#next.nexttab').replaceWith('<span class="pull-right nexttab btn btn-xs btn-danger glyphicon glyphicon-chevron-right" id="#next" />');
 
 /* modals */
     $('.opendialog').each(function(k,val){

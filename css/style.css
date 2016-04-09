@@ -34,7 +34,7 @@ a:focus,button:focus{outline:none !important}
 .btn-link:link{border-color:#666}
 span.glyphicon{margin:5px}
 .well{background-color:#FCFCFC}
-.btn-primary.disabled{opacity:0.2}
+.btn.disabled{opacity:0.2}
 /* ## phpList */
 #container{margin-bottom:50px}
 .navbar-brand{padding-top:7px}
@@ -45,8 +45,8 @@ body.plugins a.ajaxable button{background:inherit;padding:0;margin:0;font-size:i
 #progresscount{margin-bottom:10px}
 #processqueueprogress{min-height:100px;border-color:#e3e3e3}
 #processqueuesummary{border-color:#e3e3e3;margin-top:40px;height:200px}
-.sendtabs_container{border-bottom: 4px solid;height: 63px;}
-span.nexttab, span.prevtab{margin:0px}
+.sendtabs_container{border-bottom: 4px solid #999;height: 63px;}
+span.nexttab, span.prevtab{margin:35px 0 0 0}
 #sendtabs ul li{margin-right:2px}
 
 /* # header *******************/
