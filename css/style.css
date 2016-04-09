@@ -23,7 +23,9 @@ TABLE OF CONTENT
 
 
 /* # generals *****************/
+
 iframe{border:0px}
+
 /* ## bootstrap */
 a:focus,button:focus{outline:none !important}
 .btn{margin:10px 5px 10px 0px}
@@ -35,6 +37,7 @@ a:focus,button:focus{outline:none !important}
 span.glyphicon{margin:5px}
 .well{background-color:#FCFCFC}
 .btn.disabled{opacity:0.2}
+
 /* ## phpList */
 #container{margin-bottom:50px}
 .navbar-brand{padding-top:7px}
@@ -49,8 +52,10 @@ body.plugins a.ajaxable button{background:inherit;padding:0;margin:0;font-size:i
 span.nexttab, span.prevtab{margin:35px 0 0 0}
 #sendtabs ul li{margin-right:2px}
 .panel .step-nav{position:relative}
-.panel .step-nav a,.panel .step-nav a.next{padding:0}
+.panel .step-nav a,.panel .step-nav a.next{padding:0 5px 5px}
 .panel .step-nav a:hover{background-color:transparent}
+
+
 
 /* # header *******************/
 
