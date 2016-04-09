@@ -25,7 +25,7 @@ var myfunction = function() {
     $('span.button a.opendialog span.view').parent().parent().parent().find('span.button').removeClass('btn-default');
     
 /* FORMS */
-    $('input[type=text],input[type=password]').addClass('form-control');
+    $('input[type=text],input[type=password],textarea').addClass('form-control');
     $('#login-form td').addClass('input-group input-group-lg');
     $('div.login').addClass('input-group input-group-sm');
     $('div.login p').contents().unwrap().wrap('<span id=helpBlock class=help-block/>');

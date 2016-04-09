@@ -25,6 +25,7 @@ TABLE OF CONTENT
 /* # generals *****************/
 
 iframe{border:0px}
+#cke_message{width:100% !important}
 
 /* ## bootstrap */
 a:focus,button:focus{outline:none !important}
