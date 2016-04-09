@@ -48,6 +48,9 @@ body.plugins a.ajaxable button{background:inherit;padding:0;margin:0;font-size:i
 .sendtabs_container{border-bottom: 4px solid #999;height: 63px;}
 span.nexttab, span.prevtab{margin:35px 0 0 0}
 #sendtabs ul li{margin-right:2px}
+.panel .step-nav{position:relative}
+.panel .step-nav a,.panel .step-nav a.next{padding:0}
+.panel .step-nav a:hover{background-color:transparent}
 
 /* # header *******************/
 
