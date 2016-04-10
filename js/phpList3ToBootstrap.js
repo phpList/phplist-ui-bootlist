@@ -32,6 +32,19 @@ var myfunction = function() {
     $('input[name=forgotpassword]').attr('aria-describedby','helpblock');
     $('#login-form input[type=submit]').addClass('btn-lg');
     $('#forgotpassword-form input[type=submit]').addClass('btn-sm');
+    $('div[id*=list] ul').addClass('list-unstyled');
+    $('input[type=checkbox]').not('label input[type-checkbox], div.checkbox input[type=checkbox]').wrap('<div class="checkbox checkbox-inline" />');
+    $('input[type=checkbox]').each(function(){
+        var checkid= $(this).attr('name') + $(this).attr('value');
+        $(this).attr('id',checkid);
+        if(!$(this).next('label').length) $(this).after('<label for="'+checkid+'"> </label>');
+    });    
+    $('input[type=radio]').not('label input[type-radio], div.radio input[type=radio]').wrap('<div class="radio radio-inline" />');
+    $('input[type=radio]').each(function(){
+        var radioid= $(this).attr('name') + $(this).attr('value');
+        $(this).attr('id',radioid);
+        if(!$(this).next('label').length) $(this).after('<label for="'+radioid+'"> </label>');
+    });    
 
 /* PROGRESSBAR */
     $('#progressbar').wrap('<div class="progress"/>').addClass('progress-bar progress-bar-striped active').attr({"role":"progressbar","aria-valuemin":"0"});
@@ -44,25 +57,29 @@ var myfunction = function() {
     $('#processqueuecontrols a').addClass('btn-xs');
 
 /* COLLAPSIBLE */
-    $('.accordion').addClass('panel-group').attr({ 'aria-multiselectable':'true', 'id':'accordion','role':'tablist' });
-    $('.accordion h3').addClass('panel-title').each(function(){ $(this).next('div').andSelf().wrapAll('<div class="panel panel-default"/>'); });
-    $('.accordion h3 a').addClass('collapsed').attr({ "role":"button", "data-toggle":"collapse", "data-parent":"#accordion", "aria-expanded":"false", "aria-controls":function(i) { return 'collapse'+(i+1); }, "href":function(i) { return '#collapse'+(i+1);} });
-    $('.accordion .panel-default:first h3 a').attr('aria-expanded','true');
-    $('.accordion .panel-default div').not('.accordion .panel-default div div').addClass('panel-collapse collapse');
-    $('.accordion .panel-default:first .panel-collapse').addClass(' in ');
-    $('.accordion .panel-default .panel-collapse').wrapInner('<div class="panel-body"/>').attr({ 'role':'tabpanel', 'id':function(i) { return 'collapse'+(i+1); },'aria-labelledby':function(i) { return 'heading'+(i+1); } });
-    $('.accordion h3').wrap('<div class="panel-heading"/>');
-    $('.accordion .panel-heading').attr({ 'id':function(i) { return 'heading'+(i+1);}, 'role':'tab' });
-
+    if ( !$('.accordion').hasClass('panel-group') ){
+        $('.accordion').addClass('panel-group').attr({ 'aria-multiselectable':'true', 'id':'accordion','role':'tablist' });
+        $('.accordion h3').addClass('panel-title').each(function(){ $(this).next('div').andSelf().wrapAll('<div class="panel panel-default"/>'); });
+        $('.accordion h3 a').addClass('collapsed').attr({ "role":"button", "data-toggle":"collapse", "data-parent":"#accordion", "aria-expanded":"false", "aria-controls":function(i) { return 'collapse'+(i+1); }, "href":function(i) { return '#collapse'+(i+1);} });
+        $('.accordion .panel-default:first h3 a').attr('aria-expanded','true');
+        $('.accordion .panel-default div').not('.accordion .panel-default div div').addClass('panel-collapse collapse');
+        $('.accordion .panel-default:first .panel-collapse').addClass(' in ');
+        $('.accordion .panel-default .panel-collapse').wrapInner('<div class="panel-body"/>').attr({ 'role':'tabpanel', 'id':function(i) { return 'collapse'+(i+1); },'aria-labelledby':function(i) { return 'heading'+(i+1); } });
+        $('.accordion h3').wrap('<div class="panel-heading"/>');
+        $('.accordion .panel-heading').attr({ 'id':function(i) { return 'heading'+(i+1);}, 'role':'tab' });
+    }
 /* TABS*/
-    $('.tabbed ul:first').addClass('nav nav-tabs');
-    $('.tabbed ul.nav-tabs').attr('role','tablist');
-    $('.tabbed ul.nav-tabs li').attr('role','presentation');
-    $('.tabbed ul.nav-tabs li a').attr({ 'role':'tab', 'data-toggle':'tab' });
-    $('.tabbed div[id]').not('.tabbed ul div').wrapAll('<div class="tab-content"/>');
-    $('.tabbed .tab-content div[id]').addClass('tab-pane fade');
-    $('.tabbed .tab-pane').attr('role','tabpanel');
-    $('.tabbed ul.nav-tabs li a:first').tab('show');
+    if ( !$('.tabbed ul:first').hasClass('nav-tabs') ){
+        $('.tabbed ul:first').addClass('nav nav-tabs');
+        $('.tabbed ul.nav-tabs').attr('role','tablist');
+        $('.tabbed ul.nav-tabs li').attr('role','presentation');
+        $('.tabbed ul.nav-tabs li a').attr({ 'role':'tab', 'data-toggle':'tab' });
+        $('.tabbed div[id]').not('.tabbed ul div').wrapAll('<div class="tab-content"/>');
+        $('.tabbed .tab-content div[id]').addClass('tab-pane fade');
+        $('.tabbed .tab-pane').attr('role','tabpanel');
+        $('.tabbed ul.nav-tabs li a:first').tab('show');
+    }
+
 /* #sendtabs */
     $('.sendtabs_container').addClass('text-center');
     $('#sendtabs ul li').css({'height':'100px'});
