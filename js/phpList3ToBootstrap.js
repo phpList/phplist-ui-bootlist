@@ -164,7 +164,7 @@ $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
 
 
 /******** RESPONSIVE TABS *******/
-$.getScript("ui/bootlist/js/bootstrap-tabcollapse.js", function(){
+$.getScript("ui/phplist-ui-bootstrap/js/bootstrap-tabcollapse.js", function(){
     $('.tabbed').tabCollapse();
 });
 
