@@ -32,7 +32,7 @@
       $globalhelp = $pageinfo->content();
       if (!empty($globalhelp)) { ?>
         <div class="collapse" id="helptarget">
-            <div class="well">
+            <div class="alert alert-info">
                 <?php print $globalhelp ?>
             </div>
         </div>
