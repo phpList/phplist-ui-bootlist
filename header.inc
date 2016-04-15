@@ -32,13 +32,12 @@
     <?php
       $globalhelp = $pageinfo->content();
       if (!empty($globalhelp)) { ?>
-        <div class="content">
-            <div class="text">
+        <div class="collapse" id="helptarget">
+            <div class="alert alert-info">
                 <?php print $globalhelp ?>
             </div>
         </div>
-        <div class="buttonhelp open"><?php echo s('HELP') ?></div>
-        <div class="buttonhelp close"><?php echo s('HELP') ?></div>
+        <button class="btn btn-xs btn-danger pull-right glyphicon glyphicon-info-sign" type="button" data-toggle="collapse" data-target="#helptarget" aria-expanded="false" aria-controls="collapseExample" title="<?php echo s('HELP') ?>"></button>
     <?php } ?>
     </div>
     <div id="content" class="col-md-9">

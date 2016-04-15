@@ -36,7 +36,7 @@
                 <?php print $globalhelp ?>
             </div>
         </div>
-        <button class="btn btn-xs btn-danger pull-right" type="button" data-toggle="collapse" data-target="#helptarget" aria-expanded="false" aria-controls="collapseExample"><?php echo s('HELP') ?></button>
+        <button class="btn btn-xs btn-danger pull-right glyphicon glyphicon-info-sign" type="button" data-toggle="collapse" data-target="#helptarget" aria-expanded="false" aria-controls="collapseExample" title="<?php echo s('HELP') ?>"></button>
     <?php } ?>
     </div>
 	<div class="clearfix"></div>
