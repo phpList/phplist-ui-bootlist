@@ -25,7 +25,7 @@ var myfunction = function() {
     $('span.button a.opendialog span.view').parent().parent().parent().find('span.button').removeClass('btn-default');
     $('.actions .fright').addClass('text-right');
 
-/* MINITABS, WEBBLERTABS AN FILTERDIVS */
+/* MINITABS, WEBBLERTABS, dropButton and FILTERDIVS */
     $('.minitabs #webblertabs').addClass('navbar navbar-left navbar-default');
     $('.minitabs #webblertabs ul').addClass('nav navbar-nav');
     $('.minitabs #webblertabs ul li.current').addClass('active');
@@ -163,6 +163,7 @@ var myfunction = function() {
 
 /* tables*/
 //    $('.content').addClass('table-responsive');
+    $('table').attr('border',null);
     $('table').not('.home table, table.loginPassUpdate').addClass('table');
     $('table.listing, table.templateForm, table.importadmin').not('.home table.listing').addClass('table-striped');
     $('table.messageView').addClass('table-bordered');
