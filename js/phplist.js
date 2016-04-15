@@ -42,7 +42,7 @@ $(document).ready(function() {
 		});
 	});
 	
-    // open/close div global help    
+/*    // open/close div global help    
         $("#globalhelp").click(function(){        
 //    	    if(matchMedia('only screen and (max-width: 767px)').matches){ $("#menuTop").hide(); }
      	    $("#globalhelp .content").toggle();
@@ -110,6 +110,6 @@ $(document).ready(function() {
 
     }
 
-
+*/
 
 });

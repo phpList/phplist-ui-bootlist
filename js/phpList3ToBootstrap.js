@@ -23,6 +23,23 @@ var myfunction = function() {
     $('.action-button').addClass('btn btn-lg btn-primary');
     $('.reset').addClass('btn btn-link');
     $('span.button a.opendialog span.view').parent().parent().parent().find('span.button').removeClass('btn-default');
+    $('.actions .fright').addClass('text-right');
+
+/* MINITABS, WEBBLERTABS AN FILTERDIVS */
+    $('.minitabs #webblertabs').addClass('navbar navbar-left navbar-default');
+    $('.minitabs #webblertabs ul').addClass('nav navbar-nav');
+    $('.minitabs #webblertabs ul li.current').addClass('active');
+    $('.minitabs #webblertabs').attr('id','');
+    $('#webblertabs').attr('id','dropdown-tabs');
+    $('#dropdown-tabs').addClass('btn-group');
+    $('#dropdown-tabs ul').addClass('dropdown-menu');
+    $('#dropdown-tabs ul').before('<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>');
+    $("#dropdown-tabs .dropdown-menu li").each(function(){
+      $("#dropdown-tabs .btn:first-child").html($(this).parent().find('.current').text()+' &nbsp; <span class="caret"></span>');
+      $("#dropdown-tabs .btn:first-child").val($(this).parent().find('.current').text());
+   });
+    $('.filterdiv').addClass('navbar navbar-default navbar-form navbar-right');
+    $('.filterdiv, .minitabs,#webblertabs').after('<div class="clearfix" />');
     
 /* FORMS */
     $('input[type=text],input[type=password],textarea').addClass('form-control');
