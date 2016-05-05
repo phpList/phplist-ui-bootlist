@@ -59,8 +59,11 @@ span.nexttab, span.prevtab{margin:35px 0 0 0}
 .helpdialog{margin-right:5px}
 
 
+
 /* # header *******************/
 
+h4.page-header{display:inline-block;width:100%;margin-top:20px}
+h4.page-header:first-letter{ text-transform:uppercase }
 #logged{margin-right:0px;margin-top:20px;margin-bottom:20px} 
 #navigation{min-height: 71px}
 

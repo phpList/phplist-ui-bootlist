@@ -114,7 +114,7 @@ var myfunction = function() {
     $('div.result').addClass('alert alert-danger');
 
 /* typography */
-    $('.pagetitle').addClass('page-header');
+    $('.pagetitle').addClass('page-header text-primary');
 
 /* icons */
     /* dashboard */
