@@ -115,7 +115,7 @@ var myfunction = function() {
     $('div.result').addClass('alert alert-danger');
 
 /* typography */
-    $('.pagetitle').addClass('page-header text-primary');
+    $('.pagetitle').addClass('page-header');
     $('.inactivelist').addClass('small text-danger');
     $('.activelist').addClass('small text-primary');
 
