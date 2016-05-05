@@ -24,6 +24,7 @@ var myfunction = function() {
     $('.reset').addClass('btn btn-link');
     $('span.button a.opendialog span.view').parent().parent().parent().find('span.button').removeClass('btn-default');
     $('.actions .fright').addClass('text-right');
+    $('ul.reconcile').addClass('list-unstyled');
 
 /* MINITABS, WEBBLERTABS, dropButton and FILTERDIVS */
     $('.minitabs #webblertabs').addClass('navbar navbar-left navbar-default');
