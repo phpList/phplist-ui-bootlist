@@ -39,6 +39,8 @@ a:focus,button:focus{outline:none !important}
 span.glyphicon{margin:5px}
 .well{background-color:#FCFCFC}
 .btn.disabled{opacity:0.2}
+.tab-content ul.list-unstyled li{margin-bottom:15px}
+
 
 /* ## phpList */
 #container{margin-bottom:50px}
@@ -105,8 +107,8 @@ body.home .custom-attribute td.listingname{padding-left:40px}
 /* ## send */
 body.send #sendtabs .btn {margin:0px;padding:5px}
 #sendtabs ul li a{width:100px}
-
-
+.field{ margin-bottom:20px}
+#schedulecontent .field label[for="requeueuntil"]{display:block;margin-top:10px}
 
 /* # tabs ************/
 ul.nav-tabs{padding:0}
@@ -147,6 +149,7 @@ input[type="checkbox"].styled:checked + label:after, input[type="radio"].styled:
 input[type="checkbox"] .styled:checked + label::before, input[type="radio"] .styled:checked + label::before { color:#fff}
 input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styled:checked + label::after { color:#fff}
 select.form-control{display:inline-block;width:auto}
+
 
 
 /*3d88b6

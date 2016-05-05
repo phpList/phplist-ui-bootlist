@@ -116,6 +116,8 @@ var myfunction = function() {
 
 /* typography */
     $('.pagetitle').addClass('page-header text-primary');
+    $('.inactivelist').addClass('small text-danger');
+    $('.activelist').addClass('small text-primary');
 
 /* icons */
     /* dashboard */
