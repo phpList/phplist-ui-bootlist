@@ -67,7 +67,8 @@ var myfunction = function() {
         var radioid= $(this).attr('name') + $(this).attr('value');
         $(this).attr('id',radioid);
         if(!$(this).next('label').length) $(this).after('<label for="'+radioid+'"> </label>');
-    });    
+    });
+    $('select').addClass('form-control');
 
 /* PROGRESSBAR */
     $('#progressbar').wrap('<div class="progress"/>').addClass('progress-bar progress-bar-striped active').attr({"role":"progressbar","aria-valuemin":"0"});
