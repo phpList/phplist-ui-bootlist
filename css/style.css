@@ -40,6 +40,7 @@ span.glyphicon{margin:5px}
 .well{background-color:#FCFCFC}
 .btn.disabled{opacity:0.2}
 .tab-content ul.list-unstyled li{margin-bottom:15px}
+.form-control{max-width: 100% !important}
 
 
 /* ## phpList */
