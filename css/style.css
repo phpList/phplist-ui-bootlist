@@ -40,7 +40,7 @@ span.glyphicon{margin:5px}
 .well{background-color:#FCFCFC}
 .btn.disabled{opacity:0.2}
 .tab-content ul.list-unstyled li{margin-bottom:15px}
-.form-control{max-width: 100% !important}
+.form-control{max-width: 780px !important}
 
 
 /* ## phpList */
@@ -60,6 +60,7 @@ span.nexttab, span.prevtab{margin:35px 0 0 0}
 .panel .step-nav a,.panel .step-nav a.next{padding:0 5px 5px}
 .panel .step-nav a:hover{background-color:transparent}
 .helpdialog{margin-right:5px}
+#exportdates{margin:15px 0 30px}
 
 
 

@@ -25,6 +25,9 @@ var myfunction = function() {
     $('span.button a.opendialog span.view').parent().parent().parent().find('span.button').removeClass('btn-default');
     $('.actions .fright').addClass('text-right');
     $('ul.reconcile').addClass('list-unstyled');
+    $('.btn-primary.btn-default').removeClass('btn-default');
+    $('a.confirm').not('.dropButton a.confirm').addClass('btn btn-default');
+
 
 /* MINITABS, WEBBLERTABS, dropButton and FILTERDIVS */
     $('.minitabs #webblertabs').addClass('navbar navbar-left navbar-default');
@@ -149,7 +152,7 @@ var myfunction = function() {
     $('span.listingelement a, div.configEdit a').not('.home span.listingelement a,a[name]').addClass('btn btn-xs btn-warning');    
     $('span.edit a, .edit-list a, .configEdit a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
     $('.send-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
-    $('.add_member a').html('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
+    $('.add_member a, span.viewusers a').html('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
     $('span.delete a, a.del, a[title=Del]').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
     $('span.view a, a.opendialog span.view').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('span.marksent a').html('<span aria-hidden="true" class="glyphicon glyphicon-ok"/>');
