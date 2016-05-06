@@ -25,8 +25,10 @@ TABLE OF CONTENT
 
 /* # generals *****************/
 
+body{background-image:none !important /*this fix style.css from dev in ?page=community*/}
 iframe{border:0px}
 .cke{width:100% !important}
+
 
 /* ## bootstrap */
 a:focus,button:focus{outline:none !important}
