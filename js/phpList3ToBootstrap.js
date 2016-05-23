@@ -4,7 +4,7 @@ var myfunction = function() {
     $("#resumequeue").removeClass('hidden'); 
     
 /* STRUCTURE */
-    $('.content').not('.accordion .content').addClass('well');
+    $('.content, body.configure fieldset').not('.accordion .content, .content table .content,body.dbcheck table').addClass('well');
 
     
 /* MAIN MENU */
@@ -52,7 +52,7 @@ var myfunction = function() {
     $('.filterdiv, .minitabs,#webblertabs').after('<div class="clearfix" />');
     
 /* FORMS */
-    $('input[type=text],input[type=password],textarea').addClass('form-control');
+    $('input[type=text],input[type=password],textarea,select').addClass('form-control');
     $('#login-form td').addClass('input-group input-group-lg');
     $('div.login').addClass('input-group input-group-sm');
     $('div.login p').contents().unwrap().wrap('<span id=helpBlock class=help-block/>');
@@ -72,7 +72,7 @@ var myfunction = function() {
         $(this).attr('id',radioid);
         if(!$(this).next('label').length) $(this).after('<label for="'+radioid+'"> </label>');
     });
-    $('select').addClass('form-control');
+    $('body.configure div.shade1, body.configure div.shade2').addClass('form-group');
 
 /* PROGRESSBAR */
     $('#progressbar').wrap('<div class="progress"/>').addClass('progress-bar progress-bar-striped active').attr({"role":"progressbar","aria-valuemin":"0"});
@@ -122,6 +122,7 @@ var myfunction = function() {
     $('.pagetitle').addClass('page-header');
     $('.inactivelist').addClass('small text-danger');
     $('.activelist').addClass('small text-primary');
+    $('.dbcheck .listingelement h2').wrapInner('<small />');
 
 /* icons */
     /* dashboard */
@@ -175,11 +176,12 @@ var myfunction = function() {
     });
 
 /* tables*/
-//    $('.content').addClass('table-responsive');
+    $('.content').not('.listingelement .content').addClass('table-responsive');
     $('table').attr('border',null);
     $('table').not('.home table, table.loginPassUpdate').addClass('table');
+    $('.listingelement table,body.dbcheck table').addClass('table-condensed');
     $('table.listing, table.templateForm, table.importadmin').not('.home table.listing').addClass('table-striped');
-    $('table.messageView').addClass('table-bordered');
+    $('table.messageView, body.about table.about').addClass('table-bordered');
     $('table.setupMain').addClass('table-hover');
 
 /* show page after loading */

@@ -113,6 +113,9 @@ body.send #sendtabs .btn {margin:0px;padding:5px}
 .field{ margin-bottom:20px}
 #schedulecontent .field label[for="requeueuntil"]{display:block;margin-top:10px}
 
+/* ## settings (configure) */
+body.configure fieldset legend{border:0}
+
 /* # tabs ************/
 ul.nav-tabs{padding:0}
 div.tab-content {padding:20px;border:1px solid #CCC;background-color:#FFF}
