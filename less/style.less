@@ -1,0 +1,164 @@
+@import "../bootstrap/less/bootstrap.less";
+
+
+/* File:/lists/admin/ui/phplist-ui-bootstrap/css/style.css */
+
+/******************************* 
+
+TABLE OF CONTENT 
+
+# generals 
+    ## bootstrap
+    ## phpList
+
+# header
+
+# Special pages
+    ## login
+    ## dashboard
+    ## send
+
+# tabs
+# modals
+# forms
+
+*******************************/
+
+
+/* # generals *****************/
+
+iframe{border:0px}
+.cke{width:100% !important}
+
+
+/* ## bootstrap */
+a:focus,button:focus{outline:none !important}
+.btn{margin:10px 5px 10px 0px}
+.btn-xs{margin:2px}
+.btn-default{background:#DDD}
+.btn-warning{color:#333;background-color:#FF9}
+.btn-link{border-color:#CCC;border-radius:4px}
+.btn-link:link{border-color:#666}
+span.glyphicon{margin:5px}
+.well{background-color:#FCFCFC}
+.btn.disabled{opacity:0.2}
+.tab-content ul.list-unstyled li{margin-bottom:15px}
+.form-control{max-width: 780px !important}
+
+
+/* ## phpList */
+#container{margin-bottom:50px}
+.navbar-brand{padding-top:7px}
+div.panel{padding:0px !important;background:none !important} /* FIX NEEDED BECAOUSE HELP PAGE (page=community) loads style.css from dressprow theme */
+body.plugins a.ajaxable button{background:inherit;padding:0;margin:0;font-size:inherit}
+.output:last-child{font-weight:bold}
+#processqueueoutput .well{background:none}
+#progresscount{margin-bottom:10px}
+#processqueueprogress{min-height:100px;border-color:#e3e3e3}
+#processqueuesummary{border-color:#e3e3e3;margin-top:40px;height:200px}
+.sendtabs_container{border-bottom:4px solid #999;height:63px;}
+span.nexttab, span.prevtab{margin:35px 0 0 0}
+#sendtabs ul li{margin-right:2px}
+.panel .step-nav{position:relative}
+.panel .step-nav a,.panel .step-nav a.next{padding:0 5px 5px}
+.panel .step-nav a:hover{background-color:transparent}
+.helpdialog{margin-right:5px}
+#exportdates{margin:15px 0 30px}
+
+
+
+/* # header *******************/
+
+h4.page-header{display:inline-block;width:100%;margin-top:20px;color:#222}
+h4.page-header:first-letter{ text-transform:uppercase }
+#logged{margin-right:0px;margin-top:20px;margin-bottom:20px} 
+#navigation{min-height: 71px}
+
+@media only screen and (min-width:768px){ 
+    #navigation #menuTop a.dropdown-toggle{padding-top:22px;padding-bottom:27px}    
+}
+@media only screen and (min-width:768px) and (max-width:991px) { 
+    #navigation .container{padding:0}
+    .navbar-collapse{padding:0}
+    #navigation #menuTop a.dropdown-toggle{padding-left:10px;padding-right:10px}
+}
+@media only screen and (max-width:991px){ 
+    .navbar-brand > img{width:150px}
+    #right-bar{margin-top:40px}
+}
+@media only screen and (max-width:767px){ 
+    .navbar-collapse{box-shadow:none;border-top:0;margin-top:10px;}
+    #logged{right:80px; position:absolute; top:15px;margin-top:0} 
+}
+
+
+
+/* # special pages ************/
+
+/* ## login */
+body.login form{margin-top:40px}
+body.login form input{max-width:300px}
+body.login form span.general{margin-top:20px;display:block}
+
+/* ## dashboard */
+body.home table.listing *{white-space:normal}
+body.home td.listingname {width:200px}
+body.home td.listingelement{padding-right:20px;padding-left:20px}
+body.home .btn.btn-info{font-size:14px;display:block;padding:15px 5px;font-family:"genlight";color:rgb(255, 255, 255);}
+body.home .btn.btn-info span{display:block;font-size:40px;margin-right:0}
+body.home .custom-attribute .btn.btn-info span{font-size:25px}
+body.home .custom-attribute td.listingname{padding-left:40px}
+
+/* ## send */
+body.send #sendtabs .btn {margin:0px;padding:5px}
+#sendtabs ul li a{width:100px}
+.field{ margin-bottom:20px}
+#schedulecontent .field label[for="requeueuntil"]{display:block;margin-top:10px}
+
+/* ## settings (configure) */
+body.configure fieldset legend{border:0}
+
+/* # tabs ************/
+ul.nav-tabs{padding:0}
+div.tab-content {padding:20px;border:1px solid #CCC;background-color:#FFF}
+.nav.nav-tabs .active a,.nav.nav-tabs .active a:focus{background-color:#f5f5f5;outline:none}
+
+
+
+/* # modals ************/
+.modal .modal-dialog .close.externo{z-index:999999;position:absolute;right:10px;top:10px;border:1px solid #000;padding:0 8px 4px;border-radius:5px;background-color:#CCC}
+.modal #navigation{display:none}
+
+
+/* # forms ************/
+.checkbox { padding:5px;margin:0 5px}
+.checkbox label { display:inline-block; vertical-align:middle; position:relative; padding:0px;margin-left:15px}
+.checkbox label::before { content:""; display:inline-block; position:absolute; width:17px; height:17px; left:0; margin-left:-20px; border:1px solid #bbb; border-radius:3px; background-color:#fff; -webkit-transition:border 0.15s ease-in-out, color 0.15s ease-in-out; -o-transition:border 0.15s ease-in-out, color 0.15s ease-in-out; transition:border 0.15s ease-in-out, color 0.15s ease-in-out}
+.checkbox label::after { display:inline-block; position:absolute; width:16px; height:16px; left:0; top:0; margin-left:-20px; padding-left:3px; padding-top:1px; font-size:11px; color:#FFF;background-color:#31b0d5}
+.checkbox input[type="checkbox"], .checkbox input[type="radio"] { opacity:0; z-index:1}
+.checkbox input[type="checkbox"]:focus + label::before, .checkbox input[type="radio"]:focus + label::before { outline:thin dotted; outline:5px auto -webkit-focus-ring-color; outline-offset:-2px}
+.checkbox input[type="checkbox"]:checked + label::after, .checkbox input[type="radio"]:checked + label::after { font-family:"Glyphicons Halflings"; content:"\e013"}
+.checkbox input[type="checkbox"]:indeterminate + label::after, .checkbox input[type="radio"]:indeterminate + label::after { display:block; content:""; width:10px; height:3px; background-color:#555555; border-radius:2px; margin-left:-16.5px; margin-top:7px}
+.checkbox input[type="checkbox"]:disabled + label, .checkbox input[type="radio"]:disabled + label { opacity:0.65}
+.checkbox input[type="checkbox"]:disabled + label::before, .checkbox input[type="radio"]:disabled + label::before { background-color:#eeeeee; cursor:not-allowed}
+.checkbox.checkbox-circle label::before { border-radius:50%}
+.checkbox.checkbox-inline {margin-top:0}
+.radio { padding:5px;margin:0 3px }
+.radio label { display:inline-block; vertical-align:middle; position:relative; padding:0px;margin-left:15px}
+.radio label::before { content:""; display:inline-block; position:absolute; width:17px; height:17px; left:0; margin-left:-20px; border:1px solid #bbb; border-radius:50%; background-color:#fff; -webkit-transition:border 0.15s ease-in-out; -o-transition:border 0.15s ease-in-out; transition:border 0.15s ease-in-out}
+.radio label::after { display:inline-block; position:absolute; content:" "; width:11px; height:11px; left:3px; top:3px; margin-left:-20px; border-radius:50%; background-color:#31b0d5; -webkit-transform:scale(0, 0); -ms-transform:scale(0, 0); -o-transform:scale(0, 0); transform:scale(0, 0); -webkit-transition:-webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); -moz-transition:-moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); -o-transition:-o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); transition:transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33)}
+.radio input[type="radio"] { opacity:0; z-index:1}
+.radio input[type="radio"]:focus + label::before { outline:thin dotted; outline:5px auto -webkit-focus-ring-color; outline-offset:-2px}
+.radio input[type="radio"]:checked + label::after { -webkit-transform:scale(1, 1); -ms-transform:scale(1, 1); -o-transform:scale(1, 1); transform:scale(1, 1)}
+.radio input[type="radio"]:disabled + label { opacity:0.65}
+.radio input[type="radio"]:disabled + label::before { cursor:not-allowed}
+.radio.radio-inline { margin-top:0}
+input[type="checkbox"].styled:checked + label:after, input[type="radio"].styled:checked + label:after { font-family:'Glyphicons Halflings'; content:"\e013"}
+input[type="checkbox"] .styled:checked + label::before, input[type="radio"] .styled:checked + label::before { color:#fff}
+input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styled:checked + label::after { color:#fff}
+select.form-control{display:inline-block;width:auto}
+
+
+
+/*3d88b6
+/* End of /lists/admin/ui/phplist-ui-bootstrap/css/style.css */

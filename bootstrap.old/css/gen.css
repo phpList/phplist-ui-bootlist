@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'genlight';
+  src: url('../fonts/Gen-Light-webfont.eot');
+  src: url('../fonts/Gen-Light-webfont.eot?#iefix') format('embedded-opentype'), 
+  url('../fonts/Gen-Light-webfont.woff2') format('woff2'), 
+  url('../fonts/Gen-Light-webfont.woff') format('woff'), 
+  url('../fonts/Gen-Light-webfont.ttf') format('truetype'), 
+  url('../fonts/Gen-Light-webfont.svg#genlight') format('svg');
+}
+
+@font-face {
+  font-family: 'genregular';
+  src: url('../fonts/Gen-Regular-webfont.eot');
+  src: url('../fonts/Gen-Regular-webfont.eot?#iefix') format('embedded-opentype'), 
+  url('../fonts/Gen-Regular-webfont.woff2') format('woff2'), 
+  url('../fonts/Gen-Regular-webfont.woff') format('woff'), 
+  url('../fonts/Gen-Regular-webfont.ttf') format('truetype'), 
+  url('../fonts/Gen-Regular-webfont.svg#genregular') format('svg');
+}
