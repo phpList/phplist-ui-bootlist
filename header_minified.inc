@@ -1,9 +1,9 @@
 </head>
-<body class="<?php if(isset($GLOBALS['page'])) print $GLOBALS['page'];else print "home-not-auth"; ?>">
+<body class="invisible <?php if(isset($GLOBALS['page'])) print $GLOBALS['page'];else print "home-not-auth"; ?>">
 <div id="dialog"></div><div id="hiddendiv"></div>
 
 <nav id="navigation" class="navbar navbar-inverse <?php /* navbar-fixed-top*/ ?>">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuTop" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -26,7 +26,7 @@
     </div>
 </nav>
 
-<div id="container" class="container">
+<div id="container" class="content-wrapper">
     <div id="globalhelp">
     <?php
       $globalhelp = $pageinfo->content();
@@ -40,7 +40,24 @@
     <?php } ?>
     </div>
 	<div class="clearfix"></div>
-    <div id="content" class="col-md-9">
+
+    <div id="sidebar" class="sidebar col-md-2">
+        <?php echo $firstInstallButton?>
+        <div id="language">
+            <?php print $languageswitcher; ?>
+        </div>
+        <div id="context-menu" class="menutableright block">
+            <h3>Navigation</h3>
+            <?php print contextMenu(); ?>
+        </div>
+        <div id="recent" class="menutableright block">
+            <?php print recentlyVisited(); ?>
+        </div>
+    <div class="clear"></div>
+        <?php include dirname(__FILE__).'/rssfeed.php'; ?>  
+    </div>
+    <!-- end #sidebar -->
+    <div id="content" class="col-md-10">
     <div id="wrapp">
     <div id="progressbar"></div>
 <!-- content start here -->

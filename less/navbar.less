@@ -1,0 +1,19 @@
+.navbar-inverse {
+	.navbar-nav {
+	    li {
+	    	.dropdown-menu {
+	    		background-color: darken(@menucolor,20%);
+	    		border: 0;
+	    	}
+	    	&.dropdown.open a{
+	    		background-color: darken(@menucolor,20%);
+	    	}
+	    	a {
+	    		color: #fff;
+	    		&:hover {
+	    			background-color: darken(@menucolor,10%);
+	    		}
+	    	}
+	    }
+	}	
+}

@@ -1,5 +1,5 @@
 </head>
-<body class="<?php if(isset($GLOBALS['page'])) print $GLOBALS['page'];else print "home-not-auth"; ?>">
+<body class="invisible <?php if(isset($GLOBALS['page'])) print $GLOBALS['page'];else print "home-not-auth"; ?>">
 
 <nav id="navigation" class="navbar navbar-inverse <?php /* navbar-fixed-top*/ ?>">
     <div class="container">

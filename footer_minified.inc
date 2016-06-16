@@ -1,22 +1,5 @@
 	    </div>
-    </div> <!-- end #content -->
-
-    <div id="right-bar" class="col-md-3">
-    <?php echo $firstInstallButton?>
-        <div id="context-menu" class="menutableright block">
-            <h3>Navigation</h3>
-            <?php print contextMenu(); ?>
-        </div>
-        <div id="recent" class="menutableright block">
-            <?php print recentlyVisited(); ?>
-        </div>
-	    <div id="language">
-            <?php print $languageswitcher; ?>
-        </div>
-	<div class="clear"></div>
-<?php include dirname(__FILE__).'/rssfeed.php'; ?>  
-	</div><!-- end #right-bar -->
-	
+    </div> <!-- end #content -->	
 	<div class="clear"></div>
 
 </div> <!-- end #container -->
