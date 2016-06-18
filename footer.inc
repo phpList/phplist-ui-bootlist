@@ -34,7 +34,7 @@
 <script type="text/javascript" src="ui/phplist-ui-bootstrap/js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="js/phplistapp.js"></script>
 <script type="text/javascript" src="ui/phplist-ui-bootstrap/js/phpList3ToBootstrap.js"></script>
-<script type="text/javascript" src="ui/phplist-ui-bootstrap/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="ui/phplist-ui-bootstrap/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="ui/phplist-ui-bootstrap/js/jcarousellite_1.0.1.min.js"></script>
 <script type="text/javascript" src="ui/phplist-ui-bootstrap/js/phplist.js?v=<?php echo filemtime(dirname(__FILE__).'/js/phplist.js'); ?>"></script>
 

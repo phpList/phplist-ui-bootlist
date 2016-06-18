@@ -29,8 +29,8 @@
 <link rel="stylesheet" href="css/app.css" />
 
 <!-- now override the above with the styles and JS from the UI theme -->
-<link href='ui/phplist-ui-bootstrap/bootstrap/css/gen.css' rel='stylesheet' />
-<link rel="stylesheet" href="ui/phplist-ui-bootstrap/bootstrap/css/bootstrap.min.css" />
+<!--<link href='ui/phplist-ui-bootstrap/bootstrap/css/gen.css' rel='stylesheet' />
+<link rel="stylesheet" href="ui/phplist-ui-bootstrap/bootstrap/css/bootstrap.min.css" />-->
 <link rel="stylesheet" href="ui/phplist-ui-bootstrap/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />
 
 <?php
