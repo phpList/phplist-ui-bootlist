@@ -8,12 +8,12 @@ var myfunction = function() {
 
     
 /* MAIN MENU */
-    $('#menuTop').addClass('collapse navbar-collapse navbar-left');
+    /*$('#menuTop').addClass('collapse navbar-collapse navbar-left');
     $('#menuTop ul li ul').parent().parent().addClass('nav navbar-nav');
     $('#menuTop ul li ul').parent().addClass('dropdown');
     $('#menuTop ul li ul').addClass('dropdown-menu');
     $('#menuTop ul li ul').parent().find('a:first').addClass('dropdown-toggle').attr({ 'data-toggle':'dropdown','aria-haspopup':'true','aria-expanded':'false' });
-
+*/
 /* BUTTONS */
     $('button, #prev.prevtab, #next.nexttab').addClass('btn');
     $('.submit, input[type=submit]').not('p.submit').addClass('btn btn-primary');
