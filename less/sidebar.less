@@ -1,4 +1,5 @@
 .sidebar {
+	background-color: lighten(@grey, 35%);
 	padding-top:20px;
 	.block {
 		margin: auto -15px;
@@ -15,7 +16,10 @@
 		padding:0;
 		li {
 			&:hover {
-				background-color: lighten(@grey, 35%);
+				background-color: lighten(@grey, 30%);
+			}
+			&.active {
+				//background-color: red;
 			}
 		}
 		a {
@@ -32,6 +36,25 @@
 				border-color: @blue;
 				text-decoration: none;
 				color: darken(@menucolor,20%);
+			}
+		}
+	}
+	.menu {
+		#menuTop > ul {
+			margin-bottom: 0;
+			ul {
+				display: none;
+			}
+			li.open {
+				ul {
+					display:block;
+					li {
+						margin-left: 20px;
+						a {
+							border: 0;
+						}
+					}
+				}
 			}
 		}
 	}

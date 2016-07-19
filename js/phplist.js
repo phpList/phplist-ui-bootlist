@@ -41,6 +41,8 @@ $(document).ready(function() {
 		$(this).next("div.content").toggle("slow");
 		});
 	});
+    // Set active link
+    $('.sidebar li.active').parents('li').addClass('active open');
 	
 /*    // open/close div global help    
         $("#globalhelp").click(function(){        
@@ -111,5 +113,4 @@ $(document).ready(function() {
     }
 
 */
-
 });
