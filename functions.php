@@ -1,10 +1,9 @@
 <?php
-/**
- * @Todo: move this to core.
- */
+/* replace topmenu() function */
 
 function _topMenu()
 {
+    if ( !isset($_GET['page'] ) ) { $_GET['page'] = ''; }
     $current_page = htmlentities($_GET['page']);
     if (empty($_SESSION['logindetails'])) {
         return '';
@@ -42,17 +41,33 @@ function _topMenu()
         }
 
         $thismenu = '';
+
         foreach ($categoryDetails['menulinks'] as $page) {
-            $title = $GLOBALS['I18N']->pageTitle($page);
-            $active = '';
-            if ($page == $current_page) {
-                $active = ' class="active"';
+            if (!is_array($page)) {
+                $title = $GLOBALS['I18N']->pageTitle($page);
+                $active = '';
+                if ($page == $current_page) {
+                    $active = ' class="active"';
+                }
+                $link = PageLink2($page, $title, '', true);
+                if ($link) {
+                    $thismenu .= '<li' . $active . '>' . $link . '</li>';
+                }
             }
-            $link = PageLink2($page, $title, '', true);
-            if ($link) {
-                $thismenu .= '<li' . $active . '>' . $link . '</li>';
+            else {
+                $sub = $page;
+                $subtitle = key($page);
+                $title = $GLOBALS['I18N']->pageTitle($subtitle);
+                $active = '';
+                if ($subtitle == $current_page || in_array($current_page, $sub[$subtitle])) {
+                    $active = ' class="active"';
+                }
+                $link = PageLink2($subtitle, $title, '', true);
+                if ($link) {
+                    $thismenu .= '<li' . $active . '>' . $link . '</li>';
+                }
             }
-        }
+        }             
         if (!empty($thismenu)) {
             $thismenu = '<ul>' . $thismenu . '</ul>';
         }

@@ -1,22 +1,31 @@
 var myfunction = function() {
     /* fix elements using .hidden class */
     $("#resumequeue").hide(); 
-    $("#resumequeue").removeClass('hidden'); 
-    
+    $("#resumequeue").removeClass('hidden');
+
+    /* fix elements with bad inline styles */
+    $('body.list .rows .listingelement div').css({'width':'auto','float':'none'});
+    $('body.list .rows .listingelement span.view').css({ 'width':'auto','float':'none','margin-left':'10px'});
+
 /* STRUCTURE */
-    $('.content, body.configure fieldset').not('.accordion .content, .content table .content,body.dbcheck table').addClass('well');
+    $('.content, body.configure fieldset, body.adminattributes table.attributeSet,body.adminattributes table.attributeNew,table.spageeditListing,body.reconcileusers #content form,body.export #content form').not('.accordion .content, .content table .content,body.dbcheck table, body.adminattributes .content').addClass('well');
+    $('.fleft').addClass('pull-left');
 
     
-/* MAIN MENU */
+/* MAIN MENU (horizontal style) */
     /*$('#menuTop').addClass('collapse navbar-collapse navbar-left');
     $('#menuTop ul li ul').parent().parent().addClass('nav navbar-nav');
     $('#menuTop ul li ul').parent().addClass('dropdown');
     $('#menuTop ul li ul').addClass('dropdown-menu');
     $('#menuTop ul li ul').parent().find('a:first').addClass('dropdown-toggle').attr({ 'data-toggle':'dropdown','aria-haspopup':'true','aria-expanded':'false' });
 */
+
+/* languageswitcher */
+    $('#languageswitcher select').addClass('selectpicker').attr({ 'data-style':'btn-primary' });
+
 /* BUTTONS */
     $('button, #prev.prevtab, #next.nexttab').addClass('btn');
-    $('.submit, input[type=submit]').not('p.submit').addClass('btn btn-primary');
+    $('.submit, input[type=submit]').not('p.submit,body.import2 div.submit').addClass('btn btn-primary');
     $('button[type=submit]').addClass('btn-primary');
     $('.button').addClass('btn btn-default');
     $('table .button').addClass('btn-xs');
@@ -28,6 +37,7 @@ var myfunction = function() {
     $('.btn-primary.btn-default').removeClass('btn-default');
     $('a.confirm').not('.dropButton a.confirm').addClass('btn btn-default');
     $('a.resourceslink').addClass('btn btn-link');
+
 
 
 /* MINITABS, WEBBLERTABS, dropButton and FILTERDIVS */
@@ -48,11 +58,12 @@ var myfunction = function() {
       $("#dropdown-tabs .btn:first-child").html($(this).parent().find('.current').text()+' &nbsp; <span class="caret"></span>');
       $("#dropdown-tabs .btn:first-child").val($(this).parent().find('.current').text());
    });
-    $('.filterdiv').addClass('navbar navbar-default navbar-form navbar-right');
-    $('.filterdiv, .minitabs,#webblertabs').after('<div class="clearfix" />');
+    $('.filterdiv,.usersFind').addClass('navbar navbar-default navbar-form');
+    $('.filterdiv,.usersFind,.minitabs,#webblertabs').after('<div class="clearfix" />');
+    $('.filter label[for=sortby]').before('<div class="clearfix"></div>');
     
 /* FORMS */
-    $('input[type=text],input[type=password],textarea,select').addClass('form-control');
+    $('input[type=text],input[type=password],textarea,select,input[type=email],input[type=phone],input[type=file]').addClass('form-control');
     $('#login-form td').addClass('input-group input-group-lg');
     $('div.login').addClass('input-group input-group-sm');
     $('div.login p').contents().unwrap().wrap('<span id=helpBlock class=help-block/>');
@@ -73,6 +84,12 @@ var myfunction = function() {
         if(!$(this).next('label').length) $(this).after('<label for="'+radioid+'"> </label>');
     });
     $('body.configure div.shade1, body.configure div.shade2').addClass('form-group');
+    $('div, label').removeClass('label');
+    $('#sendTest br').remove();
+    $('body.editattributes form').addClass('form-inline');
+    $('.accordion label,#sendmessageform .well label').not('.checkbox label,.radio label').before('<div class="clearfix"></div>');
+    $('label[for=htmlchoice], label[for=emaildoubleentry]').after('<div class="clearfix"></div>');
+
 
 /* PROGRESSBAR */
     $('#progressbar').wrap('<div class="progress"/>').addClass('progress-bar progress-bar-striped active').attr({"role":"progressbar","aria-valuemin":"0"});
@@ -110,6 +127,7 @@ var myfunction = function() {
 
 /* #sendtabs */
     $('.sendtabs_container').addClass('text-center');
+    $('#sendtabs ul').addClass('list-unstyled');
     $('#sendtabs ul li').css({'height':'100px'});
     $('#sendtabs ul li a').not('li.current a').addClass('btn btn-default');
     $('#sendtabs ul li.current a').addClass('btn btn-danger');
@@ -123,6 +141,9 @@ var myfunction = function() {
     $('.inactivelist').addClass('small text-danger');
     $('.activelist').addClass('small text-primary');
     $('.dbcheck .listingelement h2').wrapInner('<small />');
+    $('.configcontent').wrapInner('<code />');
+    $('.missing').addClass('text-danger');
+    $('body.bouncerules p.information').addClass('well text-right');
 
 /* icons */
     /* dashboard */
@@ -149,6 +170,7 @@ var myfunction = function() {
     $('.setup span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-wrench"/>');
     $('.dbcheck span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tasks"/>');
     $('.view-log span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>');
+    $('.dashboard .panel').addClass('col-md-4');
     /*buttons*/
     $('span.listingname a').addClass('btn btn-xs btn-info');
     $('span.listingelement a, div.configEdit a').not('.home span.listingelement a,a[name]').addClass('btn btn-xs btn-warning');    
@@ -165,10 +187,16 @@ var myfunction = function() {
     $('#prev.prevtab').replaceWith('<span class="pull-left prevtab btn btn-xs btn-danger glyphicon glyphicon-chevron-left" id="#prev" />');
     $('#next.nexttab').replaceWith('<span class="pull-right nexttab btn btn-xs btn-danger glyphicon glyphicon-chevron-right" id="#next" />');
     $('.step-nav').first().addClass('pull-right').css('margin-top','-40px');
-    $('.step-nav .back').html('<span class="glyphicon glyphicon-hand-left" />');
-    $('.step-nav .next').html('<span class="glyphicon glyphicon-hand-right" />');
+    $('.step-nav .back').html('<span class="glyphicon glyphicon-arrow-left" />');
+    $('.step-nav .next').html('<span class="glyphicon glyphicon-arrow-right" />');
+    $('.import #wrapp ul, .system #wrapp ul.dashboard_button, .usermgt #wrapp ul').addClass('nav nav-pills nav-stacked');
+    $('.import #wrapp ul li a, .system #wrapp ul li a,.usermgt #wrapp ul li a').addClass('glyphicon glyphicon-menu-right');
+    $('#wrapp .nav.nav-pills li ul').addClass('small');
+    /*yes/no icons */
+    $('span.yes').addClass('glyphicon glyphicon-ok text-success').empty();
+    $('span.no').addClass('glyphicon glyphicon-ban-circle text-danger').empty();
 
-/* modals */
+   /* modals */
     $('.opendialog').each(function(k,val){
         var value = $(this).attr('href');
         $(this).attr({ 'data-target':'#mymodal'+k, 'data-toggle':'modal', 'href':value + '&embed=yes&omitall=yes'});
@@ -179,10 +207,27 @@ var myfunction = function() {
     $('.content').not('.listingelement .content').addClass('table-responsive');
     $('table').attr('border',null);
     $('table').not('.home table, table.loginPassUpdate').addClass('table');
-    $('.listingelement table,body.dbcheck table').addClass('table-condensed');
-    $('table.listing, table.templateForm, table.importadmin').not('.home table.listing').addClass('table-striped');
+    $('.listingelement table,body.dbcheck table, table.spageeditListing').addClass('table-condensed');
+    $('table.spageeditListing tr:first-child,table.attributeSet tr:first-child').addClass('info');
+    $('table.listing, table.templateForm, table.importadmin, table.import1,table.importcsvMain,table.userAdd').not('.home table.listing').addClass('table-striped');
     $('table.messageView, body.about table.about').addClass('table-bordered');
     $('table.setupMain').addClass('table-hover');
+    $('table.spageeditListing').wrap('table-responsive');
+    $('table').each(function(){
+	var bgcolor = $(this).attr('bgcolor');
+	$(this).css({'background-color':bgcolor});
+    });
+    $('.table .table').removeClass('table');
+
+    
+/* news widget */
+    $('#newsfeed ul').addClass('well list-unstyled');
+
+/* tooltip */
+    $(function () {
+  	$('[data-toggle="tooltip"]').tooltip();
+    });
+    $('a.btn-warning').attr({'data-toggle':'tooltip'});
 
 /* show page after loading */
     $('body').removeClass('invisible');
@@ -195,11 +240,16 @@ $( window ).load(function(){
 $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
 
 
+/**************************** INCLUDE JS AND CSS FILES RELATED ***********************/
 
 /******** RESPONSIVE TABS *******/
-$.getScript("ui/phplist-ui-bootstrap/js/bootstrap-tabcollapse.js", function(){
-    $('.tabbed').tabCollapse();
-});
+$.getScript("ui/phplist-ui-bootstrap-ph/js/bootstrap-tabcollapse.js", function(){ $('.tabbed').tabCollapse(); });
+
+/******** SELECT TO DROPDOWN *******/
+$.getScript("ui/phplist-ui-bootstrap-ph/js/bootstrap-select.min.js", function(){ $('.selectpicker').selectpicker(); });
+$('<link/>', { rel: 'stylesheet', type: 'text/css',href: 'ui/phplist-ui-bootstrap-ph/css/bootstrap-select.min.css'}).appendTo('head');
+
+/**************************** ///////////////////////////// ****************************/
 
 
 

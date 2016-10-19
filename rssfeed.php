@@ -42,7 +42,7 @@ if (!isset($_GET['page']) || (isset($_GET['page']) && in_array($_GET['page'], ar
     if (!empty($news)) {
         print '<div id="newsfeed" class="menutableright block">';
         print '
-       <h3>'.s('phpList community news').'</h3>
+       <h3><span class="glyphicon glyphicon-bullhorn text-danger"></span> '.s('phpList community news').'</h3>
         <ul>'.$news.'</ul>';
         print '</div>';
     }

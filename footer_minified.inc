@@ -1,18 +1,18 @@
+            <div class="clear"></div>
+            <?php include dirname(__FILE__).'/rssfeed.php'; ?>
 	    </div>
-    </div> <!-- end #content -->	
-	<div class="clear"></div>
 
-</div> <!-- end #container -->
-
-<div id="footer">
-    <div class="container">
-            <a target="_blank" href="https://phplist.com">&copy; phpList ltd.</a> - v<?php echo VERSION?>
-        <div class="right">
-            <a target="_blank" href="https://resources.phplist.com">Resources</a>&nbsp; |  
-            <a target="_blank" href="http://twitter.com/phplist">twitter</a>
+        <div id="footer">
+            <div class="version pull-left">
+                <a target="_blank" href="https://phplist.com">&copy; phpList ltd.</a> - v<?php echo VERSION?>               
+            </div>
+            <div class="ressources pull-right">
+                <a target="_blank" href="https://resources.phplist.com">Resources</a>&nbsp; |  
+                <a target="_blank" href="http://twitter.com/phplist">twitter</a>
+            </div>
         </div>
-    </div>
-</div>
+    </div> <!-- end #content -->
+</div> <!-- end #container -->
 
 
 <script type="text/javascript" src="ui/phplist-ui-bootstrap/js/jquery-1.12.1.min.js"></script>
