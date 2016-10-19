@@ -10,22 +10,24 @@ TABLE OF CONTENT
 
 # header
 
+# news widget
+
 # Special pages
     ## login
     ## dashboard
     ## send
-
 # tabs
 # modals
 # forms
+# plugins
 
 *******************************/
 
 
 /* # generals *****************/
 .content-wrapper {
-    background-color: @greylight;
-    float:left;
+	background-color: #fff;
+	float:left;
 }
 #content {
     background-color: #fff;
@@ -47,7 +49,12 @@ span.glyphicon{margin:5px}
 .btn.disabled{opacity:0.2}
 .tab-content ul.list-unstyled li{margin-bottom:15px}
 .form-control{max-width: 780px !important}
-
+body.members,body.list,body.mviews,body.templates,body.eventlog,body.spage{
+	.table-striped > tbody > tr:nth-of-type(2n+1) { border-bottom:2px solid #999}
+}
+body.users .table-striped > tbody > tr:nth-of-type(2n) { border-bottom:2px solid #999}
+.progress{margin-bottom:10px;margin-top:30px}
+table.well tr td{padding:10px 20px;padding-right:20px}
 
 /* ## phpList */
 #container{margin-bottom:50px}
@@ -67,6 +74,7 @@ span.nexttab, span.prevtab{margin:35px 0 0 0}
 .panel .step-nav a:hover{background-color:transparent}
 .helpdialog{margin-right:5px}
 #exportdates{margin:15px 0 30px}
+.tabbed{margin-top:15px}
 
 
 
@@ -94,14 +102,50 @@ h4.page-header:first-letter{ text-transform:uppercase }
     #logged{right:80px; position:absolute; top:15px;margin-top:0} 
 }
 
-
-
+/* # news widget */
+#newsfeed {
+	li{
+		padding-left:10px;
+		border-top:1px dotted #CCC;
+		font-size:13px;
+		margin-bottom:5px;
+		padding-top:5px;
+		color:@red;
+	}
+	li:first-child{
+		border-top:0;
+	}
+	li a{ 
+		font-size:18px;
+		color:@black;
+	}
+}
 /* # special pages ************/
 
 /* ## login */
-body.login form{margin-top:40px}
-body.login form input{max-width:300px}
-body.login form span.general{margin-top:20px;display:block}
+body.login {
+	#container, #content{
+		background-color: #FFF;
+	} 
+	background:none;
+	form{ 
+		margin-top:40px; 
+		input{
+			max-width:300px
+		}
+		span.general{
+			margin-top:20px;display:block
+		}
+		.btn-primary{
+			margin-top:30px;
+		}
+	}
+	.page-header {
+		display: none;
+	}
+	#newsfeed h3{font-size:22px}
+}
+
 
 /* ## dashboard */
 body.home table.listing *{white-space:normal}
@@ -110,20 +154,86 @@ body.home td.listingelement{padding-right:20px;padding-left:20px}
 body.home .btn.btn-info{font-size:14px;display:block;padding:15px 5px;font-family:"genlight";color:rgb(255, 255, 255);}
 body.home .btn.btn-info span{display:block;font-size:40px;margin-right:0}
 body.home .custom-attribute .btn.btn-info span{font-size:25px}
-body.home .custom-attribute td.listingname{padding-left:40px}
+body.home .custom-attribute td.listingname{padding-left:40px} 
+body.dashboard h2 span.glyphicon {vertical-align:bottom}
+#newsfeed h3 span.glyphicon {vertical-align:middle}
+ 
+/* ## subscribers import Emails */
+body.import1 table.import1 tr td:first-child,
+body.import2 table.importcsvMain tr td:first-child,
+body.importadmin table.table tr td:first-child{
+	width:15%;
+	.required{
+		white-space: nowrap
+	}           
+}
 
 /* ## send */
 body.send #sendtabs .btn {margin:0px;padding:5px}
+
 #sendtabs ul li a{width:100px}
 .field{ margin-bottom:20px}
 #schedulecontent .field label[for="requeueuntil"]{display:block;margin-top:10px}
 
+/* ## attributes */
+body.attributes .form-control{width:auto}
+
 /* ## settings (configure) */
 body.configure fieldset legend{border:0}
 
+/* ## add admin */
+#privileges label{margin-right:15px}
+#privileges .checkbox label{margin-right:0px}
+body.admin .radio.radio-inline{margin-left:15px}
+body.adminattributes table.attributeSet td,
+body.adminattributes table.attributeNew td{width:1%}
+
+
+/* ## subscribe page */
+form.spageEdit {
+	#collapse2 h4 {
+		font-weight: 700;
+		padding: 10px 0;
+	}
+	#collapse5 .clearfix {
+		margin-top:15px;
+	}
+	#collapse4 .radio {
+		padding: 0;
+		margin: 0 0 0 10px;
+	}
+	table.spageeditListing, table.attributeSet {
+		max-width: 768px;
+		tr.info{
+			font-weight:700;
+			td{ 
+				padding:7px 0 7px 10px;
+			}
+		}
+		td {
+			width:1%;
+			padding: 10px 20px 0;
+			.form-control {
+				max-width: 120px !important;
+			}
+		}
+	}
+}
+
+/* fix border-radius on /lists/admin/?page=eventlog */
+body.eventlog .btn-group .dropdown-toggle:not(:first-child){
+	border-top-left-radius:5px !important;
+	border-bottom-left-radius:5px !important;
+}
+
+/* fix bug in view campaing table */
+.messageView table {
+	background-color: transparent !important;
+}
+
 /* # tabs ************/
 ul.nav-tabs{padding:0}
-div.tab-content {padding:20px;border:1px solid #CCC;background-color:#FFF}
+div.tab-content {padding:20px;border:1px solid #CCC;background-color:#FFF;margin-bottom:15px}
 .nav.nav-tabs .active a,.nav.nav-tabs .active a:focus{background-color:#f5f5f5;outline:none}
 
 
@@ -134,10 +244,10 @@ div.tab-content {padding:20px;border:1px solid #CCC;background-color:#FFF}
 
 
 /* # forms ************/
-.checkbox { padding:5px;margin:0 5px}
+.checkbox { margin:0 5px}
 .checkbox label { display:inline-block; vertical-align:middle; position:relative; padding:0px;margin-left:15px}
 .checkbox label::before { content:""; display:inline-block; position:absolute; width:17px; height:17px; left:0; margin-left:-20px; border:1px solid #bbb; border-radius:3px; background-color:#fff; -webkit-transition:border 0.15s ease-in-out, color 0.15s ease-in-out; -o-transition:border 0.15s ease-in-out, color 0.15s ease-in-out; transition:border 0.15s ease-in-out, color 0.15s ease-in-out}
-.checkbox label::after { display:inline-block; position:absolute; width:16px; height:16px; left:0; top:0; margin-left:-20px; padding-left:3px; padding-top:1px; font-size:11px; color:#FFF;background-color:#31b0d5}
+.checkbox label::after { display:inline-block; position:absolute; width:16px; height:16px; left:0; top:0; margin-left:-20px; padding-left:3px; padding-top:1px; font-size:11px; color:#FFF;background-color:@brand-success}
 .checkbox input[type="checkbox"], .checkbox input[type="radio"] { opacity:0; z-index:1}
 .checkbox input[type="checkbox"]:focus + label::before, .checkbox input[type="radio"]:focus + label::before { outline:thin dotted; outline:5px auto -webkit-focus-ring-color; outline-offset:-2px}
 .checkbox input[type="checkbox"]:checked + label::after, .checkbox input[type="radio"]:checked + label::after { font-family:"Glyphicons Halflings"; content:"\e013"}
@@ -145,23 +255,25 @@ div.tab-content {padding:20px;border:1px solid #CCC;background-color:#FFF}
 .checkbox input[type="checkbox"]:disabled + label, .checkbox input[type="radio"]:disabled + label { opacity:0.65}
 .checkbox input[type="checkbox"]:disabled + label::before, .checkbox input[type="radio"]:disabled + label::before { background-color:#eeeeee; cursor:not-allowed}
 .checkbox.checkbox-circle label::before { border-radius:50%}
-.checkbox.checkbox-inline {margin-top:0}
-.radio { padding:5px;margin:0 3px }
+.checkbox.checkbox-inline {margin-top:0;padding:0 5px}
+.radio { margin:0 3px }
 .radio label { display:inline-block; vertical-align:middle; position:relative; padding:0px;margin-left:15px}
 .radio label::before { content:""; display:inline-block; position:absolute; width:17px; height:17px; left:0; margin-left:-20px; border:1px solid #bbb; border-radius:50%; background-color:#fff; -webkit-transition:border 0.15s ease-in-out; -o-transition:border 0.15s ease-in-out; transition:border 0.15s ease-in-out}
-.radio label::after { display:inline-block; position:absolute; content:" "; width:11px; height:11px; left:3px; top:3px; margin-left:-20px; border-radius:50%; background-color:#31b0d5; -webkit-transform:scale(0, 0); -ms-transform:scale(0, 0); -o-transform:scale(0, 0); transform:scale(0, 0); -webkit-transition:-webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); -moz-transition:-moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); -o-transition:-o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); transition:transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33)}
+.radio label::after { display:inline-block; position:absolute; content:" "; width:11px; height:11px; left:3px; top:3px; margin-left:-20px; border-radius:50%; background-color:@brand-success; -webkit-transform:scale(0, 0); -ms-transform:scale(0, 0); -o-transform:scale(0, 0); transform:scale(0, 0); -webkit-transition:-webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); -moz-transition:-moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); -o-transition:-o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); transition:transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33)}
 .radio input[type="radio"] { opacity:0; z-index:1}
 .radio input[type="radio"]:focus + label::before { outline:thin dotted; outline:5px auto -webkit-focus-ring-color; outline-offset:-2px}
 .radio input[type="radio"]:checked + label::after { -webkit-transform:scale(1, 1); -ms-transform:scale(1, 1); -o-transform:scale(1, 1); transform:scale(1, 1)}
 .radio input[type="radio"]:disabled + label { opacity:0.65}
 .radio input[type="radio"]:disabled + label::before { cursor:not-allowed}
-.radio.radio-inline { margin-top:0}
+.radio.radio-inline { margin-top:0;padding: 0 5px}
 input[type="checkbox"].styled:checked + label:after, input[type="radio"].styled:checked + label:after { font-family:'Glyphicons Halflings'; content:"\e013"}
 input[type="checkbox"] .styled:checked + label::before, input[type="radio"] .styled:checked + label::before { color:#fff}
 input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styled:checked + label::after { color:#fff}
 select.form-control{display:inline-block;width:auto}
 
-
+/* # plugins */
+div.inline{margin-right:20px;padding:5px 0;display:inline-block !important; }
+div.inline .checkbox,div.inline .radio{margin-right:-5px}
 
 /*3d88b6
 /* End of /lists/admin/ui/phplist-ui-bootstrap/css/style.css */

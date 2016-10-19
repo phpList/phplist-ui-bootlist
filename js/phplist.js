@@ -1,7 +1,3 @@
-
-var menuArrowsrc = 'ui/dressprow/images/menuarrow.png';
-var menuArrowActivesrc = 'ui/dressprow/images/menuarrow_active.png';
-
 /* JS function to handle media queries */
 window.matchMedia = window.matchMedia || (function(doc, undefined){
   
@@ -43,74 +39,18 @@ $(document).ready(function() {
 	});
     // Set active link
     $('.sidebar li.active').parents('li').addClass('active open');
-	
-/*    // open/close div global help    
-        $("#globalhelp").click(function(){        
-//    	    if(matchMedia('only screen and (max-width: 767px)').matches){ $("#menuTop").hide(); }
-     	    $("#globalhelp .content").toggle();
-	});
-	
 
-    // dropdown menu 1
-    $('#webblertabs').each(function(){
-        $(this).find('ul li').hide();
-        $(this).find('ul li.current').show();
-    });
-    $('#webblertabs').hover(function(){
-        $(this).find('ul li').slideDown();
-    },
-    function(){
-        $(this).find('ul li').hide();
-        $(this).find('ul li.current').show();
-    });
-    
-    // dropdown menu 2
-    $('.dropButton').hover(function(){
-        $(this).find('.submenu').slideDown();
-    },
-    function(){
-        $(this).find('.submenu').hide();
+    // Sidebar
+    $('.navbar-toggle').click(function() {
+        if ($('#sidebar.sidebar-open').length) {
+            $('#sidebar').removeClass('sidebar-open');
+        } else {
+            $('#sidebar').addClass('sidebar-open');
+        }
+        
     });
 
-        // styling list tab in send page
-	$('body.send').find('.ui-tabs-panel li').each(function(){
-	  var li = $(this);
-	  listify(li);
-	});
-    listify_finish_tab('.campaignTracking');
-    listify_finish_tab('.resetStatistics');
-    listify_finish_tab('.isTestCampaign');
-
-    function listify_finish_tab(selector)
-    {
-        var cbx = $(selector).find('input[type=checkbox]');
-        var cbx_name = $(cbx).attr('name');
-        var label = $(selector).find('label');
-        $(cbx).attr('id', cbx_name);
-        $(label).attr('for', cbx_name);
-    }
-
-    function listify(selector) 
-    {
-        $(selector).each(function(index, val) {
-            // Give all checkboxes the same ID as the name attribute
-            var cbx_name = $(this).find('input[type=checkbox]').attr('name');
-            $(this).find('input[type=checkbox]').attr('id', cbx_name);
-
-            // Wrap the contents of the <li> with a <label>
-            var content = $(this).html().replace('(<span', '<span');
-            content = content.replace('span>)','span><small>');
-            content = content + "</small>";
-            $(this).html('<label for="' + cbx_name + '">' + content + '</label>');
-
-            // Pop the checkbox out of the label (for CSS selecting reasons)
-            var cbx = $(this).find('input[type=checkbox]');
-            $(this).prepend(cbx);
-        });
-        $('li input[type=checkbox]').hide();
-
-
-    }
-
-*/
+    /* Misc */
+    var min_height = ($("#container").height()+15) + "px";
+    $('#content').css('min-height', min_height);
 });

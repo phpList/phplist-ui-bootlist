@@ -1,3 +1,20 @@
+.navbar-default {
+	height:auto !important;
+	.form-control {
+		margin-bottom:0;
+	}
+	.navbar-nav {
+		margin:0;
+		li {
+			float:left;
+			a{
+				padding-top:15px;
+				padding-bottom:15px;
+			}
+		}
+	}
+}    		
+
 .navbar-inverse {
 	.navbar-nav {
 	    li {
@@ -16,4 +33,41 @@
 	    	}
 	    }
 	}	
+}
+#navigation {
+	height: 61px;
+}
+.navbar-toggle {
+    display: block;
+    border: 0;
+    &:hover {
+    	background: transparent;
+    }
+}
+.navbar-brand {
+	width:200px;
+	& > img {
+		max-height: 50px;	
+		float: left;
+	}
+	.brand-name {
+	    color: #fff;
+	    font-size: 24px;
+	    line-height: 2;
+	    margin-left: 10px;
+	}
+}
+#container #content #wrapp .nav.nav-pills{
+	height:auto;
+}
+#container #content #wrapp .nav.nav-pills{ 
+	a{ font-family:inherit; }
+	a:before{ font-family:'Glyphicons Halflings';padding-right:10px}
+}
+.nav.nav-pills > li{
+	padding-left:20px;
+	a { 
+		padding-left:0; 
+		display:inline-block;
+	}
 }
