@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://www.phplist.com" target="_blank" class="navbar-brand"><img src="<ui/phplist-ui-bootstrap/logo.svg" alt="phpList, email newsletter manager, logo" title="phpList, the world's most popular Open Source newsletter manager" /> <span class="brand-name">phpList</span></a>
+            <a href="http://www.phplist.com" target="_blank" class="navbar-brand"><img src="ui/phplist-ui-bootstrap/logo.svg" alt="phpList, email newsletter manager, logo" title="phpList, the world's most popular Open Source newsletter manager" /> <span class="brand-name">phpList</span></a>
         </div>
         <div id="logged" class="navbar-right">
             <?php
