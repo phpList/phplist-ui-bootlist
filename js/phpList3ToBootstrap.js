@@ -243,11 +243,11 @@ $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
 /**************************** INCLUDE JS AND CSS FILES RELATED ***********************/
 
 /******** RESPONSIVE TABS *******/
-$.getScript("ui/phplist-ui-bootstrap-ph/js/bootstrap-tabcollapse.js", function(){ $('.tabbed').tabCollapse(); });
+$.getScript("ui/phplist-ui-bootstrap/js/bootstrap-tabcollapse.js", function(){ $('.tabbed').tabCollapse(); });
 
 /******** SELECT TO DROPDOWN *******/
-$.getScript("ui/phplist-ui-bootstrap-ph/js/bootstrap-select.min.js", function(){ $('.selectpicker').selectpicker(); });
-$('<link/>', { rel: 'stylesheet', type: 'text/css',href: 'ui/phplist-ui-bootstrap-ph/css/bootstrap-select.min.css'}).appendTo('head');
+$.getScript("ui/phplist-ui-bootstrap/js/bootstrap-select.min.js", function(){ $('.selectpicker').selectpicker(); });
+$('<link/>', { rel: 'stylesheet', type: 'text/css',href: 'ui/phplist-ui-bootstrap/css/bootstrap-select.min.css'}).appendTo('head');
 
 /**************************** ///////////////////////////// ****************************/
 
