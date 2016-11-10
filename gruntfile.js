@@ -2,6 +2,26 @@ module.exports = function(grunt) {
   require('jit-grunt')(grunt);
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    	 concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: ['js/phpList3ToBootstrap.js','bootstrap/dist/js/bootstrap.min.js','js/jcarousellite_1.0.1.min.js','js/phplist.js'],
+        dest: 'js/dist/<%= pkg.name %>.js'
+      }
+    },
+    uglify: {
+      options: {
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+      },
+      dist: {
+        files: {
+          'js/dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+        }
+      }
+    },
     less: {
       development: {
         options: {
@@ -24,6 +44,7 @@ module.exports = function(grunt) {
       }
     }
   });
-
-  grunt.registerTask('default', ['less', 'watch']);
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.registerTask('default', ['less', 'watch','concat','uglify']);
 };
