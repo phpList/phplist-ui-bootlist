@@ -50,6 +50,7 @@ var myfunction = function() {
     $('.dropButton .submenu').wrap('<ul />');
     $('.dropButton .submenu a').each(function(){$(this).wrapAll('<li />');});
     $('.dropButton .submenu li').unwrap();
+if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('#dropdown-tabs').addClass('btn-group');
     $('#dropdown-tabs ul').addClass('dropdown-menu');
     $('#dropdown-tabs ul').before('<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>');
@@ -58,6 +59,7 @@ var myfunction = function() {
       $("#dropdown-tabs .btn:first-child").html($(this).parent().find('.current').text()+' &nbsp; <span class="caret"></span>');
       $("#dropdown-tabs .btn:first-child").val($(this).parent().find('.current').text());
    });
+}
     $('.filterdiv,.usersFind').addClass('navbar navbar-default navbar-form');
     $('.filterdiv,.usersFind,.minitabs,#webblertabs').after('<div class="clearfix" />');
     $('.filter label[for=sortby]').before('<div class="clearfix"></div>');
