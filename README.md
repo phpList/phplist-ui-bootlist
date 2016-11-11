@@ -12,6 +12,14 @@ Building the project requires nodejs & npm. See https://nodejs.org for setup.
 ``` 
 sudo npm install -g grunt-cli
 ```
+### Grunt plugins
+To minify js we use this grunt plugins:
+
+https://github.com/gruntjs/grunt-contrib-concat
+
+https://github.com/gruntjs/grunt-contrib-uglify
+
+
 ### Install project dependencies
 ``` 
 cd THEME_DIR # Replace THEME_DIR by theme path.
