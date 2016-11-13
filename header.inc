@@ -43,7 +43,6 @@
     <div id="sidebar" class="sidebar col-md-2">
         <?php echo $firstInstallButton?>
         <div id="context-menu" class="menu block">
-            <h3>Navigation</h3>
             <?php print _topMenu(); ?>
         </div>
         <div id="recent" class="menu visited block">
