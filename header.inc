@@ -42,9 +42,6 @@
 
     <div id="sidebar" class="sidebar col-md-2">
         <?php echo $firstInstallButton?>
-        <div id="language">
-            <?php print $languageswitcher; ?>
-        </div>
         <div id="context-menu" class="menu block">
             <h3>Navigation</h3>
             <?php print _topMenu(); ?>
@@ -52,6 +49,10 @@
         <div id="recent" class="menu visited block">
             <?php print recentlyVisited(); ?>
         </div> 
+        <br />
+        <div id="language">
+            <?php print $languageswitcher; ?>
+        </div>
     </div>
     <!-- end #sidebar -->
     <div id="content" class="col-md-9">
