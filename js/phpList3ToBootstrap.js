@@ -191,8 +191,8 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.step-nav').first().addClass('pull-right').css('margin-top','-40px');
     $('.step-nav .back').html('<span class="glyphicon glyphicon-arrow-left" />');
     $('.step-nav .next').html('<span class="glyphicon glyphicon-arrow-right" />');
-    $('.import #wrapp ul, .system #wrapp ul.dashboard_button, .usermgt #wrapp ul').addClass('nav nav-pills nav-stacked');
-    $('.import #wrapp ul li a, .system #wrapp ul li a,.usermgt #wrapp ul li a').addClass('glyphicon glyphicon-menu-right');
+    $('.import #wrapp ul, .system #wrapp ul.dashboard_button, .usermgt #wrapp ul, ul.navigation_list').addClass('nav nav-pills nav-stacked');
+    $('.import #wrapp ul li a, .system #wrapp ul li a,.usermgt #wrapp ul li a, ul.navigation_list li a').addClass('glyphicon glyphicon-menu-right');
     $('#wrapp .nav.nav-pills li ul').addClass('small');
     /*yes/no icons */
     $('span.yes').addClass('glyphicon glyphicon-ok text-success').empty();
