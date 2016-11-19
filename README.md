@@ -1,9 +1,13 @@
 # phplist-ui-bootstrap
-phpList 3 theme with bootstrap 3
-
+A bootstrap-based theme for [phpList 3](https://github.com/phpList/phplist3/)
 
 Bootstrap class names and extra html needed, inserted by jQuery with the script:
-phplist-ui-bootstrap/js/phpList3ToBootstrap.js 
+`phplist-ui-bootstrap/js/phpList3ToBootstrap.js`
+
+## Issues
+
+* [https://mantis.phplist.org/search.php?project_id=2&category=Theme%20-%20bootstrap&sticky_issues=off&sortby=last_updated&dir=DESC&hide_status_id=-2&match_type=0](View issues) on Mantis issue tracker
+* [https://mantis.phplist.org/bug_report_page.php](Report issues) on Mantis issue tracker (use category //Theme - bootstrap//)
 
 ## Getting started
 Building the project requires nodejs & npm. See https://nodejs.org for setup.
