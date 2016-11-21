@@ -146,6 +146,9 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.configcontent').wrapInner('<code />');
     $('.missing').addClass('text-danger');
     $('body.bouncerules p.information').addClass('well text-right');
+    $('.memberCount').addClass('text-success');
+    $('.blacklistedCount').addClass('text-danger');
+    $('.unconfirmedCount').addClass('text-warning');
 
 /* icons */
     /* dashboard */
