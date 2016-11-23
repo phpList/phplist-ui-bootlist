@@ -177,6 +177,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.home .view-log span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>');
     $('.dashboard .panel').addClass('col-md-4');
     /*buttons*/
+    $('.home span.listingname a').addClass('btn btn-xs btn-info');
 	$('span.listingelement a, div.configEdit a').not('body.members a.listingelement, .home span.listingelement a,a[name]').addClass('btn btn-xs btn-warning');
     $('span.edit a, .edit-list a, .configEdit a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
     $('.send-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
