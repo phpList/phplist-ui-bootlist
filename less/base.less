@@ -13,12 +13,10 @@
 body {
 	font-family: 'genlight',"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 15px;
-	background-color:@sidebarcolor;
 	overflow-x:hidden;
 }
 
 #container {
-	width:100%;
 	margin-bottom:0;
 	.accordion{
 	 	.panel-body {
@@ -63,8 +61,9 @@ body {
 }
 
 #content {
-	//margin-top: -4px;
 	min-height:auto !important;
+	background:none;
+	padding-left:30px
 }
 div.panel {
     clear: both;
@@ -126,7 +125,6 @@ div.panel {
 }
 
 a#logout,a#login {
-	border: 1px solid #fff;
 	&:before {
 		content: "\e017";
 		font-family: 'Glyphicons Halflings';

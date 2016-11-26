@@ -84,25 +84,7 @@ span.nexttab, span.prevtab{margin:35px 0 0 0}
 
 h4.page-header{display:inline-block;width:100%;margin-top:20px;color:#222}
 h4.page-header:first-letter{ text-transform:uppercase }
-#logged{margin-right:0px;margin-top:20px;margin-bottom:20px} 
-#navigation{/*min-height: 71px;*/ margin-bottom:0;background-color: @menucolor;border:0;border-radius: 0}
-
-@media only screen and (min-width:768px){ 
-    #navigation #menuTop a.dropdown-toggle{padding-top:22px;padding-bottom:27px}    
-}
-@media only screen and (min-width:768px) and (max-width:991px) { 
-    #navigation .container{padding:0}
-    .navbar-collapse{padding:0}
-    #navigation #menuTop a.dropdown-toggle{padding-left:10px;padding-right:10px}
-}
-@media only screen and (max-width:991px){ 
-    .navbar-brand > img{width:150px}
-    #right-bar{margin-top:40px}
-}
-@media only screen and (max-width:767px){ 
-    .navbar-collapse{box-shadow:none;border-top:0;margin-top:10px;}
-    #logged{right:80px; position:absolute; top:15px;margin-top:0} 
-}
+#navigation{margin-bottom:0;background-color: @menucolor;border:0;border-radius: 0}
 
 /* # news widget */
 #newsfeed {
@@ -126,8 +108,12 @@ h4.page-header:first-letter{ text-transform:uppercase }
 
 /* ## login */
 body.login {
+	.navbar{ width:100% !important}
 	#container, #content{
 		background-color: #FFF;
+		margin-left:auto !important;
+		width:100% !important;
+		padding-left:0 !important
 	} 
 	background:none;
 	form{ 
@@ -146,6 +132,7 @@ body.login {
 		display: none;
 	}
 	#newsfeed h3{font-size:22px}
+	#globalhelp{margin-top:60px !important}
 }
 
 
