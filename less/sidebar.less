@@ -1,53 +1,50 @@
-/*
-@media (min-width: 768px)
-.navbar-toggle {
-    display: none;
-}
-*/
-
 .sidebar {
+	position:fixed;
+	padding:20px 0 40px;
+	top:60px;
 	display:none;
+	overflow:auto;
+	height:100%;
 	&.sidebar-open {
-		display: block!important;
-		overflow:auto;
+		display: block !important;
 	}
 	background-color: @sidebarcolor;
-	padding-top:20px;
-	position: absolute;
-	width: 200px;
-	top: 60px;
-	max-height: 100%;
-	overflow: hidden;
+	padding:20px 0;
 	z-index: 10;
-	#language{
-		margin-bottom:50px;
-		#languageswitcher {
-			.btn-group{
-				background:none;
-				select {
-					background-color: @sidebarcolor;
-					color: #ccc;
-				}
-				.btn {
-					margin:0px;
-				}
-				ul {
-					max-height:250px !important;
-					a { 
-						color:#000;
-						border:0;
+	.sidebar-footer{
+		height:auto;
+		margin-bottom:70px;
+		display:inline-block;
+		width:100%;
+		#language{
+			margin-bottom:50px;
+			#languageswitcher {
+				.btn-group{
+					background:none;
+					select {
+						background-color: @sidebarcolor;
+						color: #ccc;
 					}
-					a:hover {
-						background-color:#CCC;
+					.btn {
+						margin:0px;
+					}
+					ul {
+						max-height:250px !important;
+						a { 
+							color:#000;
+							border:0;
+						}
+						a:hover {
+							background-color:#CCC;
+						}
 					}
 				}
+				position: absolute;
+				width: 85%;
 			}
-			position: absolute;
-			width: 85%;
 		}
 	}
 	.block {
-		margin: auto -15px;
 		h3 {
 			padding: 5px 10px;
 			display: inline-block;
@@ -135,40 +132,17 @@
 	}
 }
 
+#globalhelp {
+	margin: 0 -15px 0 -30px;
+}
 
 @media (min-width: 992px) {
-	
+
 	.navbar-toggle {
 	    display: none;
 	}
-	.content-wrapper {
-		max-width:98%;
-		min-height:900px;
-		margin-left:17%;
-		#content {
-    			left:-16%
-		}
-		.sidebar {
-			display: block;
-			position: relative;
-			width: 16.66666667%;
-			top:0;
-			left:-17%;
-		}
-	}
-	#globalhelp {
-		margin-left: -17%;
-		width: 100%;
-		#helptarget {
-			width: 117%;
-			margin-left: -7px;
-			padding-right:100px;
-			.alert{
-				margin: 0;
-				padding-right: 10%;
-				padding-left: 30px;
-			}
-		}
+	.sidebar{
+		display:block;
 	}
 }
 
@@ -183,22 +157,18 @@
 	    float: none;
 	}
 	#logged {
-    		right: 80px;
-    		position: absolute;
-    		top: 15px;
 		margin-top:0;
 		a {
 		   margin:0
 		}
 	}
-}
-
-@media only screen and (max-width: 768px) {
-	.brand-name {
-		display: none;
+	#sidebar{
+		min-width:250px;
+	} 
+	#content{ 
+		margin-top:60px;
 	}
-
-}
+} 
 
 
 
@@ -210,7 +180,6 @@
 		display: none;
 	}
 	#container, #content {
-		width: 100%;
 		background-color: @greylight;
 	}
 	#wrapp {
