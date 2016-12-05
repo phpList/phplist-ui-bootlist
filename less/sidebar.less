@@ -47,11 +47,11 @@
 	.block {
 		h3 {
 			padding: 5px 10px;
-			display: inline-block;
-			margin: 0;
+			margin: 20px 0 0;
 			font-size: 12px;
 			text-transform: uppercase;
-			color: #ccc;
+			color: @grey;
+			border-bottom:1px dotted @grey;
 		}
 	}
 	ul {
@@ -63,23 +63,20 @@
 			}
 			&.active {
 				&>a {
-					border-color: @orange;
 					text-decoration: none;
 					color: #fff;					
 				}
-			}
+			} 
 		}
 		a {
 			font-family: 'genregular';
 			font-size: 14px;
 			display: inline-block;
-			padding: 10px 15px;
+			padding: 7px 15px;
 			color: #fff;
 			padding-left: 10px;
-			border-left: 5px solid transparent;
 			width: 100%;
 			&:hover, &:active {
-				border-color: @grey;
 				text-decoration: none;
 				color: #fff;
 			}
@@ -91,39 +88,47 @@
 			ul {
 				display: none;
 			}
-			&>li {
-				&> a:after {
-					content: "\e258";
-					font-family: 'Glyphicons Halflings';
-					float: right;
+			li {
+				a.level0 span.glyphicon{
+					background:#FFF;
+					border-radius:20px;
+					width:26px;
+					height:26px;
+					vertical-align:middle;
+					margin:-4px 10px 2px 0;
+					color:#2C2C2C;
+					text-align:center;
+					line-height:1.95; 
+					opacity:0.5;
 				}
-			}
-			li.open {
-				background-color: darken(@sidebarcolor, 5%);
-				&> a:after {
-					content: "\e259";
-					font-family: 'Glyphicons Halflings';
-					float: right;
+				a:hover span.glyphicon{
+					opacity:0.7;			
 				}
-				ul {
-					background-color: lighten(@sidebarcolor, 5%);
-					display:block;
-					li {
-						margin-left: 20px;
-						&.active {
-							a {
+				&.open {
+					background-color: darken(@sidebarcolor, 5%);
+					a span.glyphicon{
+						opacity:1;
+					}
+					ul {
+						background-color: lighten(@sidebarcolor, 5%);
+						display:block;
+						padding-top:8px;
+						padding-bottom:8px;
+						li {
+							margin-left: 20px;
+							&.active a {
 								color:#fff;
 							}
-						}
-						&:hover {
-							background-color: lighten(@sidebarcolor, 5%);
-							a {
-								color: #fff;
+							&:hover {
+								background-color: lighten(@sidebarcolor, 5%);
+								a {
+									color: #fff;
+								}
 							}
-						}
-						a {
-							border: 0;
-							color: #ccc;
+							a {
+								border: 0;
+								color: #ccc;
+							}
 						}
 					}
 				}
