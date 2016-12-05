@@ -10,6 +10,8 @@ $GLOBALS['subcat'] = array(
 	'system' => array('converttoutf8'),
 	'bouncemgt' => array('bounce','processbounces','generatebouncerules'),
 	'bouncerules' => array('bouncerule'),
+	'spage' => array('spageedit'),
+	'attributes' => array('editattributes','defaults'),
 	);
 
 
