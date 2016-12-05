@@ -1,6 +1,31 @@
 <?php
-/* replace topmenu() function */
+/* This array is to add third level to phpList menu, adding orphan items to a menulink */
+$GLOBALS['subcat'] = array(
+	'import' => array ('import1','import2','import3','import4','importsimple'),
+	'users' => array('user','userhistory'),
+	'list' => array('members','editlist'),
+	'usermgt' => array('massremove','usercheck'),
+	'messages' => array('message'),
+	'templates' => array('template'),
+	'system' => array('converttoutf8'),
+	'bouncemgt' => array('bounce','processbounces','generatebouncerules'),
+	'bouncerules' => array('bouncerule'),
+	);
 
+
+/* This function is to add third level to phpList menu */
+function pageSubCategory($menulinks = array(), $current) {
+    foreach ($GLOBALS['subcat'] as $subcategory => $subcat_details) {
+        if ( !in_array($current, $menulinks) /* <-first check if is not a menulink */ 
+        	&& in_array($current, $subcat_details) /* then find the menulink in array above */ ) {
+            return $subcategory;
+        }
+    }
+    return '';
+}
+
+
+/* replace topmenu() function */
 function _topMenu()
 {
     if ( !isset($_GET['page'] ) ) { $_GET['page'] = ''; }
@@ -12,9 +37,6 @@ function _topMenu()
     if ($_SESSION['logindetails']['superuser']) { // we don't have a system yet to distinguish access to plugins
         if (count($GLOBALS['plugins'])) {
             foreach ($GLOBALS['plugins'] as $pluginName => $plugin) {
-                //if (isset($GLOBALS['pagecategories']['plugins'])) {
-                //array_push($GLOBALS['pagecategories']['plugins']['menulinks'],'main&pi='.$pluginName);
-                //}
                 $menulinks = $plugin->topMenuLinks;
                 foreach ($menulinks as $link => $linkDetails) {
                     if (isset($GLOBALS['pagecategories'][$linkDetails['category']])) {
@@ -33,41 +55,43 @@ function _topMenu()
     }
 
     foreach ($GLOBALS['pagecategories'] as $category => $categoryDetails) {
-        if ($category == 'hide'
-            ## hmm, this also suppresses the "dashboard" item
-            #     || count($categoryDetails['menulinks']) == 0
-        ) {
+        if ($category == 'hide') {
             continue;
         }
 
         $thismenu = '';
-
+        $icon = 'glyphicon-plus';
+        $icontext = "";
+        $open = '';
+        switch ($category) {
+			case "dashboard" : $icon = "glyphicon-home"; break;
+			case "subscribers" : $icon = "glyphicon-user"; break;
+			case "campaigns" : $icon = "glyphicon-envelope"; break;
+			case "statistics" : $icon = "glyphicon-stats"; break;
+			case "system" : $icon = "glyphicon-wrench"; break;
+			case "config" : $icon = "glyphicon-cog"; break;
+			case "info" : $icon = "";$icontext= "<samp style='line-height:0;font-weight:bold;font-size:19px'>i</samp>"; break;
+			case "develop" : $icon = "glyphicon-console"; break;
+        }
         foreach ($categoryDetails['menulinks'] as $page) {
-            if (!is_array($page)) {
-                $title = $GLOBALS['I18N']->pageTitle($page);
+               $title = $GLOBALS['I18N']->pageTitle($page);
                 $active = '';
-                if ($page == $current_page) {
-                    $active = ' class="active"';
+				if ( isset($_GET['pi']) && $page == $current_page.'&pi='.$_GET['pi']
+                	|| !$_GET['pi'] && $page == $current_page 
+                	|| $page == pageSubCategory($categoryDetails['menulinks'], $current_page) ) {
+					   $active = ' class="active"';
+                }
+                elseif (!isset($_GET['pi']) && $category == pageCategory($current_page) ){ // third level
+                    $open = ' class="active open"';
                 }
                 $link = PageLink2($page, $title, '', true);
                 if ($link) {
                     $thismenu .= '<li' . $active . '>' . $link . '</li>';
                 }
-            }
-            else {
-                $sub = $page;
-                $subtitle = key($page);
-                $title = $GLOBALS['I18N']->pageTitle($subtitle);
-                $active = '';
-                if ($subtitle == $current_page || in_array($current_page, $sub[$subtitle])) {
-                    $active = ' class="active"';
-                }
-                $link = PageLink2($subtitle, $title, '', true);
-                if ($link) {
-                    $thismenu .= '<li' . $active . '>' . $link . '</li>';
-                }
-            }
-        }             
+         }
+        if ( $current_page == 'home' && $categoryDetails['toplink'] == 'dashboard' ) { // page 'home' redirect from dashboard
+                    $open = ' class=" active open"';
+        }
         if (!empty($thismenu)) {
             $thismenu = '<ul>' . $thismenu . '</ul>';
         }
@@ -75,7 +99,7 @@ function _topMenu()
         if (!empty($categoryDetails['toplink'])) {
             $categoryurl = PageUrl2($categoryDetails['toplink'], '', '', true);
             if ($categoryurl) {              
-                $topmenu .= '<ul><li><a href="' . $categoryurl . '" title="' . $GLOBALS['I18N']->pageTitleHover($category) . '">' . ucfirst($GLOBALS['I18N']->get($category)) . '</a>' . $thismenu . '</li></ul>';
+                $topmenu .= '<ul><li '.$open.' id="'.$category.'"><a class="level0" href="' . $categoryurl . '" title="' . $GLOBALS['I18N']->pageTitleHover($category) . '"><span class="glyphicon '.$icon.'">'.$icontext.'</span>' . ucfirst($GLOBALS['I18N']->get($category)) . '</a>' . $thismenu . '</li></ul>';
             } else {
                 $topmenu .= '<ul><li><span>' . $GLOBALS['I18N']->get($category) . $categoryurl . '</span>' . $thismenu . '</li></ul>';
             }
