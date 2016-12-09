@@ -38,7 +38,14 @@ var myfunction = function() {
     $('a.confirm').not('.dropButton a.confirm').addClass('btn btn-default');
     $('a.resourceslink').addClass('btn btn-link');
 
-
+/* PAGINATION */
+	$('.paging .range').addClass('small col-sm-7 col-md-8 col-lg-9');
+	$('.paging .controls').addClass('btn-group btn-group-xs col-sm-5 col-md-4 col-lg-3');
+	$('.paging .controls a').addClass('btn btn-primary');
+	$('.paging .controls a.first').prepend('<span aria-hidden="true" class="glyphicon glyphicon-step-backward" />');
+	$('.paging .controls a.last').prepend('<span aria-hidden="true" class="glyphicon glyphicon-step-forward" />');
+	$('.paging .controls a.previous').prepend('<span aria-hidden="true" class="glyphicon glyphicon-chevron-left" />');
+	$('.paging .controls a.next').prepend('<span aria-hidden="true" class="glyphicon glyphicon-chevron-right" />');
 
 /* MINITABS, WEBBLERTABS, dropButton and FILTERDIVS */
     $('.minitabs #webblertabs').addClass('navbar navbar-left navbar-default');
