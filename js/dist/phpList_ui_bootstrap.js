@@ -32,7 +32,7 @@ var myfunction = function() {
     $('.action-button').addClass('btn btn-lg btn-primary');
     $('.reset').addClass('btn btn-link');
     $('span.button a.opendialog span.view').parent().parent().parent().find('span.button').removeClass('btn-default');
-    $('.actions .fright').addClass('text-right');
+    $('.actions .fright').addClass('pull-right');
     $('ul.reconcile').addClass('list-unstyled');
     $('.btn-primary.btn-default').removeClass('btn-default');
     $('a.confirm').not('.dropButton a.confirm').addClass('btn btn-default');
