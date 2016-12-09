@@ -49,10 +49,12 @@ span.glyphicon{margin:5px}
 .btn.disabled{opacity:0.2}
 .tab-content ul.list-unstyled li{margin-bottom:15px}
 .form-control{max-width: 780px !important}
-body.members,body.list,body.mviews,body.templates,body.eventlog,body.spage{
+body.list,body.mviews,body.templates,body.eventlog,body.spage{
 	.table-striped > tbody > tr:nth-of-type(2n+1) { border-bottom:2px solid #999}
 }
-body.users .table-striped > tbody > tr:nth-of-type(2n) { border-bottom:2px solid #999}
+body.members, body.users { 
+	.table-striped > tbody > tr:nth-of-type(2n) { border-bottom:2px solid #999} 
+}
 .progress{margin-bottom:10px;margin-top:30px}
 table.well tr td{padding:10px 20px;padding-right:20px}
 
