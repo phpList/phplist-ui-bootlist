@@ -39,8 +39,9 @@ var myfunction = function() {
     $('a.resourceslink').addClass('btn btn-link');
 
 /* PAGINATION */
-	$('.paging .range').addClass('small col-sm-7 col-md-8 col-lg-9');
-	$('.paging .controls').addClass('btn-group btn-group-xs col-sm-5 col-md-4 col-lg-3');
+	$('.paging .range').addClass('small pull-left');
+	$('.paging .controls').addClass('pull-right');
+	$('.paging .controls').wrapInner('<div class="btn-group btn-group-xs" />');
 	$('.paging .controls a').addClass('btn btn-primary');
 	$('.paging .controls a.first').prepend('<span aria-hidden="true" class="glyphicon glyphicon-step-backward" />');
 	$('.paging .controls a.last').prepend('<span aria-hidden="true" class="glyphicon glyphicon-step-forward" />');
