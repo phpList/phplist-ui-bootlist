@@ -6,19 +6,21 @@ var myfunction = function() {
     /* fix elements with bad inline styles */
     $('body.list .rows .listingelement div').css({'width':'auto','float':'none'});
     $('body.list .rows .listingelement span.view').css({ 'width':'auto','float':'none','margin-left':'10px'});
+    
+    /*fix Bounce Details (?page=bounce&id=xx) */
+    $('body.bounce .content div.content').css({'min-height':'60px'}).addClass('well').removeClass('content'); 
+    $('body.bounce .content div').not('.fleft,.fleft div').addClass('col-sm-12');
+	$('body.bounce .content div.fleft div.well').css({'margin-left':'-15px','margin-right':'-15px'});
+	$('body.bounce .content div.fleft:first-child').addClass('col-sm-1').removeClass('fleft'); 
+	$('body.bounce .content div.fleft:nth-child(2)').addClass('col-sm-4 col-sm-offset-1').removeClass('fleft'); 
+	$('body.bounce .content div.fleft:nth-child(3)').addClass('col-sm-5 col-sm-offset-1').removeClass('fleft'); 
+
+
 
 /* STRUCTURE */
     $('.content, body.configure fieldset, body.adminattributes table.attributeSet,body.adminattributes table.attributeNew,table.spageeditListing,body.reconcileusers #content form,body.export #content form').not('.accordion .content, .content table .content,body.dbcheck table, body.adminattributes .content').addClass('well');
     $('.fleft').addClass('pull-left');
 
-    
-/* MAIN MENU (horizontal style) */
-    /*$('#menuTop').addClass('collapse navbar-collapse navbar-left');
-    $('#menuTop ul li ul').parent().parent().addClass('nav navbar-nav');
-    $('#menuTop ul li ul').parent().addClass('dropdown');
-    $('#menuTop ul li ul').addClass('dropdown-menu');
-    $('#menuTop ul li ul').parent().find('a:first').addClass('dropdown-toggle').attr({ 'data-toggle':'dropdown','aria-haspopup':'true','aria-expanded':'false' });
-*/
 
 /* languageswitcher */
     $('#languageswitcher select').addClass('selectpicker').attr({ 'data-style':'btn-primary' });
