@@ -183,6 +183,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.home .bounces span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-ban-circle"/>');
     $('.home .plugin span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-pushpin"/>');
     $('.home .setup span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-wrench"/>');
+    $('.home .upgrade span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-up"/>');
     $('.home .dbcheck span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tasks"/>');
     $('.home .view-log span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>');
     $('.dashboard .panel').addClass('col-md-4');
