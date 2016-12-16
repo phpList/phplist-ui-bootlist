@@ -91,7 +91,8 @@ function _topMenu()
                     $thismenu .= '<li' . $active . '>' . $link . '</li>';
                 }
          }
-        if ( $current_page == 'home' && $categoryDetails['toplink'] == 'dashboard' ) { // page 'home' redirect from dashboard
+        $twohomes = array('dashboard','home');
+        if ( in_array($current_page,$twohomes) && $categoryDetails['toplink'] == 'dashboard' ) { // page 'home' redirect from dashboard
                     $open = ' class=" active open"';
         }
         if (!empty($thismenu)) {
@@ -100,7 +101,8 @@ function _topMenu()
 
         if (!empty($categoryDetails['toplink'])) {
             $categoryurl = PageUrl2($categoryDetails['toplink'], '', '', true);
-            if ($categoryurl) {              
+            if ($categoryurl) {
+            	$categoryurl = ($thismenu == "") ? $categoryurl : "#";
                 $topmenu .= '<ul><li '.$open.' id="'.$category.'"><a class="level0" href="' . $categoryurl . '" title="' . $GLOBALS['I18N']->pageTitleHover($category) . '"><span class="glyphicon '.$icon.'">'.$icontext.'</span>' . ucfirst($GLOBALS['I18N']->get($category)) . '</a>' . $thismenu . '</li></ul>';
             } else {
                 $topmenu .= '<ul><li><span>' . $GLOBALS['I18N']->get($category) . $categoryurl . '</span>' . $thismenu . '</li></ul>';

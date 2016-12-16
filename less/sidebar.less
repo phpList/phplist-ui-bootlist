@@ -88,6 +88,7 @@
 			ul {
 				display: none;
 			}
+/*			li:hover ul{display:block !important;} */
 			li {
 				a.level0 span.glyphicon{
 					background:#FFF;
@@ -99,16 +100,16 @@
 					color:#2C2C2C;
 					text-align:center;
 					line-height:1.95; 
-					opacity:0.5;
+					opacity:0.5;				
 				}
 				a:hover span.glyphicon{
-					opacity:0.7;			
+					opacity:0.7;
+				}
+				&.active a span.glyphicon{
+						opacity:1;
 				}
 				&.open {
 					background-color: darken(@sidebarcolor, 5%);
-					a span.glyphicon{
-						opacity:1;
-					}
 					ul {
 						background-color: lighten(@sidebarcolor, 5%);
 						display:block;
