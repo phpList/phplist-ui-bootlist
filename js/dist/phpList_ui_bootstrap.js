@@ -379,7 +379,7 @@ $(document).ready(function() {
     $('#content').css('min-height', min_height);
 
     /* menu */
-	$('#menuTop a.level0')/*.not('#menuTop li.active a.level0')*/.click(function(){
+	$('#menuTop a.level0').click(function(){
 		$(this).parent().toggleClass('open');
 		$('#menuTop li').not($(this).parent()).removeClass('open');
 	});
