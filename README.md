@@ -1,8 +1,8 @@
 # phplist-ui-bootstrap
 A bootstrap-based theme for [phpList 3](https://github.com/phpList/phplist3/)
 
-![alt tag](http://www.imagebam.com/image/c1cd67521924237)
-![alt tag](http://www.imagebam.com/image/063f75521924240)
+![alt tag](http://thumbnails117.imagebam.com/52193/c1cd67521924237.jpg)
+![alt tag](http://thumbnails117.imagebam.com/52193/063f75521924240.jpg)
 
 Bootstrap class names and extra html needed, inserted by jQuery with the script:
 `phplist-ui-bootstrap/js/phpList3ToBootstrap.js`
