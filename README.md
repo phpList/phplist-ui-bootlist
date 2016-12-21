@@ -5,7 +5,7 @@ A bootstrap-based theme for [phpList 3](https://github.com/phpList/phplist3/)
 ![alt tag](http://thumbnails117.imagebam.com/52193/063f75521924240.jpg)
 
 Bootstrap class names and extra html needed, inserted by jQuery with the script:
-`phplist-ui-bootstrap/js/phpList3ToBootstrap.js`
+`js/phpList3ToBootstrap.js`
 
 ## Issues
 
