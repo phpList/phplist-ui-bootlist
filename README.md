@@ -1,4 +1,4 @@
-# phplist-ui-bootstrap
+# Bootlist
 A bootstrap-based theme for [phpList 3](https://github.com/phpList/phplist3/)
 
 ![alt tag](http://thumbnails117.imagebam.com/52193/c1cd67521924237.jpg)
