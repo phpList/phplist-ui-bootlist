@@ -1,4 +1,5 @@
-<?php
+<?php include_once( dirname(__FILE__) . '/functions.php');
+
 /*
   We request you retain the full headers below including the links.
   This not only gives respect to the large amount of time given freely
@@ -27,7 +28,7 @@
 
 <!-- initial styles and JS from basic application -->
 <link rel="stylesheet" href="css/app.css" />
-<link rel="stylesheet" href="ui/phplist-ui-bootstrap/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />
+<link rel="stylesheet" href="<?php echo theme_info();?>/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />
 
 <?php
 if (isset($GLOBALS['config']['head'])) {

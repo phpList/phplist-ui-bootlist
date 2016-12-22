@@ -17,9 +17,9 @@
 
 </div> <!-- end .container-fluid-->
 
-<script type="text/javascript" src="ui/phplist-ui-bootstrap/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="<?php echo theme_info();?>/js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="js/phplistapp.js"></script>
-<script type="text/javascript" src="ui/phplist-ui-bootstrap/js/dist/phpList_ui_bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo theme_info();?>/js/dist/phpList_ui_bootstrap.min.js"></script>
 
 <script>
 /* do not remove this from here */
