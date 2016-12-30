@@ -1,3 +1,4 @@
+
 	            <div class="clear"></div>
     	        <?php include dirname(__FILE__).'/rssfeed.php'; ?>
 		    </div>
@@ -16,12 +17,14 @@
 	</div> <!-- end #container -->
 </div> <!-- end .container-fluid-->
 
-<script type="text/javascript" src="ui/phplist-ui-bootstrap/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="<?php echo theme_info(); ?>/js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="js/phplistapp.js"></script>
-<script type="text/javascript" src="ui/phplist-ui-bootstrap/js/phpList3ToBootstrap.js"></script>
-<script type="text/javascript" src="ui/phplist-ui-bootstrap/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="ui/phplist-ui-bootstrap/js/jcarousellite_1.0.1.min.js"></script>
-<script type="text/javascript" src="ui/phplist-ui-bootstrap/js/phplist.js"></script>
+<script type="text/javascript" src="<?php echo theme_info(); ?>/js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="<?php echo theme_info(); ?>/js/bootstrap-tabcollapse.js"></script>
+<script type="text/javascript" src="<?php echo theme_info(); ?>/js/phpList3ToBootstrap.js"></script>
+<script type="text/javascript" src="<?php echo theme_info(); ?>/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo theme_info(); ?>/js/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript" src="<?php echo theme_info(); ?>/js/phplist.js"></script>
 
 <script>
 /* do not remove this from here */
