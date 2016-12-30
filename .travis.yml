@@ -1,0 +1,21 @@
+# Configuration file for running the test suite. Results will be at https://travis-ci.org/phpList/phplist3
+# whitelist
+language: php
+php:
+  - 7.1
+  - 7.0
+  - 5.6
+  - 5.5
+  - 5.4
+  - 5.3
+
+before_script:
+  - sudo apt-get update > /dev/null
+  - composer self-update
+  - composer install --prefer-dist
+
+script:
+  - vendor/njoannidi/php-lint-bash/phpLint 
+
+after_failure:
+  - echo "Failures detected."
