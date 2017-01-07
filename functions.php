@@ -115,22 +115,3 @@ function _topMenu()
     return $topmenu;
 }
 
-
-## pick up theme_info (name or dir)
-function theme_info($data = "dir"){
-	$thinfo = dirname(__FILE__) . '/theme_info';
-	if ( is_file($thinfo) ) {
-        $theme_info = file_get_contents($thinfo);
-        $lines = explode("\n", $theme_info);
-        $info = array();
-        foreach ($lines as $line) {
-            if (preg_match('/(\w+)=([\p{L}\p{N}&\#; \-\(\)]+)/u', $line, $regs)) {
-                $info[$regs[1]] = $regs[2];
-            }
-        }
-        $dir = ( !empty($info['dir']) ) ? 'ui/'.$info['dir'] : 'ui/phplist-ui-bootlist';
-        $return = ($data == 'name') ? $info['name'] : $dir;
-        
-        return $return;
-	}
-}

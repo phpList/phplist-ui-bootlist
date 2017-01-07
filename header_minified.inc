@@ -13,7 +13,7 @@
     	            <span class="icon-bar"></span>
     	            <span class="icon-bar"></span>
     	        </button>
-    	        <a href="http://www.phplist.com" target="_blank" class="navbar-brand"><img src="<?php echo theme_info();?>/logo.svg" alt="phpList, email newsletter manager, logo" title="phpList, the world's most popular Open Source newsletter manager" /></a>
+    	        <a href="http://www.phplist.com" target="_blank" class="navbar-brand"><img src="ui/phplist-ui-bootlist/logo.svg" alt="phpList, email newsletter manager, logo" title="phpList, the world's most popular Open Source newsletter manager" /></a>
 			</nav>
     		<div id="sidebar" class="sidebar col-lg-2 col-md-3">
     		    <?php echo $firstInstallButton?>
@@ -57,4 +57,4 @@
 		    </div>
 		    <div id="wrapp">
 			    <div id="progressbar"></div>
-<!-- content start here -->
+<!-- content starts here -->
