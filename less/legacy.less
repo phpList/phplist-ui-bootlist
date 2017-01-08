@@ -14,6 +14,9 @@ TABLE OF CONTENT
     ## login
     ## dashboard
     ## send
+    ## messages
+    ## attributes
+    ## settings
 # tabs
 # modals
 # forms
@@ -163,11 +166,14 @@ body.importadmin table.table tr td:first-child{
 
 /* ## send */
 body.send #sendtabs .btn {margin:0px;padding:5px}
-
 #sendtabs ul li a{width:100px}
 .field{ margin-bottom:20px}
 #schedulecontent .field label[for="requeueuntil"]{display:block;margin-top:10px}
 
+/* ## messages */
+@media (max-width:480px){
+	body.messages div.actions .pull-right{float:none !important}
+}
 /* ## attributes */
 body.attributes .form-control{width:auto}
 
