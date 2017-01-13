@@ -2330,6 +2330,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('span.view a, a.opendialog span.view').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('span.marksent a').html('<span aria-hidden="true" class="glyphicon glyphicon-ok"/>');
     $('span.resend a').html('<span aria-hidden="true" class="glyphicon glyphicon-repeat"/>');
+    $('span.stats a').html('<span aria-hidden="true" class="glyphicon glyphicon-stats"/>');
     $('span.suspend a').html('<span aria-hidden="true" class="glyphicon glyphicon-pause"/>');
     $('a.hide').html('x');$('a.hide').addClass('close');$('a.hide.close').removeClass('hide');
     $('a.helpdialog').html('<span class="glyphicon glyphicon-question-sign text-warning" />');
