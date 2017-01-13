@@ -2389,6 +2389,10 @@ $( window ).load(function(){
  
 $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
 
+$( document ).ajaxComplete(function() {
+	myfunction();
+});
+
 
 /**************************** INCLUDE JS AND CSS FILES RELATED ***********************/
 
