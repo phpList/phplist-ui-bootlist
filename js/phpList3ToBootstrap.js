@@ -20,7 +20,7 @@ var myfunction = function() {
 /* STRUCTURE */
     $('.content, body.configure fieldset, body.adminattributes table.attributeSet,body.adminattributes table.attributeNew,table.spageeditListing,body.reconcileusers #content form,body.export #content form').not('.accordion .content, .content table .content,body.dbcheck table, body.adminattributes .content').addClass('well');
     $('.fleft').addClass('pull-left');
-
+ 
 
 /* languageswitcher */
     $('#languageswitcher select').addClass('selectpicker').attr({ 'data-style':'btn-primary' });
@@ -192,7 +192,8 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 	$('span.listingelement a, div.configEdit a').not('body.members a.listingelement, .home span.listingelement a,a[name]').addClass('btn btn-xs btn-primary');
     $('span.edit a, .edit-list a, .configEdit a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
     $('.send-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
-    $('.add_member a, span.viewusers a').html('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
+    $('.add_member a').html('<span aria-hidden="true" class="glyphicon glyphicon-plus"/>'); 
+    $('span.viewusers a').html('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
     $('span.delete a, a.del, a[title=Del]').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
     $('span.view a, a.opendialog span.view').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('span.marksent a').html('<span aria-hidden="true" class="glyphicon glyphicon-ok"/>');
