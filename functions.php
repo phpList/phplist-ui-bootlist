@@ -72,7 +72,7 @@ function _topMenu()
 			case "statistics" : $icon = "glyphicon-stats"; break;
 			case "system" : $icon = "glyphicon-wrench"; break;
 			case "config" : $icon = "glyphicon-cog"; break;
-			case "info" : $icon = "";$icontext= "<samp style='line-height:1;font-weight:bold;font-size:19px'>i</samp>"; break;
+			case "info" : $icon = "";$icontext= "<samp style='line-height:1.5;font-weight:bold;font-size:19px'>i</samp>"; break;
 			case "develop" : $icon = "glyphicon-console"; break;
         }
         foreach ($categoryDetails['menulinks'] as $page) {
