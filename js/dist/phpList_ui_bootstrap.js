@@ -2174,14 +2174,14 @@
     $('a.resourceslink').addClass('btn btn-link');
 
 /* PAGINATION */
-	$('.paging .range').addClass('small pull-left');
-	$('.paging .controls').addClass('pull-right');
-	$('.paging .controls').wrapInner('<div class="btn-group btn-group-xs" />');
-	$('.paging .controls a').addClass('btn btn-primary');
-	$('.paging .controls a.first').prepend('<span aria-hidden="true" class="glyphicon glyphicon-step-backward" />');
-	$('.paging .controls a.last').prepend('<span aria-hidden="true" class="glyphicon glyphicon-step-forward" />');
-	$('.paging .controls a.previous').prepend('<span aria-hidden="true" class="glyphicon glyphicon-chevron-left" />');
-	$('.paging .controls a.next').prepend('<span aria-hidden="true" class="glyphicon glyphicon-chevron-right" />');
+	$('.paging .range').not('.small.pull-left').addClass('small pull-left');
+	$('.paging .controls').not('.controls.pull-right').wrapInner('<div class="btn-group btn-group-xs" />');
+	$('.paging .controls a').not('.controls.pull-right a').addClass('btn btn-primary');
+	$('.paging .controls a.first').not('.controls.pull-right a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-step-backward" />');
+	$('.paging .controls a.last').not('.controls.pull-right a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-step-forward" />');
+	$('.paging .controls a.previous').not('.controls.pull-right a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-chevron-left" />');
+	$('.paging .controls a.next').not('.controls.pull-right a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-chevron-right" />');
+	$('.paging .controls').not('.controls.pull-right').addClass('pull-right');
 
 /* MINITABS, WEBBLERTABS, dropButton and FILTERDIVS */
     $('.minitabs #webblertabs').addClass('navbar navbar-left navbar-default');
@@ -2242,7 +2242,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 
 /* process output */
     $('#processqueueprogress').addClass('text-info well');
-    $('#processqueuesummary').addClass('text-dagner well');
+    $('#processqueuesummary').addClass('well');
     $('#progresscount').addClass('text-warning');
     $('#processqueuecontrols a').addClass('btn-xs');
 
@@ -2295,30 +2295,30 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 
 /* icons */
     /* dashboard */
-    $('.home .send-campaign span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
-    $('.home .manage-campaigns span.listingname a, .home .configure span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-cog"/>');
-    $('.home .manage-users span.listingname a, .home .list-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
-    $('.home .view-statistics span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-stats"/>');
-    $('.home .manage-lists span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-th-list"/>');
-    $('.home .import-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-import"/>');
-    $('.home .export-users span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-export"/>');
-    $('.home .reconcileusers span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-heart"/>');
-    $('.home .configure-attributes span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tags"/>');
-    $('.home .custom-attribute span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tag"/>');
-    $('.home .spage span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-pencil"/>');
-    $('.home .admins span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-king"/>');
-    $('.home .adminattributes span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-equalizer"/>');
-    $('.home .send-message span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-envelope"/>');
-    $('.home .templates span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-modal-window"/>');
-    $('.home .list-all-msg span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list"/>');
-    $('.home .processqueue span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-time"/>');
-    $('.home .processbounces span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-hourglass"/>');
-    $('.home .bounces span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-ban-circle"/>');
-    $('.home .plugin span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-pushpin"/>');
-    $('.home .setup span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-wrench"/>');
-    $('.home .upgrade span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-up"/>');
-    $('.home .dbcheck span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tasks"/>');
-    $('.home .view-log span.listingname a').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>');
+    $('.home .send-campaign span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-send"/>').removeClass('listingname');
+    $('.home .manage-campaigns span.listingname a.listingname, .home .configure span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-cog"/>').removeClass('listingname');
+    $('.home .manage-users span.listingname a.listingname, .home .list-users span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-user"/>').removeClass('listingname');
+    $('.home .view-statistics span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-stats"/>').removeClass('listingname');
+    $('.home .manage-lists span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-th-list"/>').removeClass('listingname');
+    $('.home .import-users span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-import"/>').removeClass('listingname');
+    $('.home .export-users span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-export"/>').removeClass('listingname');
+    $('.home .reconcileusers span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-heart"/>').removeClass('listingname');
+    $('.home .configure-attributes span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tags"/>').removeClass('listingname');
+    $('.home .custom-attribute span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tag"/>').removeClass('listingname');
+    $('.home .spage span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-pencil"/>').removeClass('listingname');
+    $('.home .admins span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-king"/>').removeClass('listingname');
+    $('.home .adminattributes span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-equalizer"/>').removeClass('listingname');
+    $('.home .send-message span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-envelope"/>').removeClass('listingname');
+    $('.home .templates span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-modal-window"/>').removeClass('listingname');
+    $('.home .list-all-msg span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list"/>').removeClass('listingname');
+    $('.home .processqueue span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-time"/>').removeClass('listingname');
+    $('.home .processbounces span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-hourglass"/>').removeClass('listingname');
+    $('.home .bounces span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-ban-circle"/>').removeClass('listingname');
+    $('.home .plugin span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-pushpin"/>').removeClass('listingname');
+    $('.home .setup span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-wrench"/>').removeClass('listingname');
+    $('.home .upgrade span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-up"/>').removeClass('listingname');
+    $('.home .dbcheck span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tasks"/>').removeClass('listingname');
+    $('.home .view-log span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>').removeClass('listingname');
     $('.dashboard .panel').addClass('col-md-4');
     /*buttons*/
     $('.home span.listingname a').addClass('btn btn-xs btn-info');
@@ -2355,19 +2355,18 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 
 /* tables*/
     $('.content').not('.listingelement .content').addClass('table-responsive');
-    $('table').attr('border',null);
-    $('table').not('.home table, table.loginPassUpdate').addClass('table');
-    $('.listingelement table,body.dbcheck table, table.spageeditListing').addClass('table-condensed');
+    $('table').not('table.table').attr('border',null);
+    $('.listingelement table,body.dbcheck table, table.spageeditListing').not('table.table').addClass('table-condensed');
     $('table.spageeditListing tr:first-child,table.attributeSet tr:first-child').addClass('info');
-    $('table.listing, table.templateForm, table.importadmin, table.import1,table.importcsvMain,table.userAdd').not('.home table.listing').addClass('table-striped');
-    $('table.messageView, body.about table.about').addClass('table-bordered');
-    $('table.setupMain').addClass('table-hover');
-    $('table.spageeditListing').wrap('table-responsive');
-    $('table').each(function(){
+    $('table.listing, table.templateForm, table.importadmin, table.import1,table.importcsvMain,table.userAdd').not('.home table.listing,table.table').addClass('table-striped');
+    $('table.messageView, body.about table.about').not('table.table').addClass('table-bordered');
+    $('table.setupMain').not('table.table').addClass('table-hover');
+    $('table.spageeditListing').not('table.table').wrap('table-responsive');
+    $('table').not('table.table').each(function(){
 	var bgcolor = $(this).attr('bgcolor');
 	$(this).css({'background-color':bgcolor});
     });
-    $('.table .table').removeClass('table');
+    $('table').not('.home table, table.loginPassUpdate, table.table').addClass('table');
 
     
 /* news widget */
@@ -2390,7 +2389,9 @@ $( window ).load(function(){
 $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
 
 $( document ).ajaxComplete(function() {
-	myfunction();
+	if ( !$('table').hasClass('table') ){
+		myfunction();
+	}
 });
 
 
