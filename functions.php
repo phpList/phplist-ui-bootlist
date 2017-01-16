@@ -74,6 +74,7 @@ function _topMenu()
 			case "config" : $icon = "glyphicon-cog"; break;
 			case "info" : $icon = "";$icontext= "<samp style='line-height:1.5;font-weight:bold;font-size:19px'>i</samp>"; break;
 			case "develop" : $icon = "glyphicon-console"; break;
+			case "account" : $icon = "glyphicon-briefcase"; break;
         }
         foreach ($categoryDetails['menulinks'] as $page) {
                $title = $GLOBALS['I18N']->pageTitle($page);
