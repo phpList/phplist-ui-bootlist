@@ -28,7 +28,6 @@
 	    		    <div id="language">
     			        <?php print $languageswitcher; ?>
     			    </div>
-					<div id="themedrop"><?php print $themeswitcher; ?></div>
 
     			    <div id="logged">
     			        <?php
