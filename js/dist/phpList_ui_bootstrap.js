@@ -1905,7 +1905,7 @@
         this.options   = options;
         this.$tabs  = $(el);
 
-        this._accordionVisible = false; //content is attached to tabs at first
+        this._accordionVisible = true; //content is attached to tabs at first
         this._initAccordion();
         this._checkStateOnResize();
 
@@ -2399,7 +2399,7 @@ $( document ).ajaxComplete(function() {
 /**************************** INCLUDE JS AND CSS FILES RELATED ***********************/
 
 /******** RESPONSIVE TABS *******/
-$('.tabbed').tabCollapse();
+//$('.tabbed').tabCollapse();
 
 /******** SELECT TO DROPDOWN *******/
 $('.selectpicker').selectpicker();

@@ -266,7 +266,7 @@ $( document ).ajaxComplete(function() {
 /**************************** INCLUDE JS AND CSS FILES RELATED ***********************/
 
 /******** RESPONSIVE TABS *******/
-$('.tabbed').tabCollapse();
+//$('.tabbed').tabCollapse();
 
 /******** SELECT TO DROPDOWN *******/
 $('.selectpicker').selectpicker();
