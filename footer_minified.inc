@@ -1,5 +1,5 @@
 	            <div class="clear"></div>
-	            <?php include dirname(__FILE__).'/rssfeed.php'; ?>
+				<?php include 'communityfeed.php'; ?>
 		    </div>
 
 	        <div id="footer">
