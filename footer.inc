@@ -7,7 +7,10 @@
 
 
 	            <div class="clear"></div>
-				<?php include 'communityfeed.php'; ?>
+	            <div id="newsfeed" class="menutableright block">
+	       			<h3><span class="glyphicon glyphicon-bullhorn text-danger"></span> <?php print s('phpList community news');?></h3>
+					<?php include 'communityfeed.php'; ?>
+				</div>
 		    </div>
 
     	    <div id="footer">
