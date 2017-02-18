@@ -2146,10 +2146,13 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('body').removeClass('invisible');
 }
 
+
+/* fire myfunction on: */
+
 $( window ).load(function(){
     if ( $('body').hasClass('invisible') ){ myfunction();}
  });
- 
+
 $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
 
 $( document ).ajaxComplete(function() {
@@ -2219,7 +2222,12 @@ $.fn.updateProgress = function() {
   $("#progresscount").show();
   $("#progressbar" ).css('width', perc+'%').attr({'aria-valuenow': perc,'aria-valuemax':done});   
 };
-;/*!
+
+$(window).focus(function(){
+	if ( $('#progressbar').attr('aria-valuenow') == "100" ){
+		$('.progress').hide();
+	}
+});;/*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under the MIT license
