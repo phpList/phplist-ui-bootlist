@@ -2139,9 +2139,9 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 
 /* tooltip */
     $(function () {
-  	$('[data-toggle="tooltip"]').tooltip();
+	  	$('[data-toggle="tooltip"]').tooltip();
     });
-    $('a.btn-warning').attr({'data-toggle':'tooltip'});
+    $('a.btn-xs').attr({'data-toggle':'tooltip'});
 
 /* show page after loading */
     $('body').removeClass('invisible');
@@ -2164,9 +2164,6 @@ $( document ).ajaxComplete(function() {
 
 
 /**************************** INCLUDE JS AND CSS FILES RELATED ***********************/
-
-/******** RESPONSIVE TABS *******/
-//$('.tabbed').tabCollapse();
 
 /******** SELECT TO DROPDOWN *******/
 $('.selectpicker').selectpicker();
@@ -2222,12 +2219,16 @@ $.fn.updateProgress = function() {
   $("#progresscount").html(done + ' / '+ total);
   $("#progresscount").show();
   $("#progressbar" ).css('width', perc+'%').attr({'aria-valuenow': perc,'aria-valuemax':done});   
+  if (perc >= 100){ $('.progress').hide(); }
 };
 
 $(window).focus(function(){
 	if ( $('#progressbar').attr('aria-valuenow') == "100" ){
 		$('.progress').hide();
 	}
+});
+$('#stopqueue').click(function(){
+		$('.progress').hide();
 });;/*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
