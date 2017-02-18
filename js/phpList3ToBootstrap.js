@@ -104,9 +104,10 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 
 
 /* PROGRESSBAR */
-    $('#progressbar').wrap('<div class="progress"/>').addClass('progress-bar progress-bar-striped active').attr({"role":"progressbar","aria-valuemin":"0"});
-    $('.progress').hide();
-
+	if ( !$('#progressbar').hasClass('progress-bar') ){
+    	$('#progressbar').wrap('<div class="progress"/>').addClass('progress-bar progress-bar-striped active').attr({"role":"progressbar","aria-valuemin":"0"});
+    	$('.progress').hide();
+	}
 /* process output */
     $('#processqueueprogress').addClass('text-info well');
     $('#processqueuesummary').addClass('well');
@@ -260,7 +261,7 @@ $( window ).load(function(){
 $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
 
 $( document ).ajaxComplete(function() {
-	if ( !$('table').hasClass('table') ){
+	if ( !$('table').hasClass('table')){
 		myfunction();
 	}
 });
