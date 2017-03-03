@@ -32,7 +32,7 @@
 <script type="text/javascript" src="ui/phplist-ui-bootlist/js/bootstrap-select.min.js"></script>
 <script type="text/javascript" src="ui/phplist-ui-bootlist/js/phpList3ToBootstrap.js"></script>
 <script type="text/javascript" src="ui/phplist-ui-bootlist/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="ui/phplist-ui-bootlist/js/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript" src="ui/phplist-ui-bootlist/js/jquery.jcarousellite.min.js"></script>
 <script type="text/javascript" src="ui/phplist-ui-bootlist/js/phplist.js"></script>
 
 <script>

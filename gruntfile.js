@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['js/bootstrap-select.js','js/phpList3ToBootstrap.js','bootstrap/dist/js/bootstrap.min.js','js/jcarousellite_1.0.1.min.js','js/phplist.js'],
+        src: ['js/bootstrap-select.js','js/phpList3ToBootstrap.js','bootstrap/dist/js/bootstrap.min.js','js/jquery.jcarousellite.min.js','js/phplist.js'],
         dest: 'js/dist/<%= pkg.name %>.js'
       }
     },
