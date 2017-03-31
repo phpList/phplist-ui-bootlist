@@ -83,12 +83,16 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('#login-form input[type=submit]').addClass('btn-lg');
     $('#forgotpassword-form input[type=submit]').addClass('btn-sm');
     $('div[id*=list] ul').addClass('list-unstyled');
+
+/* remove checkbox style because is not submiting on import2 form 
+
     $('input[type=checkbox]').not('label input[type-checkbox], div.checkbox input[type=checkbox]').wrap('<div class="checkbox checkbox-inline" />');
     $('input[type=checkbox]').each(function(){
         var checkid= $(this).attr('name') + $(this).attr('value');
         $(this).attr('id',checkid);
         if(!$(this).next('label').length) $(this).after('<label for="'+checkid+'"> </label>');
-    });    
+    });
+ */
     $('input[type=radio]').not('label input[type-radio], div.radio input[type=radio]').wrap('<div class="radio radio-inline" />');
     $('input[type=radio]').each(function(){
         var radioid= $(this).attr('name') + $(this).attr('value');
