@@ -2002,7 +2002,6 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.accordion label,#sendmessageform .well label').not('.checkbox label,.radio label').before('<div class="clearfix"></div>');
     $('label[for=htmlchoice], label[for=emaildoubleentry]').after('<div class="clearfix"></div>');
 
-
 /* PROGRESSBAR */
 	if ( !$('#progressbar').hasClass('progress-bar') ){
     	$('#progressbar').wrap('<div class="progress"/>').addClass('progress-bar progress-bar-striped active').attr({"role":"progressbar","aria-valuemin":"0"});
@@ -2040,7 +2039,6 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 	if ( $('.tabbed ul.nav-tabs li').length == 0 ){
 	        $('.tabbed .tab-content .tab-pane').css({'display':'block'});
 	    }
-
 
 /* #sendtabs */
     $('.sendtabs_container').addClass('text-center');
@@ -2237,7 +2235,23 @@ $(window).focus(function(){
 });
 $('#stopqueue').click(function(){
 		$('.progress').hide();
-});;/*!
+});
+
+
+/* vertical scrolling */
+
+$(document).ready(function(){
+	if ( $('body').hasClass('configure') ){
+		var id = location.hash;
+		console.log(id);
+		setTimeout(function(){
+			$('html, body').animate({
+		        scrollTop: $(id).offset().top
+		    }, 1000);
+		},1000);
+	}
+});
+;/*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under the MIT license
