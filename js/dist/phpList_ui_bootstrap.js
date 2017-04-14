@@ -2114,6 +2114,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.import #wrapp ul, .system #wrapp ul.dashboard_button, .usermgt #wrapp ul, ul.navigation_list').addClass('nav nav-pills nav-stacked');
     $('.import #wrapp ul li a, .system #wrapp ul li a,.usermgt #wrapp ul li a, ul.navigation_list li a').addClass('glyphicon glyphicon-menu-right');
     $('#wrapp .nav.nav-pills li ul').addClass('small');
+    $('.updatepluginbutton').addClass('btn-xs');
     /*yes/no icons */
     $('span.yes').addClass('glyphicon glyphicon-ok text-success').empty();
     $('span.no').addClass('glyphicon glyphicon-ban-circle text-danger').empty();
