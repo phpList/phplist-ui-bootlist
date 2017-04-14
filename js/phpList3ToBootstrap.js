@@ -70,6 +70,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
       $("#dropdown-tabs .btn:first-child").val($(this).parent().find('.current').text());
    });
 }
+	$('.pull-right').find('.dropdown-menu').addClass('dropdown-menu-right');
     $('.filterdiv,.usersFind').addClass('navbar navbar-default navbar-form');
     $('.filterdiv,.usersFind,.minitabs,#webblertabs').after('<div class="clearfix" />');
     $('.filter label[for=sortby]').before('<div class="clearfix"></div>');
