@@ -41,7 +41,7 @@
 				</div>
     		</div>    <!-- end #sidebar -->
 
-	    <div class="col-lg-10 col-md-9 col-lg-offset-2 col-md-offset-3" id="content">
+	    <div class="col-lg-10 col-md-9 col-lg-offset-2 col-md-offset-3" id="content" tabindex=-1>
 		    <div id="globalhelp">
 		    <?php
 		      $globalhelp = $pageinfo->content();
