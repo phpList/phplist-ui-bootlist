@@ -40,24 +40,5 @@ $(document).ready(function(){
     if ( $('body').hasClass('invisible') ){
         myfunction();
     }
-    
-    /* function to prevent leave page */    
-    $("body").click(function(e) {
-		$(window).on('beforeunload', function() {
-			if ( inside == 0 ){
-				inside=1;
-				if ( $('#sendmessageform').length  > 0 ||
-					 $('.configForm').length > 0 && $('.submit').attr('name') == "savebutton"  ){
-					return "Are you sure you want to leave? ";
-				}
-			}
-		});
-        if ( e.target.id == "content" || $(e.target).parents("#content").size() || e.target.id == "modal-open" || $(e.target).parents(".modal-open").size() ) { 
-            var inside = 1;
-        } else { 
-           inside = 0;
-        }
-    });
-
 });
 </script>

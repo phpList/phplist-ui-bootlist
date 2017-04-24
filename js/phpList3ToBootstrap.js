@@ -84,6 +84,9 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('#login-form input[type=submit]').addClass('btn-lg');
     $('#forgotpassword-form input[type=submit]').addClass('btn-sm');
     $('div[id*=list] ul').addClass('list-unstyled');
+   	$('#edit_list_categories .form-control').attr('data-role','tagsinput');
+
+
 
 /* remove checkbox style because is not submiting on import2 form 
 
@@ -344,9 +347,10 @@ $('#stopqueue').click(function(){
 });
 
 
-/* vertical scrolling */
 
 $(document).ready(function(){
+
+	/* vertical scrolling */
 	if ( $('body').hasClass('configure') ){
 		var id = location.hash;
 		console.log(id);
@@ -356,4 +360,28 @@ $(document).ready(function(){
 		    }, 1000);
 		},1000);
 	}
-});
+
+	/* function to prevent leave page */    
+    $("body").click(function(e) {
+		$(window).on('beforeunload', function() {
+			if ( inside == 0 ){
+				inside=1;
+				if ( $('#sendmessageform').length  > 0 ||
+					 $('.configEditing').length > 0 && window.location.href.indexOf("id=list_categories") == -1){
+					return "Are you sure you want to leave? ";
+				}
+			}
+		});
+        if ( e.target.id == "content" || $(e.target).parents("#content").size() || e.target.id == "modal-open" || $(e.target).parents(".modal-open").size() ) { 
+            var inside = 1;
+        } else { 
+           inside = 0;
+        }
+    });
+	
+	/* bootstrap tags input */
+	$('#dontsaveitem_list_categories').click(function(){
+		if(window.location.href.indexOf("id=list_categories") > -1)
+			location.reload();
+	});
+}); /* <-- end document.ready */
