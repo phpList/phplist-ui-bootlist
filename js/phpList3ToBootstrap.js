@@ -197,7 +197,6 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.home .upgrade span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-up"/>').removeClass('listingname');
     $('.home .dbcheck span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tasks"/>').removeClass('listingname');
     $('.home .view-log span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>').removeClass('listingname');
-    $('.dashboard .panel').addClass('col-md-4');
     /*buttons*/
     $('.home span.listingname a').addClass('btn btn-xs btn-info');
 	$('span.listingelement a, div.configEdit a').not('body.members a.listingelement, .home span.listingelement a,a[name]').addClass('btn btn-xs btn-primary');
