@@ -134,16 +134,18 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
         $('.accordion .panel-heading').attr({ 'id':function(i) { return 'heading'+(i+1);}, 'role':'tab' });
     }
 /* TABS*/
-    if ( !$('.tabbed ul:first').hasClass('nav-tabs') ){
-        $('.tabbed ul:first').addClass('nav nav-tabs');
-        $('.tabbed ul.nav-tabs').attr('role','tablist');
-        $('.tabbed ul.nav-tabs li').attr('role','presentation');
-        $('.tabbed ul.nav-tabs li a').attr({ 'role':'tab', 'data-toggle':'tab' });
-        $('.tabbed div[id]').not('.tabbed ul div').wrapAll('<div class="tab-content"/>');
-        $('.tabbed .tab-content div[id]').addClass('tab-pane');
-        $('.tabbed .tab-pane').attr('role','tabpanel');
-        $('.tabbed ul.nav-tabs li a:first').tab('show');
-    }
+    $('.tabbed').each(function(){
+    	if ( !$(this).find('ul:first').hasClass('nav-tabs') ){
+        	$(this).find('ul:first').addClass('nav nav-tabs');
+        	$(this).find('ul.nav-tabs').attr('role','tablist');
+	        $(this).find('ul.nav-tabs li').attr('role','presentation');
+	        $(this).find('ul.nav-tabs li a').attr({ 'role':'tab', 'data-toggle':'tab' });
+	        $(this).find('div[id]').not('.tabbed ul div').wrapAll('<div class="tab-content"/>');
+	        $(this).find('.tab-content div[id]').addClass('tab-pane');
+	        $(this).find('.tab-pane').attr('role','tabpanel');
+	        $(this).find('ul.nav-tabs li a:first').tab('show');
+	    }
+    });
 	if ( $('.tabbed ul.nav-tabs li').length == 0 ){
 	        $('.tabbed .tab-content .tab-pane').css({'display':'block'});
 	    }
