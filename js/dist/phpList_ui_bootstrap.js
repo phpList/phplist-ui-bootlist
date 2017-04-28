@@ -2264,12 +2264,14 @@ $(document).ready(function(){
 			if ( inside == 0 ){
 				inside=1;
 				if ( $('#sendmessageform').length  > 0 ||
-					 $('.configEditing').length > 0 && window.location.href.indexOf("id=list_categories") == -1){
+					 $('.configEdit .configValue').length > 0 && window.location.href.indexOf("id=list_categories") == -1){
 					return "Are you sure you want to leave? ";
 				}
 			}
 		});
-        if ( e.target.id == "content" || $(e.target).parents("#content").size() || e.target.id == "modal-open" || $(e.target).parents(".modal-open").size() ) { 
+        if ( e.target.id == "content" || $(e.target).parents("#content").size() || 
+        		e.target.id == "modal-open" || $(e.target).parents(".modal-open").size() ||
+	        	$(e.target).parents(".configValue").size() ) { 
             var inside = 1;
         } else { 
            inside = 0;
