@@ -72,9 +72,8 @@ function _topMenu()
 			case "statistics" : $icon = "glyphicon-stats"; break;
 			case "system" : $icon = "glyphicon-wrench"; break;
 			case "config" : $icon = "glyphicon-cog"; break;
-			case "info" : $icon = "";$icontext= "<samp style='line-height:1.5;font-weight:bold;font-size:19px'>i</samp>"; break;
+			case "info" : $icon = ""; $icontext = "<samp style='line-height:1.5;font-weight:bold;font-size:19px'>i</samp>"; break;
 			case "develop" : $icon = "glyphicon-console"; break;
-			case "account" : $icon = "glyphicon-briefcase"; break;
         }
         foreach ($categoryDetails['menulinks'] as $page) {
                $title = $GLOBALS['I18N']->pageTitle($page);
@@ -88,8 +87,20 @@ function _topMenu()
                     $open = ' class="active open"';
                 }
                 $link = PageLink2($page, $title, '', true);
-                if ($link) {
-                    $thismenu .= '<li' . $active . '>' . $link . '</li>';
+
+				/* build account  menu (accmenu) if Account section exist */
+                if ($link && $category == 'account') {
+					switch($page){
+                			case "accinfo" : $icon = "glyphicon-briefcase"; break;
+							case "accsettings" : $icon = "glyphicon-wrench"; break;
+							case "acchelp" : $icon = "glyphicon-comment"; break;
+					}
+					if ($active == ' class="active"')  $active = ' class="open active"';
+                    $accmenu .= '<ul><li '.$active.'.><a class="level0" href="' . PageUrl2($page, '', '', true). '" title="' . $title . '"><span class="glyphicon '.$icon.'">'.$icontext.'</span>' . ucfirst($title) . '</a></li></ul>';
+                }
+                /* add item to mainmenu ($thismenu) */
+                 elseif ($link) {
+                	$thismenu .= '<li' . $active . '>' . $link . '</li>';
                 }
          }
         $twohomes = array('dashboard','home');
@@ -100,7 +111,7 @@ function _topMenu()
             $thismenu = '<ul>' . $thismenu . '</ul>';
         }
 
-        if (!empty($categoryDetails['toplink'])) {
+        if ($category != 'account' && !empty($categoryDetails['toplink'])) {
             $categoryurl = PageUrl2($categoryDetails['toplink'], '', '', true);
             if ($categoryurl) {
             	$categoryurl = ($thismenu == "") ? $categoryurl : "#";
@@ -108,11 +119,15 @@ function _topMenu()
             } else {
                 $topmenu .= '<ul><li><span>' . $GLOBALS['I18N']->get($category) . $categoryurl . '</span>' . $thismenu . '</li></ul>';
             }
-        }
-    }
+        }/* <- end foreach menulinks */        
+    } /* <- end foreach category */
 
+	/* add an Account  section if category exist */
+	if (!empty($accmenu)) {
+		$topmenu.='<h3>'.$GLOBALS['I18N']->get('Profile and account').'</h3>'.$accmenu;
+	}
+	
     $topmenu .= '</div>';
-
     return $topmenu;
 }
 
