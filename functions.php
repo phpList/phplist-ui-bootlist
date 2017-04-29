@@ -93,7 +93,7 @@ function _topMenu()
 					switch($page){
                 			case "accinfo" : $icon = "glyphicon-briefcase"; $page_title ="Your account"; break;
 							case "accsettings" : $icon = "glyphicon-wrench";  $page_title ="Account settings"; break;
-							case "acchelp" : $icon = "glyphicon-comment"; $page_title ="Help"; break;
+							case "acchelp" : $icon = "";$icontext="<samp style='line-height:1.5;font-weight:bold;font-size:19px'>?</samp>"; $page_title ="Help"; break;
 					}
 					if ($active == ' class="active"')  $active = ' class="open active"';
                     $accmenu .= '<ul><li '.$active.'.><a class="level0" href="' . PageUrl2($page, '', '', true). '" title="' . $title . '"><span class="glyphicon '.$icon.'">'.$icontext.'</span>' . ucfirst($page_title) . '</a></li></ul>';
