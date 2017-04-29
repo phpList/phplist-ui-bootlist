@@ -88,16 +88,17 @@ function _topMenu()
                 }
                 $link = PageLink2($page, $title, '', true);
 
-				/* build account  menu (accmenu) if Account section exist */
+				/* build account  menu ($accmenu) if Account section exist */
                 if ($link && $category == 'account') {
 					switch($page){
-                			case "accinfo" : $icon = "glyphicon-briefcase"; break;
-							case "accsettings" : $icon = "glyphicon-wrench"; break;
-							case "acchelp" : $icon = "glyphicon-comment"; break;
+                			case "accinfo" : $icon = "glyphicon-briefcase"; $page_title ="Your account"; break;
+							case "accsettings" : $icon = "glyphicon-wrench";  $page_title ="Account settings"; break;
+							case "acchelp" : $icon = "glyphicon-comment"; $page_title ="Help"; break;
 					}
 					if ($active == ' class="active"')  $active = ' class="open active"';
-                    $accmenu .= '<ul><li '.$active.'.><a class="level0" href="' . PageUrl2($page, '', '', true). '" title="' . $title . '"><span class="glyphicon '.$icon.'">'.$icontext.'</span>' . ucfirst($title) . '</a></li></ul>';
+                    $accmenu .= '<ul><li '.$active.'.><a class="level0" href="' . PageUrl2($page, '', '', true). '" title="' . $title . '"><span class="glyphicon '.$icon.'">'.$icontext.'</span>' . ucfirst($page_title) . '</a></li></ul>';
                 }
+                
                 /* add item to mainmenu ($thismenu) */
                  elseif ($link) {
                 	$thismenu .= '<li' . $active . '>' . $link . '</li>';
