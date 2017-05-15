@@ -283,7 +283,6 @@ $( document ).ajaxComplete(function() {
 
 /******** SELECT TO DROPDOWN *******/
 $('.selectpicker').selectpicker();
-
 /**************************** ///////////////////////////// ****************************/
 
 
