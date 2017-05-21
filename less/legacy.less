@@ -48,6 +48,8 @@ iframe{border:0px}
 	display: inline-block;
 }
 .noborder{border:0 !important} 
+.text-middle{vertical-align:middle !important }
+.clickeable{cursor:pointer;}
 
 /* ## bootstrap */
 a{color:darken(@grey,3%)}
@@ -79,10 +81,17 @@ table.well tr td{padding:10px 20px;padding-right:20px}
 
 @media screen and (max-width: 767px){
 	#content #wrapp .nav-tabs > li {
-					float:none;
-					border:1px dotted #CCC;
-					a{ padding:5px;}
+		float:none;
+		border:1px dotted #CCC;
+		a{ padding:5px;}
 	}
+}
+@media screen and (min-width: 768px){
+	.dl-horizontal dt{ text-align:left}
+	.dl-horizontal dd{ 
+		overflow:hidden;
+		margin-left:0
+		}
 }
 
 
