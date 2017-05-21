@@ -125,13 +125,13 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     if ( !$('.accordion').hasClass('panel-group') ){
         $('.accordion').addClass('panel-group').attr({ 'aria-multiselectable':'true', 'id':'accordion','role':'tablist' });
         $('.accordion h3').addClass('panel-title').each(function(){ $(this).next('div').andSelf().wrapAll('<div class="panel panel-default"/>'); });
-        $('.accordion h3 a').addClass('collapsed').attr({ "role":"button", "data-toggle":"collapse", "data-parent":"#accordion", "aria-expanded":"false", "aria-controls":function(i) { return 'collapse'+(i+1); }, "href":function(i) { return '#collapse'+(i+1);} });
-        $('.accordion .panel-default:first h3 a').attr('aria-expanded','true');
-        $('.accordion .panel-default div').not('.accordion .panel-default div div').addClass('panel-collapse collapse');
+        $('.accordion h3').wrap('<div class="panel-heading clickeable"/>');
+        $('.accordion .panel-heading').attr({ 'id':function(i) { return 'heading'+(i+1);}, 'role':'tab' });
+        $('.accordion .panel-heading').addClass('collapsed').attr({ "data-toggle":"collapse", "data-parent":"#accordion", "aria-expanded":"false", "aria-controls":function(i) { return 'collapse'+(i+1); }, "data-target":function(i) { return '#collapse'+(i+1);} });
+        $('.accordion .panel-default:first h3 .panel-heading').attr('aria-expanded','true');
+        $('.accordion .panel-default div').not('.accordion .panel-default div div, .accordion .panel-heading').addClass('panel-collapse collapse');
         $('.accordion .panel-default:first .panel-collapse').addClass(' in ');
         $('.accordion .panel-default .panel-collapse').wrapInner('<div class="panel-body"/>').attr({ 'role':'tabpanel', 'id':function(i) { return 'collapse'+(i+1); },'aria-labelledby':function(i) { return 'heading'+(i+1); } });
-        $('.accordion h3').wrap('<div class="panel-heading"/>');
-        $('.accordion .panel-heading').attr({ 'id':function(i) { return 'heading'+(i+1);}, 'role':'tab' });
     }
 /* TABS*/
     $('.tabbed').each(function(){
