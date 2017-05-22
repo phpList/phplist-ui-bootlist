@@ -125,7 +125,7 @@ function _topMenu()
 
 	/* add an Account  section if category exist */
 	if (!empty($accmenu)) {
-		$topmenu.='<h3>'.$GLOBALS['I18N']->get('Profile and account').'</h3>'.$accmenu;
+		$topmenu.='<h3 id="accmenu">'.$GLOBALS['I18N']->get('Profile and account').'</h3>'.$accmenu;
 	}
 	
     $topmenu .= '</div>';
