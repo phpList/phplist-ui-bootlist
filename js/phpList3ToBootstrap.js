@@ -72,8 +72,8 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 	$('.pull-right').find('.dropdown-menu').addClass('dropdown-menu-right');
     $('.filterdiv,.usersFind').addClass('navbar navbar-default navbar-form');
     if (!$('body').hasClass('modal-open')){
-	    $('.filterdiv,.usersFind,.minitabs,#webblertabs').after('<div class="clearfix" />');
-    	$('.filter label[for=sortby]').before('<div class="clearfix"></div>');
+	    $('.filterdiv,.usersFind,.minitabs,#webblertabs').after('<div class="clearfix break" />');
+    	$('.filter label[for=sortby]').before('<div class="clearfix break"></div>');
     }
 /* FORMS */
     $('input[type=text],input[type=password],textarea,select,input[type=email],input[type=phone],input[type=file]').addClass('form-control');
@@ -108,8 +108,8 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('#sendTest br').remove();
     $('body.editattributes form').addClass('form-inline');
     if (!$('body').hasClass('modal-open')){
-	    $('.accordion label,#sendmessageform .well label').not('.checkbox label,.radio label').before('<div class="clearfix"></div>');
-    	$('label[for=htmlchoice], label[for=emaildoubleentry]').after('<div class="clearfix"></div>');
+	    $('.accordion label,#sendmessageform .well label').not('.checkbox label,.radio label').before('<div class="clearfix break"></div>');
+    	$('label[for=htmlchoice], label[for=emaildoubleentry]').after('<div class="clearfix break"></div>');
 	}
 /* PROGRESSBAR */
 	if ( !$('#progressbar').hasClass('progress-bar') ){
@@ -249,12 +249,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 	$(this).css({'background-color':bgcolor});
     });
     $('table').not('.home table, table.loginPassUpdate, table.table').addClass('table');
-    
-/* ADD SPACE */ 
-	if (!$('.clearfix').hasClass('break')){
-	    $('.clearfix').addClass('break');
-	}
-    
+        
 /* news widget */
     $('#newsfeed ul').addClass('well list-unstyled');
 
@@ -270,7 +265,6 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 
 
 /* fire myfunction on: */
-
 $( window ).load(function(){
     if ( $('body').hasClass('invisible') ){ myfunction();}
  });
@@ -354,6 +348,11 @@ $('#stopqueue').click(function(){
 
 
 $(document).ready(function(){
+
+	/*not apply myfunction to acccount pages*/
+	if ( $('body').hasClass('accsettings') || $('body').hasClass('accsinfo') || $('body').hasClass('accshelp')  ){
+		$('body').removeClass('invisible');
+	}
 
 	/* vertical scrolling */
 	if ( $('body').hasClass('configure') ){
