@@ -28,6 +28,8 @@ TABLE OF CONTENT
 table{border-color:transparent;}
 
 /* # generals *****************/
+form{margin:10px 0}
+table form{margin:0px 0}
 .content-wrapper {
 	background-color: #fff;
 	float:left;
@@ -50,14 +52,20 @@ iframe{border:0px}
 .noborder{border:0 !important} 
 .text-middle{vertical-align:middle !important }
 .clickeable{cursor:pointer;}
+p{margin-top:10px}
+.alert p,p.button{margin-top:0}
+a{color:darken(@grey,3%)}
+a:focus,button:focus{outline:none !important}
+li{margin-bottom:5px}
+.navbar li{margin-bottom:0px}
+textarea{margin-bottom:10px}
+.break{margin:10px 0}
 
 /* ## bootstrap */
-a{color:darken(@grey,3%)}
 .btn a,.nav a{color:@black}
-a:focus,button:focus{outline:none !important}
-.btn,.input-group{margin:10px 5px 10px 0px}
-.input-group-btn .btn,.toggle-group .btn{margin:0}
-.btn-xs{margin:2px} 
+.btn{margin-right:10px}
+.btn-xs{margin:2px}
+.navbar .btn{margin-left:5px}
 .btn-default{background:#DDD}
 .btn-warning{color:#333;background-color:#FF9}
 .btn-link{border-color:#CCC;border-radius:4px}
@@ -67,6 +75,8 @@ span.glyphicon{margin:5px}
 .btn.disabled{opacity:0.2}
 .tab-content ul.list-unstyled li{margin-bottom:15px}
 .form-control{max-width: 100% !important} 
+label,.form-control,.btn:not(table .btn-xs){margin-top:5px;margin-bottom:5px;margin-right:5px}
+.panel-collapse, .panel-body{margin-top:0px !important}
 body.list,body.mviews,body.templates,body.eventlog,body.spage{
 	.table-striped > tbody > tr:nth-of-type(2n+1) { border-bottom:2px solid #999}
 }
@@ -74,16 +84,30 @@ body.members, body.users {
 	.table-striped > tbody > tr:nth-of-type(2n) { border-bottom:2px solid #999} 
 }
 body.messages .table-striped > tbody > .row1 { border-top:2px solid #999}
+#dropdown-tabs{margin-bottom:10px}
 
 .progress{margin-bottom:10px;margin-top:30px}
 table.well tr td{padding:10px 20px;padding-right:20px}
 .plugindetails .label{color:@black}
+.navbar-brand{padding-top:7px}
+.navbar-default{padding:10px}
+.alert{margin:10px 0}
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
 	#content #wrapp .nav-tabs > li {
 		float:none;
 		border:1px dotted #CCC;
 		a{ padding:5px;}
+	}
+	#globalhelp button{
+		margin-bottom:-30px;
+		width: 25px;
+ 		height: 25px;
+		margin-right: 32px;
+		margin-top: 10px;
+	}
+	#navigation .navbar-toggle{
+		margin-top:14px
 	}
 }
 @media screen and (min-width: 768px){
@@ -96,8 +120,8 @@ table.well tr td{padding:10px 20px;padding-right:20px}
 
 
 /* ## phpList */
+.tabbed{margin-top:10px}
 #container{margin-bottom:50px}
-.navbar-brand{padding-top:7px}
 div.panel{padding:0px !important;background:none !important} /* FIX NEEDED BECAOUSE HELP PAGE (page=community) loads style.css from dressprow theme */
 body.plugins a.ajaxable button{background:inherit;padding:0;margin:0;font-size:inherit}
 body.processqueue #spinner,#processqueuecontrols{width:auto;}
@@ -116,11 +140,14 @@ span.nexttab, span.prevtab{margin:35px 0 0 0}
 .panel .step-nav a:hover{background-color:transparent}
 .helpdialog{margin-right:5px}
 #exportdates{margin:15px 0 30px}
-.tabbed{margin-top:15px}
 .memberCount, .unconfirmedCount, .blacklistedCount{ font-weight:bold}
 .paging{height:35px} 
-
-
+div.actions .btn,.action-button{margin-top:10px;margin-bottom:10px}
+table.spageeditListing td{padding-bottom:10px !important }
+.sendSubmit{margin-top:30px;border-top:1px dotted #CCC;padding-top:10px}
+/*plugin segmentation*/
+div.segment .clearfix{margin:20px 0 !important}
+.sendTest input{margin:5px 0}
 
 
 /* # header *******************/
@@ -215,7 +242,16 @@ body.send #sendtabs .btn {margin:0px;padding:5px}
 body.attributes .form-control{width:auto}
 
 /* ## settings (configure) */
-body.configure fieldset legend{border:0}
+body.configure fieldset legend{
+	border: 0;
+	padding: 8px 16px;
+	background: @sidebarcolor;
+	border-radius: 10px;
+	width: auto;
+	color: @greylight;
+
+	font-size: 18px;
+}
 
 /* ## add admin */
 #privileges label{margin-right:15px}
@@ -293,8 +329,7 @@ div.tab-content {padding:20px;border:1px solid #CCC;background-color:#FFF;margin
 .checkbox.checkbox-inline {margin-top:0;padding:0 5px}
 #privileges .checkbox label{margin-right:0px}
 */
-.radio { margin:0 3px }
-.radio label { display:inline-block; vertical-align:middle; position:relative; padding:0px;margin-left:15px}
+.radio label { display:inline-block; vertical-align:middle; position:relative; padding:0px}
 .radio label::before { content:""; display:inline-block; position:absolute; width:17px; height:17px; left:0; margin-left:-20px; border:1px solid #bbb; border-radius:50%; background-color:#fff; -webkit-transition:border 0.15s ease-in-out; -o-transition:border 0.15s ease-in-out; transition:border 0.15s ease-in-out}
 .radio label::after { display:inline-block; position:absolute; content:" "; width:11px; height:11px; left:3px; top:3px; margin-left:-20px; border-radius:50%; background-color:@brand-success; -webkit-transform:scale(0, 0); -ms-transform:scale(0, 0); -o-transform:scale(0, 0); transform:scale(0, 0); -webkit-transition:-webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); -moz-transition:-moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); -o-transition:-o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33); transition:transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33)}
 .radio input[type="radio"] { opacity:0; z-index:1}
@@ -302,7 +337,7 @@ div.tab-content {padding:20px;border:1px solid #CCC;background-color:#FFF;margin
 .radio input[type="radio"]:checked + label::after { -webkit-transform:scale(1, 1); -ms-transform:scale(1, 1); -o-transform:scale(1, 1); transform:scale(1, 1)}
 .radio input[type="radio"]:disabled + label { opacity:0.65}
 .radio input[type="radio"]:disabled + label::before { cursor:not-allowed}
-.radio.radio-inline { margin-top:0;padding: 0 5px}
+.radio.radio-inline { margin-top:0;margin-left:5px}
 /*input[type="checkbox"].styled:checked + label:after, */input[type="radio"].styled:checked + label:after { font-family:'Glyphicons Halflings'; content:"\e013"}
 /*input[type="checkbox"] .styled:checked + label::before, */input[type="radio"] .styled:checked + label::before { color:#fff}
 /*input[type="checkbox"] .styled:checked + label::after, */ input[type="radio"] .styled:checked + label::after { color:#fff}
