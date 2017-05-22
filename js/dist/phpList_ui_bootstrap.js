@@ -2006,7 +2006,6 @@
 /* STRUCTURE */
     $('.content, body.configure fieldset, body.adminattributes table.attributeSet,body.adminattributes table.attributeNew,table.spageeditListing,body.reconcileusers #content form,body.export #content form').not('.accordion .content, .content table .content,body.dbcheck table, body.adminattributes .content').addClass('well');
     $('.fleft').addClass('pull-left');
- 
 
 /* languageswitcher */
     $('#languageswitcher select').addClass('selectpicker').attr({ 'data-style':'btn-primary' });
@@ -2058,9 +2057,10 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 }
 	$('.pull-right').find('.dropdown-menu').addClass('dropdown-menu-right');
     $('.filterdiv,.usersFind').addClass('navbar navbar-default navbar-form');
-    $('.filterdiv,.usersFind,.minitabs,#webblertabs').after('<div class="clearfix" />');
-    $('.filter label[for=sortby]').before('<div class="clearfix"></div>');
-    
+    if (!$('body').hasClass('modal-open')){
+	    $('.filterdiv,.usersFind,.minitabs,#webblertabs').after('<div class="clearfix" />');
+    	$('.filter label[for=sortby]').before('<div class="clearfix"></div>');
+    }
 /* FORMS */
     $('input[type=text],input[type=password],textarea,select,input[type=email],input[type=phone],input[type=file]').addClass('form-control');
     $('#login-form td').addClass('input-group input-group-lg');
@@ -2093,9 +2093,10 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('div, label').removeClass('label');
     $('#sendTest br').remove();
     $('body.editattributes form').addClass('form-inline');
-    $('.accordion label,#sendmessageform .well label').not('.checkbox label,.radio label').before('<div class="clearfix"></div>');
-    $('label[for=htmlchoice], label[for=emaildoubleentry]').after('<div class="clearfix"></div>');
-
+    if (!$('body').hasClass('modal-open')){
+	    $('.accordion label,#sendmessageform .well label').not('.checkbox label,.radio label').before('<div class="clearfix"></div>');
+    	$('label[for=htmlchoice], label[for=emaildoubleentry]').after('<div class="clearfix"></div>');
+	}
 /* PROGRESSBAR */
 	if ( !$('#progressbar').hasClass('progress-bar') ){
     	$('#progressbar').wrap('<div class="progress"/>').addClass('progress-bar progress-bar-striped active').attr({"role":"progressbar","aria-valuemin":"0"});
@@ -2206,7 +2207,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.step-nav .back').html('<span class="glyphicon glyphicon-arrow-left" />');
     $('.step-nav .next').html('<span class="glyphicon glyphicon-arrow-right" />');
     $('.import #wrapp ul, .system #wrapp ul.dashboard_button, .usermgt #wrapp ul, ul.navigation_list').addClass('nav nav-pills nav-stacked');
-    $('.import #wrapp ul li a, .system #wrapp ul li a,.usermgt #wrapp ul li a, ul.navigation_list li a').addClass('glyphicon glyphicon-menu-right');
+    $('.import #wrapp ul li a, .system #wrapp ul li a,.usermgt #wrapp ul li a, ul.navigation_list li a').not('#newsfeed ul li a').addClass('glyphicon glyphicon-menu-right');
     $('#wrapp .nav.nav-pills li ul').addClass('small');
     $('.updatepluginbutton').addClass('btn-xs');
     /*yes/no icons */
@@ -2234,7 +2235,11 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 	$(this).css({'background-color':bgcolor});
     });
     $('table').not('.home table, table.loginPassUpdate, table.table').addClass('table');
-
+    
+/* ADD SPACE */ 
+	if (!$('.clearfix').hasClass('break')){
+	    $('.clearfix').addClass('break');
+	}
     
 /* news widget */
     $('#newsfeed ul').addClass('well list-unstyled');
