@@ -2222,7 +2222,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     });
 
 /* tables*/
-    $('.content').not('.listingelement .content').addClass('table-responsive');
+    $('.content').not('.listingelement .content, body.import1 .content, body.import2 .content').addClass('table-responsive');
     $('table').not('table.table').attr('border',null);
     $('.listingelement table,body.dbcheck table, table.spageeditListing').not('table.table').addClass('table-condensed');
     $('table.spageeditListing tr:first-child,table.attributeSet tr:first-child').addClass('info');
