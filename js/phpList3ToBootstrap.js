@@ -350,8 +350,9 @@ $('#stopqueue').click(function(){
 $(document).ready(function(){
 
 	/*not apply myfunction to acccount pages*/
-	if ( $('body').hasClass('accsettings') || $('body').hasClass('accsinfo') || $('body').hasClass('accshelp')  ){
+	if ( $('body').hasClass('accsettings') || $('body').hasClass('accinfo') || $('body').hasClass('acchelp')  ){
 		$('body').removeClass('invisible');
+	    $('#languageswitcher select').addClass('selectpicker').attr({ 'data-style':'btn-primary' });
 	}
 
 	/* vertical scrolling */
