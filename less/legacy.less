@@ -82,8 +82,10 @@ span.glyphicon{margin:5px}
 .well{background-color:#FCFCFC}
 .btn.disabled{opacity:0.2}
 .tab-content ul.list-unstyled li{margin-bottom:15px}
-.form-control{max-width: 100% !important} 
-label,.form-control,.btn:not(table .btn-xs){margin-top:5px;margin-bottom:5px;margin-right:5px}
+.form-control{max-width: 100% !important}
+select.form-control,input.form-control{display:inline-block;width:auto}
+label,.form-control,.btn{margin:5px}
+.toggle-group label,.toggle-group span{margin:0} 
 .panel-collapse, .panel-body{margin-top:0px !important}
 body.list,body.mviews,body.templates,body.eventlog,body.spage{
 	.table-striped > tbody > tr:nth-of-type(2n+1) { border-bottom:2px solid #999}
@@ -99,6 +101,11 @@ table.well tr td{padding:10px 20px;padding-right:20px}
 .navbar-brand{padding-top:7px}
 .navbar-default{padding:10px}
 .alert{margin:10px 0}
+.table-responsive, .table-responsive .table{
+    transform:rotateX(180deg);
+    -ms-transform:rotateX(180deg); /* IE 9 */
+    -webkit-transform:rotateX(180deg); /* Safari and Chrome */
+}
 
 @media screen and (max-width: 768px){
 	#content #wrapp .nav-tabs > li {
@@ -116,7 +123,11 @@ table.well tr td{padding:10px 20px;padding-right:20px}
 	#navigation .navbar-toggle{
 		margin-top:14px
 	}
+	.well{padding:0}
+	/* need this to overwrite sizes of inputs */
+	input.form-control,select.form-control{width:100%}
 }
+
 @media screen and (min-width: 768px){
 	.dl-horizontal dt{ text-align:left}
 	.dl-horizontal dd{ 
@@ -352,7 +363,6 @@ div.tab-content {padding:20px;border:1px solid #CCC;background-color:#FFF;margin
 /*input[type="checkbox"].styled:checked + label:after, */input[type="radio"].styled:checked + label:after { font-family:'Glyphicons Halflings'; content:"\e013"}
 /*input[type="checkbox"] .styled:checked + label::before, */input[type="radio"] .styled:checked + label::before { color:#fff}
 /*input[type="checkbox"] .styled:checked + label::after, */ input[type="radio"] .styled:checked + label::after { color:#fff}
-select.form-control{display:inline-block;width:auto}
 input[type="checkbox"]{margin:6px;vertical-align:middle}
 
 

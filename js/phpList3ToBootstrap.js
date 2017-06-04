@@ -106,7 +106,6 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('body.configure div.shade1, body.configure div.shade2').addClass('form-group');
     $('div, label').removeClass('label');
     $('#sendTest br').remove();
-    $('body.editattributes form').addClass('form-inline');
     if (!$('body').hasClass('modal-open')){
 	    $('.accordion label,#sendmessageform .well label').not('.checkbox label,.radio label').before('<div class="clearfix break"></div>');
     	$('label[for=htmlchoice], label[for=emaildoubleentry]').after('<div class="clearfix break"></div>');
@@ -236,7 +235,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     });
 
 /* tables*/
-    $('.content').not('.listingelement .content, body.import1 .content, body.import2 .content').addClass('table-responsive');
+	$('body.userhistory #subscription .content, body.statsoverview .content, body.domainstats .content,body.dbcheck .content,body.bouncerules .content,body.plugins .content').addClass('table-responsive');
     $('table').not('table.table').attr('border',null);
     $('.listingelement table,body.dbcheck table, table.spageeditListing').not('table.table').addClass('table-condensed');
     $('table.spageeditListing tr:first-child,table.attributeSet tr:first-child').addClass('info');
