@@ -235,7 +235,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     });
 
 /* tables*/
-	$('body.userhistory #subscription .content, body.statsoverview .content, body.domainstats .content,body.dbcheck .content,body.bouncerules .content,body.plugins .content').addClass('table-responsive');
+	$('body.userhistory #subscription .content, body.statsoverview .content, body.domainstats .content,body.dbcheck .content,body.bouncerules .content,body.plugins .content').first().addClass('table-responsive');
     $('table').not('table.table').attr('border',null);
     $('.listingelement table,body.dbcheck table, table.spageeditListing').not('table.table').addClass('table-condensed');
     $('table.spageeditListing tr:first-child,table.attributeSet tr:first-child').addClass('info');
