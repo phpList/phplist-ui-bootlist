@@ -1,7 +1,6 @@
-	            <div class="clear"></div>
+	            <div class="clear"></div>	            
 	            <div id="newsfeed" class="menutableright block">
-	       			<h3><span class="glyphicon glyphicon-bullhorn text-danger"></span> <?php print s('phpList community news');?></h3>
-					<?php include 'communityfeed.php'; ?>
+					<?php  include __DIR__.'/../'.$THEMEINFO['dir'].'/rssfeed.php'; ?>
 				</div>
 		    </div>
 
