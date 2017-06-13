@@ -1,9 +1,10 @@
-	            <div class="clear"></div>	            
+<?php if (empty($_GET['page']) || $_GET['page'] == 'dashboard') { ?>
+	            <div class="clear"></div>
 	            <div id="newsfeed" class="menutableright block">
 					<?php  include __DIR__.'/../'.$THEMEINFO['dir'].'/rssfeed.php'; ?>
 				</div>
 		    </div>
-
+<?php } ?>
 	        <div id="footer">
 	            <div class="version pull-left">
 	                <a target="_blank" href="https://phplist.com">&copy; phpList ltd.</a> - v<?php echo VERSION?>               
