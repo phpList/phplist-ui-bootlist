@@ -65,6 +65,7 @@ function _topMenu()
         $icon = 'glyphicon-plus';
         $icontext = "";
         $open = '';
+        $accmenu = '';
         switch ($category) {
 			case "dashboard" : $icon = "glyphicon-home"; break;
 			case "subscribers" : $icon = "glyphicon-user"; break;
