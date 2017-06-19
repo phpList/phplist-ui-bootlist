@@ -2001,7 +2001,8 @@
 	$('body.bounce .content div.fleft:nth-child(2)').addClass('col-sm-4 col-sm-offset-1').removeClass('fleft'); 
 	$('body.bounce .content div.fleft:nth-child(3)').addClass('col-sm-5 col-sm-offset-1').removeClass('fleft'); 
 
-
+/* subscribe page */
+$('body.fixed .required').addClass('text-danger');
 
 /* STRUCTURE */
     $('.content, body.configure fieldset, body.adminattributes table.attributeSet,body.adminattributes table.attributeNew,table.spageeditListing,body.reconcileusers #content form,body.export #content form').not('.accordion .content, .content table .content,body.dbcheck table, body.adminattributes .content').addClass('well');
@@ -2181,7 +2182,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.home .processbounces span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-hourglass"/>').removeClass('listingname');
     $('.home .bounces span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-ban-circle"/>').removeClass('listingname');
     $('.home .plugin span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-pushpin"/>').removeClass('listingname');
-    $('.home .setup span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-wrench"/>').removeClass('listingname');
+    $('.home .setup span.listingname a.listingname,.home .config-link span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-wrench"/>').removeClass('listingname');
     $('.home .upgrade span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-circle-arrow-up"/>').removeClass('listingname');
     $('.home .dbcheck span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-tasks"/>').removeClass('listingname');
     $('.home .view-log span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>').removeClass('listingname');
@@ -2251,7 +2252,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 
 /* fire myfunction on: */
 $( window ).load(function(){
-    if ( $('body').hasClass('invisible') ){ myfunction();}
+    if ( $('body').hasClass('invisible') || $('body').hasClass('fixed') ){ myfunction();}
  });
 
 $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
