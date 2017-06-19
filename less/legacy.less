@@ -310,7 +310,14 @@ form.spageEdit {
 		}
 	}
 }
+/* ## frontend subscribe page */
+body.fixed .content .table td:first-child{width:20%}
 
+@media screen and (max-width:768px){
+body.fixed .well{padding:19px}
+body.fixed .content .table td{border-width:0;display:block;width:100%}
+body.fixed .content .table td:first-child{border-top-width:1px;width:100% }
+}
 /* fix border-radius on /lists/admin/?page=eventlog */
 body.eventlog .btn-group .dropdown-toggle:not(:first-child){
 	border-top-left-radius:5px !important;
