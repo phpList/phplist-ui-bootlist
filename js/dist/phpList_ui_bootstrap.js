@@ -2003,7 +2003,17 @@
 
 /* subscribe page */
 $('body.fixed .required').addClass('text-danger');
-
+$('body.fixed ul.list').addClass('list-unstyled');
+$('body.fixed p.information').addClass('text-info text-underline').wrapInner('<big />');
+$('body.fixed table:first-of-type').addClass('jumbotron'); 
+$('body.fixed div.attributename').wrapInner('<big />');
+$('body.fixed li.list').each(function(){
+	$(this).addClass('form-group');
+	var iname = $(this).find('input').attr('name'); 
+	$(this).find('input').attr('id',iname);
+	$(this).find('input').nextUntil('listdescription').wrapAll('<div class="btn-group">');
+	$(this).find('b').before('<label for="'+iname+'" class="btn btn-default"><span class="[ glyphicon glyphicon-ok ]"></span><span>&nbsp;</span></label>').wrap('<label for="'+iname+'"  class="btn btn-default active" />');
+	});
 /* STRUCTURE */
     $('.content, body.configure fieldset, body.adminattributes table.attributeSet,body.adminattributes table.attributeNew,table.spageeditListing,body.reconcileusers #content form,body.export #content form').not('.accordion .content, .content table .content,body.dbcheck table, body.adminattributes .content').addClass('well');
     $('.fleft').addClass('pull-left');

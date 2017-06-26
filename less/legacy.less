@@ -311,7 +311,19 @@ form.spageEdit {
 	}
 }
 /* ## frontend subscribe page */
-body.fixed .content .table td:first-child{width:20%}
+body.fixed .content .jumbotron td {padding:10px 20px 10px}
+body.fixed .content .table td:first-child{width:25%;vertical-align:middle}
+body.fixed .content .table td{border-top:0}
+body.fixed .content .table div.attributename{margin-top:15px} 
+body.fixed .form-group input[type="checkbox"] { display: none;}
+body.fixed .form-group input[type="checkbox"] + .btn-group > label span { width: 20px;}
+body.fixed .form-group input[type="checkbox"] + .btn-group > label span:first-child {display: none;}
+body.fixed .form-group input[type="checkbox"] + .btn-group > label span:last-child {display: inline-block;}
+body.fixed .form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {display: inline-block;font-size:11px;margin-left:0;margin-right:0}
+body.fixed .form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {display: none;} 
+body.fixed .form-group input[type="checkbox"] + .btn-group .btn-default{background:#FFF !important;font-size:14px;line-height:1.5;margin-left:0;margin-right:0}
+body.fixed .form-group input[type="checkbox"] + .btn-group .btn-default.active{background:#EEE  !important;box-shadow:none;}
+body.fixed .content .listdescription{display: inline-block; margin:10px;}
 
 @media screen and (max-width:768px){
 body.fixed .well{padding:19px}
