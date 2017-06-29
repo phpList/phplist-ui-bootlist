@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="admin/ui/phplist-ui-bootlist/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />
 </head>
 
-<body class="fixed">
+<body class="fixed invisible">
 
 <div id="container">
 

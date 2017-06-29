@@ -2011,7 +2011,7 @@ $('body.fixed li.list').each(function(){
 	$(this).addClass('form-group');
 	var iname = $(this).find('input').attr('name'); 
 	$(this).find('input').attr('id',iname);
-	$(this).find('input').nextUntil('listdescription').wrapAll('<div class="btn-group">');
+	$(this).find('input').nextUntil('listdescription').wrapAll('<div class="btn-group" />');
 	$(this).find('b').before('<label for="'+iname+'" class="btn btn-default"><span class="[ glyphicon glyphicon-ok ]"></span><span>&nbsp;</span></label>').wrap('<label for="'+iname+'"  class="btn btn-default active" />');
 	});
 /* STRUCTURE */
@@ -2262,7 +2262,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 
 /* fire myfunction on: */
 $( window ).load(function(){
-    if ( $('body').hasClass('invisible') || $('body').hasClass('fixed') ){ myfunction();}
+    if ( $('body').hasClass('invisible') ){ myfunction();}
  });
 
 $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
