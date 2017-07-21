@@ -21,6 +21,7 @@ TABLE OF CONTENT
 # modals
 # forms
 # plugins
+    ## bootstrap-dialog
 
 *******************************/
 
@@ -29,6 +30,14 @@ table{border-color:transparent;}
 
 
 /* # generals *****************/
+
+@keyframes shake { /*TODO: install https://github.com/daneden/animate.css/ and delete this keyframe */
+  10%, 90% {transform: translate3d(-1px, 0, 0);}
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% {transform: translate3d(4px, 0, 0);}
+}
+
 form{margin:10px 0}
 table form{margin:0px 0}
 .content-wrapper {
@@ -75,7 +84,6 @@ textarea{margin-bottom:10px}
 .btn-xs{margin:2px}
 .navbar .btn{margin-left:5px}
 .btn-default{background:#DDD}
-.btn-warning{color:#333;background-color:#FF9}
 .btn-link{border-color:#CCC;border-radius:4px}
 .btn-link:link{border-color:#666}
 span.glyphicon{margin:5px}
@@ -106,7 +114,7 @@ table.well tr td{padding:10px 20px;padding-right:20px}
     -ms-transform:rotateX(180deg); /* IE 9 */
     -webkit-transform:rotateX(180deg); /* Safari and Chrome */
 }
-
+ 
 @media screen and (max-width: 768px){
 	#content #wrapp .nav-tabs > li {
 		float:none;
@@ -388,3 +396,31 @@ input[type="checkbox"]{margin:6px;vertical-align:middle}
 /* # plugins */
 div.inline{margin-right:20px;padding:5px 0;display:inline-block !important; }
 /*div.inline .checkbox,*/div.inline .radio{margin-right:-5px}
+
+/* ## bootstrap-dialog */
+.bootstrap-dialog-footer {
+	.btn + .btn{ margin-bottom:5px !important; }
+
+}
+.bootstrap-dialog .modal-content{padding:10px}
+.bootstrap-dialog .modal-footer{padding:5px 0 0;border:0}
+.bootstrap-dialog .modal-header{float:left;border:0;padding:0} 
+.bootstrap-dialog .modal-body{padding:10px 10px 10px 50px;width:90%}
+.bootstrap-dialog-close-button{position:absolute;right:20px}
+.bootstrap-dialog-title { display:none}
+.bootstrap-dialog-header{font-weight:100}
+.bootstrap-dialog-header::before { font-weight:normal;display:inline-block;float:left;font-family:'Glyphicons Halflings'; content:"\e123";color:@state-info-text;font-size:30px;line-height:1;margin-top:10px;margin-left:5px}
+.type-primary .bootstrap-dialog-header::before{ content:"\e123";color:@brand-primary;animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;} 
+.type-primary .bootstrap-dialog-body{padding: 0 10px} 
+.bootstrap-dialog-close-button{display:inline-block;float:right}
+.bootstrap-dialog-body{padding: 10px; border-radius: 6px;background: #FFF;}
+.type-success .modal-content{background: @state-success-border} 
+.type-success .bootstrap-dialog-header::before{ content:"\e013";color:@state-success-text} 
+.type-success .bootstrap-dialog-body{color:@state-success-text}
+.type-warning .modal-content{background: @state-warning-border} 
+.type-warning .bootstrap-dialog-header::before{ content:"\e101";color:@state-warning-text}
+.type-warning .bootstrap-dialog-body{color:@state-warning-text}
+.type-danger .modal-content{background: @state-danger-border} 
+.type-danger .bootstrap-dialog-header::before{ content:"\e090";color:@state-danger-text}
+.type-danger .bootstrap-dialog-body{color:@state-danger-text}
+
