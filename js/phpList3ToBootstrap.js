@@ -1,4 +1,14 @@
 var myfunction = function() {
+
+	/* script to center radio and checkbox column th in spage */
+	if ($('body').hasClass('spage')){
+		$('td.text-center').each(function(){
+		var td = $(this);
+		var th = td.closest('table').find('th').eq(td.index());
+		$(th).addClass('text-center');
+		});
+	}
+
     /* fix elements using .hidden class */
     $("#resumequeue").hide(); 
     $("#resumequeue").removeClass('hidden');
