@@ -182,9 +182,14 @@ body.messages table.messagesendstats{ width: 49%; float: left; margin-left: 1%;}
 
 
 /* # header *******************/
-h4.page-header{display:inline-block;width:100%;margin-top:20px;margin-bottom:20px;border:0;color:#222;font-size:22px}
+h4.page-header{display:inline-block;width:100%;margin-top:0px;margin-bottom:10px;border:0;color:#222;font-size:22px}
 h4.page-header:first-letter{ text-transform:uppercase }
+.header h2{margin-top:10px}
 #navigation{margin-bottom:0;background-color: @menucolor;border:0;border-radius: 0}
+
+@media screen and (max-width:768px){
+	h4.page-header{margin-top:10px;}
+}
 
 
 /* # news widget */
