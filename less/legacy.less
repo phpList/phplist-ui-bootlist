@@ -17,6 +17,9 @@ TABLE OF CONTENT
     ## messages
     ## attributes
     ## settings
+    ## add admin
+    ## subscribe page
+    ## frontend subscribe page
 # tabs
 # modals
 # forms
@@ -92,7 +95,7 @@ span.glyphicon{margin:5px}
 .tab-content ul.list-unstyled li{margin-bottom:15px}
 .form-control{max-width: 100% !important}
 select.form-control,input.form-control{display:inline-block;width:auto}
-label,.form-control,.btn{margin:5px}
+label,.form-control,.btn{margin:5px;margin-left:0}
 .toggle-group label,.toggle-group span{margin:0} 
 .panel-collapse, .panel-body{margin-top:0px !important}
 body.list,body.mviews,body.templates,body.eventlog,body.spage{
@@ -319,6 +322,7 @@ form.spageEdit {
 	}
 }
 /* ## frontend subscribe page */
+body.fixed .content h3{margin-top:0;line-height:1.2}
 body.fixed .content .jumbotron td {padding:10px 20px 10px}
 body.fixed .content .table td:first-child{width:25%;vertical-align:middle}
 body.fixed .content .table td{border-top:0}
@@ -332,12 +336,21 @@ body.fixed .form-group input[type="checkbox"]:checked + .btn-group > label span:
 body.fixed .form-group input[type="checkbox"] + .btn-group .btn-default{background:#FFF !important;font-size:14px;line-height:1.5;margin-left:0;margin-right:0}
 body.fixed .form-group input[type="checkbox"] + .btn-group .btn-default.active{background:#EEE  !important;box-shadow:none;}
 body.fixed .content .listdescription{display: inline-block; margin:10px;}
+body.fixed .well{padding-bottom:0}
+body.fixed .content>br{display:none}
+body.fixed .content>p{text-align:right}
+body.fixed .content .poweredby{margin-top:30px}
 
 @media screen and (max-width:768px){
-body.fixed .well{padding:19px}
-body.fixed .content .table td{border-width:0;display:block;width:100%}
-body.fixed .content .table td:first-child{border-top-width:1px;width:100% }
+	body.fixed .well{padding:19px;padding-bottom:0}
+	body.fixed .content .jumbotron td label{margin-bottom:0px}
+	body.fixed .content .jumbotron td {padding-top:0px}
+	body.fixed .content .jumbotron td.attributeinput{padding-bottom:5px}
+	body.fixed .content .jumbotron td:first-child{padding-top:5px}
+	body.fixed .content .table td{border-width:0;display:block;width:100%;}
+	body.fixed .content .table td:first-child{border-top-width:1px;width:100% }
 }
+
 /* fix border-radius on /lists/admin/?page=eventlog */
 body.eventlog .btn-group .dropdown-toggle:not(:first-child){
 	border-top-left-radius:5px !important;
