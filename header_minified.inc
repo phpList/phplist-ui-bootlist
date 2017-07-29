@@ -23,7 +23,6 @@
     		    <div id="recent" class="menu visited block">
     		        <?php print recentlyVisited(); ?>
     		    </div> 
-    		    <br />
     		    <div class="col-sm-12 sidebar-footer">
 	    		    <div id="language">
     			        <?php print $languageswitcher; ?>
