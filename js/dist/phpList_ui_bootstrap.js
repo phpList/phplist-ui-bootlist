@@ -2278,7 +2278,7 @@ $( window ).load(function(){
 $('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
 
 $( document ).ajaxComplete(function() {
-	if ( !$('table').hasClass('table')){
+	if ( !$('table').hasClass('table') && !$('.clearfix').hasClass('break') ){
 		myfunction();
 	}
 });
