@@ -1,5 +1,5 @@
 {
-  "name": "phpList_ui_bootstrap",
+  "name": "phpList_ui_bootlist",
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "^1.0.1",
