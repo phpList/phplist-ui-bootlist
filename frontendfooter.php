@@ -13,7 +13,7 @@
 </div>
 <script type="text/javascript" src="admin/ui/phplist-ui-bootlist/js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="admin/js/phplistapp.js"></script>
-<script type="text/javascript" src="admin/ui/phplist-ui-bootlist/js/dist/phpList_ui_bootstrap.min.js"></script>
+<script type="text/javascript" src="admin/ui/phplist-ui-bootlist/js/dist/phpList_ui_bootlist.min.js"></script>
 <script>
 /* do not remove this from here */
 $(document).ready(function(){
