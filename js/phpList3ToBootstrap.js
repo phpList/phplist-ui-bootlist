@@ -369,13 +369,6 @@ $('#stopqueue').click(function(){
 
 $(document).ready(function(){
 
-	/*not apply myfunction to acccount pages, just add necessary styles*/
-	if ( $('body').hasClass('accsettings') || $('body').hasClass('accinfo') || $('body').hasClass('acchelp')  ){
-		$('body').removeClass('invisible');
-	    $('#languageswitcher select').addClass('selectpicker').attr({ 'data-style':'btn-primary' });
-	    $('.upgradebutton').addClass('btn btn-primary');
-	}
-
 	/* vertical scrolling */
 	if ( $('body').hasClass('configure') ){
 		var id = location.hash;
