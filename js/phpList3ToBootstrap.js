@@ -180,7 +180,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 
 /* ALERTS */
     $('div.note').addClass('alert alert-warning');
-    $('div.result, div.error').addClass('alert alert-danger');
+    $('div.result, div.error').not('body.fixed div.error').addClass('alert alert-danger');
 	if ( !$('body.send #sendmessageform #addtoqueue .missing').hasClass('h4') ){
 		$('body.send #sendmessageform #addtoqueue .missing').prepend('<span class="glyphicon glyphicon-warning-sign"></span>&nbsp; ');
 	}
