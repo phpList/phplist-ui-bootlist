@@ -331,7 +331,8 @@ form.spageEdit {
 body.fixed #header.navbar {margin-bottom: 0;}
 body.fixed h1#logo {margin: 0.3em 0 0.4em 0;}
 body.fixed .content h3{margin-top:0;line-height:1.2}
-body.fixed .content .jumbotron td {padding:10px 20px 10px}
+body.fixed .content .jumbotron td {padding:0px 20px}
+body.fixed .content .jumbotron tbody{border:10px solid #EEE}
 body.fixed .content .table td:first-child{width:25%;vertical-align:middle}
 body.fixed .content .table td{border-top:0}
 body.fixed .content .table div.attributename{margin-top:15px} 
@@ -351,8 +352,8 @@ body.fixed .content .poweredby{margin-top:30px}
 
 @media screen and (max-width:767px){
 	body.fixed .well{padding:19px;padding-bottom:0}
+	body.fixed .content .jumbotron td{padding:0px}
 	body.fixed .content .jumbotron td label{margin-bottom:0px}
-	body.fixed .content .jumbotron td {padding-top:0px}
 	body.fixed .content .jumbotron td.attributeinput{padding-bottom:5px}
 	body.fixed .content .jumbotron td:first-child{padding-top:5px}
 	body.fixed .content .table td{border-width:0;display:block;width:100%;}
