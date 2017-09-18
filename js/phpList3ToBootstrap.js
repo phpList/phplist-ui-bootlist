@@ -96,6 +96,10 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 	    $('.filterdiv,.usersFind,.minitabs,#webblertabs').after('<div class="clearfix break" />');
     	$('.filter label[for=sortby]').before('<div class="clearfix break"></div>');
     }
+    $('body.eventlog #wrapp > .paging').addClass('pull-right');
+    $('body.eventlog #wrapp > .paging >.range').css({'padding-right':'15px'});
+    
+    
 /* FORMS */
     $('input[type=text],input[type=password],textarea,select,input[type=email],input[type=phone],input[type=file]').addClass('form-control');
     $('#login-form td').addClass('input-group input-group-lg');
@@ -259,7 +263,7 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     });
 
 /* tables*/
-	$('body.userhistory #subscription .content, body.statsoverview .content, body.domainstats .content,body.dbcheck .content,body.bouncerules .content,body.plugins .content').first().addClass('table-responsive');
+	$('body.userhistory #subscription .content, body.statsoverview .content, body.domainstats .content,body.dbcheck .content,body.bouncerules .content,body.plugins .content,body.eventlog .content').first().addClass('table-responsive');
     $('table').not('table.table').attr('border',null);
     $('.listingelement table,body.dbcheck table, table.spageeditListing').not('table.table').addClass('table-condensed');
     $('table.spageeditListing tr:first-child,table.attributeSet tr:first-child').addClass('info');
