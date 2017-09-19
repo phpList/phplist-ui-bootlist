@@ -77,7 +77,7 @@ function _topMenu()
 			case "develop" : $icon = "glyphicon-console"; break;
         }
         foreach ($categoryDetails['menulinks'] as $page) {
-               $title = $GLOBALS['I18N']->pageTitle($page);
+                $title = $GLOBALS['I18N']->pageTitle($page);
                 $active = '';
 				if ( isset($_GET['pi']) && $page == $current_page.'&pi='.$_GET['pi']
                 	|| !$_GET['pi'] && $page == $current_page 
@@ -94,7 +94,7 @@ function _topMenu()
 					switch($page){
                 			case "accinfo" : $icon = "glyphicon-briefcase"; $page_title ="Your account"; break;
 							case "accsettings" : $icon = "glyphicon-wrench";  $page_title ="Account settings"; break;
-							case "acchelp" : $icon = "";$icontext="<samp style='line-height:1.5;font-weight:bold;font-size:19px'>?</samp>"; $page_title ="Help"; break;
+							case "help" : $icon = "";$page_title = "Help"; $icontext="<samp style='line-height:1.5;font-weight:bold;font-size:19px'>?</samp>"; break;
 					}
 					if ($active == ' class="active"')  $active = ' class="open active"';
                     $accmenu .= '<ul><li '.$active.'.><a class="level0" href="' . PageUrl2($page, '', '', true). '" title="' . $title . '"><span class="glyphicon '.$icon.'">'.$icontext.'</span>' . ucfirst($page_title) . '</a></li></ul>';
