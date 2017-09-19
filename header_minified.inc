@@ -30,7 +30,7 @@
 
     			    <div id="logged">
     			        <?php
-    		          if ($GLOBALS["require_login"] && (!isset ($_SESSION["adminloggedin"]) || !$_SESSION["adminloggedin"])) {
+    		          if (empty($_SESSION["adminloggedin"])) {
     		            print ('<a id="login" class="navbar-btn btn-primary btn-sm" href="./?page=home">'.s('Login').'</a> ');
     		          } else {
     		            print ('<a id="logout" class="navbar-btn btn-primary btn-sm" href="./?page=logout">'.s('Logout').'</a>');
