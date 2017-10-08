@@ -59,6 +59,7 @@ $('body.fixed li.list').each(function(){
     $('.btn-primary.btn-default').removeClass('btn-default');
     $('a.confirm').not('.dropButton a.confirm').addClass('btn btn-default');
     $('a.resourceslink').addClass('btn btn-link');
+    $('#initialisecontinue').addClass('btn-lg');
 
 /* PAGINATION */
 	$('.paging .range').not('.small.pull-left').addClass('small pull-left');
@@ -189,6 +190,11 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
 		$('body.send #sendmessageform #addtoqueue .missing').prepend('<span class="glyphicon glyphicon-warning-sign"></span>&nbsp; ');
 	}
     $('body.send #sendmessageform #addtoqueue .missing').addClass('h4');
+    $('body.initialise p.information').addClass('alert bg-success');
+    $('body.initialise div.information').addClass('alert bg-warning');
+    $('body.initialise #continuesetup, body.initialise .initialiseOptions').addClass('alert bg-info');
+    $('body.initialise .initialiseOptions ul').addClass('list-unstyled');
+
 /* typography */
     $('.pagetitle').addClass('page-header');
     $('.inactivelist').addClass('small text-danger');
@@ -251,6 +257,8 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.import #wrapp ul li a, .system #wrapp ul li a,.usermgt #wrapp ul li a, ul.navigation_list li a').not('#newsfeed ul li a').addClass('glyphicon glyphicon-menu-right');
     $('#wrapp .nav.nav-pills li ul').addClass('small');
     $('.updatepluginbutton').addClass('btn-xs');
+    $('body.initialise #continuesetup .btn').addClass('btn-primary');
+
     /*yes/no icons */
     $('span.yes').addClass('glyphicon glyphicon-ok text-success').empty();
     $('span.no').addClass('glyphicon glyphicon-ban-circle text-danger').empty();
