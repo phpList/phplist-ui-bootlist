@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
+<meta name="theme-color" content="#2C2C2C"/>
 <link rel="apple-touch-icon" href="./images/phplist-touch-icon.png" />
 <link rel="apple-touch-icon-precomposed" href="./images/phplist-touch-icon.png" />
 <link rel="stylesheet" href="admin/ui/phplist-ui-bootlist/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />

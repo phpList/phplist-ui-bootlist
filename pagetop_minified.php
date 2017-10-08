@@ -21,6 +21,7 @@
 <meta name="Powered-By" content="phplist version <?php echo VERSION?>" />
 <meta property="og:title" content="phpList" />
 <meta property="og:url" content="http://phplist.com" />
+<meta name="theme-color" content="#2C2C2C"/>
 <link rel="shortcut icon" href="./images/phplist.ico" />
 <link rel="icon" href="./images/phplist.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" href="./images/phplist-touch-icon.png" />
