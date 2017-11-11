@@ -49,9 +49,9 @@ $('body.fixed li.list').each(function(){
     $('button, #prev.prevtab, #next.nexttab').addClass('btn');
     $('.submit, input[type=submit]').not('p.submit,body.import2 div.submit').addClass('btn btn-primary');
     $('button[type=submit]').addClass('btn-primary');
-    $('.button').addClass('btn btn-default');
+    $('.button').not('#wrapp > p.button.pull-right, form.spageEdit >.button.pull-right').addClass('btn btn-default');
     $('table .button').addClass('btn-xs');
-    $('.action-button').addClass('btn btn-lg btn-primary');
+    $('.action-button, form[name="categoryedit"] .pull-right > .button, form.spageEdit > .button.pull-right > a, .actions .pull-right .button, .statsoverview .pull-right > .button, .actions.pull-right > .button, .actions .pull-right > .confirm,  #wrapp .pull-right > .confirm, #wrapp > .button.pull-right > a, #wrapp >#contentdiv > .pull-right > a.button,#wrapp > .pull-right > a.button').addClass('btn btn-lg btn-primary');
     $('.reset').addClass('btn btn-link');
     $('span.button a.opendialog span.view').parent().parent().parent().find('span.button').removeClass('btn-default');
     $('.actions .fright').addClass('pull-right');
