@@ -1,5 +1,9 @@
 <?php
+if ($page_title =='userclicks') $page_title = s('Click Statistics'); /* REMOVE AFTER RESOLVE MANTIS #18945 */
+
+
 /* This array is to add third level to phpList menu, adding orphan items to a menulink */
+
 $GLOBALS['subcat'] = array(
 	'import' => array ('import1','import2','import3','import4','importsimple'),
 	'users' => array('user','userhistory'),
