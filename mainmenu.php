@@ -3,6 +3,8 @@
 // functions for theme bootstrap
 include_once dirname(__FILE__).'/functions.php';
 
+if ($page_title == 'userclicks') $page_title = s('Click Statistics'); /* REMOVE AFTER RESOLVE MANTIS #18945 */
+
 /* fix sections not opening submenues on first click */
 $GLOBALS['pagecategories']['statistics']['toplink'] = 'statsoverview';
 $GLOBALS['pagecategories']['develop']['toplink'] = 'tests';
