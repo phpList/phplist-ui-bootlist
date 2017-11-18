@@ -39,7 +39,7 @@ $('body.fixed li.list').each(function(){
 	$(this).find('b').before('<label for="'+iname+'" class="btn btn-default"><span class="[ glyphicon glyphicon-ok ]"></span><span>&nbsp;</span></label>').wrap('<label for="'+iname+'"  class="btn btn-default active" />');
 	});
 /* STRUCTURE */
-    $('.content, body.configure fieldset, body.adminattributes table.attributeSet,body.adminattributes table.attributeNew,table.spageeditListing,body.reconcileusers #content form,body.export #content form').not('.accordion .content, .content table .content,body.dbcheck table, body.adminattributes .content').addClass('well');
+    $('.content, body.configure fieldset, body.adminattributes table.attributeSet,body.adminattributes table.attributeNew,table.spageeditListing,body.reconcileusers #content form,body.export #content form').not('.usermgt .content, .accordion .content, .content table .content,body.dbcheck table, body.adminattributes .content').addClass('well');
     $('.fleft').addClass('pull-left');
 
 /* languageswitcher */
@@ -254,8 +254,8 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('.step-nav .back').html('<span class="glyphicon glyphicon-arrow-left" />');
     $('.step-nav .next').html('<span class="glyphicon glyphicon-arrow-right" />');
     $('.import #wrapp ul, .system #wrapp ul.dashboard_button, .usermgt #wrapp ul, ul.navigation_list').addClass('nav nav-pills nav-stacked');
-    $('.import #wrapp ul li a, .system #wrapp ul li a,.usermgt #wrapp ul li a, ul.navigation_list li a').not('#newsfeed ul li a').addClass('glyphicon glyphicon-menu-right');
-    $('#wrapp .nav.nav-pills li ul').addClass('small');
+   /* $('.import #wrapp ul li a, .system #wrapp ul li a,.usermgt #wrapp ul li a, ul.navigation_list li a').not('#newsfeed ul li a').addClass('glyphicon glyphicon-menu-right'); 
+    $('#wrapp .nav.nav-pills li ul').addClass('small');*/
     $('.updatepluginbutton').addClass('btn-xs');
     $('body.initialise #continuesetup .btn').addClass('btn-primary');
 
