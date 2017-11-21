@@ -1,5 +1,12 @@
 <?php
-if ($page_title =='userclicks') $page_title = s('Click Statistics'); /* REMOVE AFTER RESOLVE MANTIS #18945 */
+
+// TODO: Remove after resolution of Mantis #18945
+if (
+    isset($page_title) 
+    && $page_title =='userclicks'
+) {
+    $page_title = s('Click Statistics');
+}
 
 
 /* This array is to add third level to phpList menu, adding orphan items to a menulink */
