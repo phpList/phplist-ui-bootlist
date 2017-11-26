@@ -295,8 +295,10 @@ body.send form, body.send #testpanel{margin-bottom:0}
 	body.messages div.actions .pull-right{float:none !important}
 }
 /* ## attributes */
-body.attributes .form-control{width:auto}
-
+body.attributes{
+	.well form > br{display:none}
+ .form-control{width:auto}
+}
 /* ## settings (configure) */
 body.configure fieldset legend{
 	border: 0;
