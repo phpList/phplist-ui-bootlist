@@ -5,6 +5,7 @@
 				</div>
 		    </div>
 <?php } ?>
+	    </div> <!-- end #content -->
 	        <div id="footer">
 	            <div class="version pull-left">
 	                <a target="_blank" href="https://phplist.com">&copy; phpList ltd.</a> - v<?php echo VERSION?>               
@@ -15,7 +16,6 @@
 	                <a target="_blank" href="http://twitter.com/phplist">Twitter</a>
 	            </div>
 	        </div>
-	    </div> <!-- end #content -->
 	</div> <!-- end #container .row-->
 
 </div> <!-- end .container-fluid-->
