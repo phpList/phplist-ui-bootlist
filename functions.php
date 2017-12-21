@@ -96,7 +96,7 @@ function _topMenu()
 				/* build account  menu ($accmenu) if Account section exist */
                 if ($link && $category == 'account') {
 					switch($page){
-                			case "accinfo" : $icon = "glyphicon-briefcase"; $page_title ="Your account"; break;
+                			case "accinfo" : $icon = "glyphicon-briefcase"; $page_title ="My account"; break;
 							case "accsettings" : $icon = "glyphicon-wrench";  $page_title ="Account settings"; break;
 							case "help" : $icon = "";$page_title = "Help"; $icontext="<samp style='line-height:1.5;font-weight:bold;font-size:19px'>?</samp>"; break;
 					}
