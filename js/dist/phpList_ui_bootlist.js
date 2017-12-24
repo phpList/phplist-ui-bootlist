@@ -2067,16 +2067,16 @@ $('body.fixed li.list').each(function(){
     $('.dropButton .submenu').wrap('<ul />');
     $('.dropButton .submenu a').each(function(){$(this).wrapAll('<li />');});
     $('.dropButton .submenu li').unwrap();
-if(!$('#dropdown-tabs').hasClass('btn-group')){
-    $('#dropdown-tabs').addClass('btn-group');
-    $('#dropdown-tabs ul').addClass('dropdown-menu');
-    $('#dropdown-tabs ul').before('<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>');
-    $('.dropButton button').html('Delete <span class="caret"></span>');
-    $("#dropdown-tabs .dropdown-menu li").each(function(){
-      $("#dropdown-tabs .btn:first-child").html($(this).parent().find('.current').text()+' &nbsp; <span class="caret"></span>');
-      $("#dropdown-tabs .btn:first-child").val($(this).parent().find('.current').text());
-   });
-}
+	if(!$('#dropdown-tabs').hasClass('btn-group')){
+    	$('#dropdown-tabs').addClass('btn-group');
+    	$('#dropdown-tabs ul').addClass('dropdown-menu');
+    	$('#dropdown-tabs ul').before('<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>');
+	    $('.dropButton button').html('Delete <span class="caret"></span>');
+    	$("#dropdown-tabs .dropdown-menu li").each(function(){
+    	  $("#dropdown-tabs .btn:first-child").html($(this).parent().find('.current').text()+' &nbsp; <span class="caret"></span>');
+    	  $("#dropdown-tabs .btn:first-child").val($(this).parent().find('.current').text());
+   		});
+	}
 	$('.pull-right').find('.dropdown-menu').addClass('dropdown-menu-right');
     $('.filterdiv,.usersFind').addClass('navbar navbar-default navbar-form');
     if (!$('body').hasClass('modal-open')){
@@ -2143,8 +2143,9 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
         $('.accordion .panel-default:first h3 .panel-heading').attr('aria-expanded','true');
         $('.accordion .panel-default div').not('.accordion .panel-default div div, .accordion .panel-heading').addClass('panel-collapse collapse');
         $('.accordion .panel-default:first .panel-collapse').addClass(' in ');
-        $('.accordion .panel-default .panel-collapse').wrapInner('<div class="panel-body"/>').attr({ 'role':'tabpanel', 'id':function(i) { return 'collapse'+(i+1); },'aria-labelledby':function(i) { return 'heading'+(i+1); } });
-    }
+        $('.accordion .panel-default .panel-collapse').wrapInner('<div class="panel-body"/>').attr({ 'role':'tabpanel', 'id':function(i) { 
+        	return 'collapse'+(i+1); },'aria-labelledby':function(i) { return 'heading'+(i+1); } });
+	    }
 /* TABS*/
     $('.tabbed').each(function(){
     	if ( !$(this).find('ul:first').hasClass('nav-tabs') ){
@@ -2266,8 +2267,8 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     $('table.setupMain').not('table.table').addClass('table-hover');
     $('table.spageeditListing').not('table.table').wrap('table-responsive');
     $('table').not('table.table').each(function(){
-	var bgcolor = $(this).attr('bgcolor');
-	$(this).css({'background-color':bgcolor});
+		var bgcolor = $(this).attr('bgcolor');
+		$(this).css({'background-color':bgcolor});
     });
     $('table').not('.home table, table.loginPassUpdate, table.table').addClass('table');
         
@@ -2280,9 +2281,16 @@ if(!$('#dropdown-tabs').hasClass('btn-group')){
     });
     $('a.btn-xs').attr({'data-toggle':'tooltip'});
 
-/* show page after loading */
-    $('body').removeClass('invisible');
-}
+	/* remove button style to any link if developer ads "myclass" to parent element */
+	$('.myclass a').removeClass(function (index, css) {
+		return (css.match (/\bbt\S+/g) || []).join(' '); // removes anything that starts with "bt"
+	}); 
+
+	/* show page after loading */
+    $('body').removeClass('invisible'); 
+
+
+} /* ---> END MYFUNCION */
 
 
 /* fire myfunction on: */
@@ -2406,6 +2414,7 @@ $(document).ready(function(){
 		if(window.location.href.indexOf("id=list_categories") > -1)
 			location.reload();
 	});
+	
 }); /* <-- end document.ready */
 ;/*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
