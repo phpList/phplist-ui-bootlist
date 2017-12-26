@@ -2222,7 +2222,7 @@ $('body.fixed li.list').each(function(){
     $('.home .view-log span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>').removeClass('listingname');
     /*buttons*/
     $('.home span.listingname a').addClass('btn btn-xs btn-info');
-	$('span.listingelement a, div.configEdit a').not('body.members a.listingelement, .home span.listingelement a,a[name]').addClass('btn btn-xs btn-primary');
+	$('.listingelement a.del, .listingelement a.button, .listingelement a.opendialog, .listingelement a.confirm, .listingelement a.ajaxable, body.mclicks .listingelement  a, body.mviews .listingelement a, body.uclicks .listingelement a, .configEdit a').addClass('btn btn-xs btn-primary');
     $('span.edit a, .edit-list a, .configEdit a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
     $('.send-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
     $('.add_member a').html('<span aria-hidden="true" class="glyphicon glyphicon-plus"/>'); 
@@ -2280,11 +2280,6 @@ $('body.fixed li.list').each(function(){
 	  	$('[data-toggle="tooltip"]').tooltip();
     });
     $('a.btn-xs').attr({'data-toggle':'tooltip'});
-
-	/* remove button style to any link if developer ads "myclass" to parent element */
-	$('.myclass a').removeClass(function (index, css) {
-		return (css.match (/\bbt\S+/g) || []).join(' '); // removes anything that starts with "bt"
-	}); 
 
 	/* show page after loading */
     $('body').removeClass('invisible'); 
