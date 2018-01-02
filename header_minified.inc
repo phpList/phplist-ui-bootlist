@@ -4,7 +4,7 @@
 
 <div class="container-fluid">
 
-	<div id="container" class="row">
+	<div id="container">
 
 			<nav id="navigation" class="navbar navbar-inverse  navbar-fixed-top col-lg-2 col-md-3">
     	        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse_" data-target="#menuTop" aria-expanded="false">
