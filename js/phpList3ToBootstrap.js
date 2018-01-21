@@ -186,6 +186,7 @@ $('body.fixed li.list').each(function(){
 
 /* ALERTS */
     $('div.note').addClass('alert alert-warning');
+    $('div.actionresult').addClass('alert alert-danger');
     $('div.result, div.error').not('body.fixed div.error').addClass('alert alert-danger');
 	if ( !$('body.send #sendmessageform #addtoqueue .missing').hasClass('h4') ){
 		$('body.send #sendmessageform #addtoqueue .missing').prepend('<span class="glyphicon glyphicon-warning-sign"></span>&nbsp; ');
