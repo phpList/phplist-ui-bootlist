@@ -31,7 +31,9 @@
     			    <div id="logged">
     			        <?php
     		          if (empty($_SESSION["adminloggedin"])) {
-    		            print ('<a id="login" class="navbar-btn btn-primary btn-sm" href="./?page=home">'.s('Login').'</a> ');
+						  if (empty($_SESSION['firstinstall']) && empty($_GET['firstinstall'])) {
+							  print ('<a id="login" class="navbar-btn btn-primary btn-sm" href="./?page=home">' . s('Login') . '</a> ');
+						  }
     		          } else {
     		            print ('<a id="logout" class="navbar-btn btn-primary btn-sm" href="./?page=logout">'.s('Logout').'</a>');
     		          }
