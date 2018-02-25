@@ -1,5 +1,6 @@
 </head>
 <body class="invisible <?php if(isset($GLOBALS['page'])) print $GLOBALS['page'];else print "home-not-auth"; ?>">
+<?php include __DIR__.'/../'.$THEMEINFO['dir'].'/body_trackers.php'; ?>
 <div id="dialog"></div><div id="hiddendiv"></div>
 
 <div class="container-fluid">
