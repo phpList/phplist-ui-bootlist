@@ -1,8 +1,8 @@
-<?php if (empty($_GET['page']) || $_GET['page'] == 'dashboard') { ?>
+<?php if (empty($_GET['page']) || $_GET['page'] == 'dashboard' || $_GET['page'] == 'home') { ?>
 	            <div class="clear"></div>
 	            <div id="newsfeed" class="menutableright block">
-					<?php  include __DIR__.'/../'.$THEMEINFO['dir'].'/rssfeed.php'; ?>
-				</div>
+					       <h3><span class="glyphicon glyphicon-bullhorn text-danger"></span> <?php print s('phpList community news'); ?></h3>
+								<?php  include 'communityfeed.php'; ?>
 		    </div>
 <?php } ?>
 	    </div> <!-- end #content -->
