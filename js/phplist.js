@@ -59,5 +59,12 @@ $(document).ready(function() {
 		$(this).parent().toggleClass('open');
 		$('#menuTop li').not($(this).parent()).removeClass('open');
 	});
+	
+	$('#login-form').submit(function(){
+			if ($('input[type=text].form-control').val().length < 4 || $('input[type=password].form-control').val().length < 2 ) {
+				alert('Please enter your credentials');
+				return false;
+			}
+	});
 
 });
