@@ -15,7 +15,14 @@ Bootstrap class names and extra html needed, inserted by jQuery with the script:
 * [Report issues](https://mantis.phplist.org/bug_report_page.php) on Mantis issue tracker (use category *Theme - bootstrap*)
 
 ## Getting started
-Building the project requires nodejs & npm. See https://nodejs.org for setup.
+If you are not going to develop, you don't need the /less and the /bootstrap directories:
+* https://github.com/phpList/phplist-ui-bootlist/tree/master/bootstrap
+* https://github.com/phpList/phplist-ui-bootlist/tree/master/less
+
+If you are going to develop you need to follow this instructions:
+
+### Building the project 
+Requires nodejs & npm. See https://nodejs.org for setup.
 
 ### Install Grunt globally
 ``` 
