@@ -2063,7 +2063,7 @@ $('body.fixed li.list').each(function(){
     $('.minitabs #webblertabs ul li.current').addClass('active');
     $('.minitabs #webblertabs').attr('id','');
     $('#webblertabs, .dropButton').attr('id','dropdown-tabs');
-    $('.dropButton a img').parent().html('');
+    $('.dropButton a img').parent().addClass('hidden');
     $('.dropButton .submenu').wrap('<ul />');
     $('.dropButton .submenu a').each(function(){$(this).wrapAll('<li />');});
     $('.dropButton .submenu li').unwrap();
@@ -2071,7 +2071,7 @@ $('body.fixed li.list').each(function(){
     	$('#dropdown-tabs').addClass('btn-group');
     	$('#dropdown-tabs ul').addClass('dropdown-menu');
     	$('#dropdown-tabs ul').before('<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>');
-	    $('.dropButton button').html('Delete <span class="caret"></span>');
+    $('.dropButton button').html($('.dropButton a img').parent().text()+' &nbsp; <span class="caret"></span>');
     	$("#dropdown-tabs .dropdown-menu li").each(function(){
     	  $("#dropdown-tabs .btn:first-child").html($(this).parent().find('.current').text()+' &nbsp; <span class="caret"></span>');
     	  $("#dropdown-tabs .btn:first-child").val($(this).parent().find('.current').text());
