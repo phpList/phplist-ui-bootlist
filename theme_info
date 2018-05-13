@@ -1,3 +1,0 @@
-name=Trevelin
-dir=phplist-ui-bootlist
-deployrm="bootstrap less vendor"
