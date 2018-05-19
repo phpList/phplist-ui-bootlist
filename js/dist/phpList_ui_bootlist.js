@@ -2229,8 +2229,8 @@ $('body.fixed li.list').each(function(){
     $('.home .view-log span.listingname a.listingname').prepend('<span aria-hidden="true" class="glyphicon glyphicon-list-alt"/>').removeClass('listingname');
     /*buttons*/
     $('.home span.listingname a').addClass('btn btn-xs btn-info');
-	$('.listingelement a.del, .listingelement a.button, .listingelement a.opendialog, .listingelement a.confirm, .listingelement a.ajaxable, body.mclicks .listingelement  a, body.mviews .listingelement a, body.uclicks .listingelement a, .configEdit a').addClass('btn btn-xs btn-primary');
-    $('span.edit a, .edit-list a, .configEdit a').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
+	$('.listingelement a.del, .listingelement a.button, .listingelement a.opendialog, .listingelement a.confirm, .listingelement a.ajaxable, body.mclicks .listingelement  a, body.mviews .listingelement a, body.uclicks .listingelement a, .configEdit a.ajaxable').addClass('btn btn-xs btn-primary');
+    $('span.edit a, .edit-list a, .configEdit a.ajaxable').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
     $('.send-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
     $('.add_member a').html('<span aria-hidden="true" class="glyphicon glyphicon-plus"/>'); 
     $('span.viewusers a').html('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
