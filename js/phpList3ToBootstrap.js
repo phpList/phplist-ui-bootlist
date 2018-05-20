@@ -47,7 +47,7 @@ $('body.fixed li.list').each(function(){
 
 /* BUTTONS */
     $('button, #prev.prevtab, #next.nexttab').addClass('btn');
-    $('.submit, input[type=submit]').not('p.submit,body.import2 div.submit').addClass('btn btn-primary');
+    $('.submit, input[type=submit], #generatetextversion a.ajaxable').not('p.submit,body.import2 div.submit').addClass('btn btn-primary');
     $('button[type=submit]').addClass('btn-primary');
     $('.button').not('#wrapp > p.button.pull-right, form.spageEdit >.button.pull-right').addClass('btn btn-default');
     $('table .button').addClass('btn-xs');
