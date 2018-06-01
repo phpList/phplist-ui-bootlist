@@ -2231,6 +2231,7 @@ $('body.fixed li.list').each(function(){
     $('.home span.listingname a').addClass('btn btn-xs btn-info');
 	$('.listingelement a.del, .listingelement a.button, .listingelement a.opendialog, .listingelement a.confirm, .listingelement a.ajaxable, body.mclicks .listingelement  a, body.mviews .listingelement a, body.uclicks .listingelement a, .configEdit a.ajaxable').addClass('btn btn-xs btn-primary');
     $('span.edit a, .edit-list a, .configEdit a.ajaxable').html('<span aria-hidden="true" class="glyphicon glyphicon-edit"/>');
+    $('span.copy a, .copy-list a, .configCopy a').html('<span aria-hidden="true" class="glyphicon glyphicon-duplicate"/>');
     $('.send-list a').html('<span aria-hidden="true" class="glyphicon glyphicon-send"/>');
     $('.add_member a').html('<span aria-hidden="true" class="glyphicon glyphicon-plus"/>'); 
     $('span.viewusers a').html('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
