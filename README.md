@@ -51,7 +51,7 @@ Each time a less file is changed, style.css will be generated automatically.
 ``` 
 grunt concat
 ```
-To unify all .js in one file: phplist-ui-bootlist.js
+To unify all .js in one file: phplist_ui_bootlist.js
 
 And then, to minify that file, you have to run:
 ``` 
