@@ -46,3 +46,14 @@ sudo npm install
 grunt watch
 ```
 Each time a less file is changed, style.css will be generated automatically.
+
+### Minify the javascript
+``` 
+grunt concat
+```
+To unify all .js in one file: phplist-ui-bootlist.js
+
+And then, to minify that file, you have to run:
+``` 
+grunt uglify
+```
