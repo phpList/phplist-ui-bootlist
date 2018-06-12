@@ -61,7 +61,7 @@ $(document).ready(function() {
 	});
 	
 	$('#login-form').submit(function(){
-			if ($('input[type=text].form-control').val().length < 4 || $('input[type=password].form-control').val().length < 2 ) {
+			if ($('input[type=text].form-control').val().length < 1 || $('input[type=password].form-control').val().length < 2 ) {
 				alert('Please enter your credentials');
 				return false;
 			}
