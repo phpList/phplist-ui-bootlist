@@ -91,7 +91,7 @@ function _topMenu()
                 elseif (!isset($_GET['pi']) && $category == pageCategory($current_page) ){ // third level
                     $open = ' class="active open"';
                 }
-                $link = PageLink2($page, $title, '', true);
+                $link = PageLink2($page, ucfirst($title), '', true);
 
 				/* build account  menu ($accmenu) if Account section exist */
                 if ($link && $category == 'account') {
