@@ -1984,7 +1984,68 @@
 
 
 }));
-;var myfunction = function() {
+;var applyJqueryUiTabMigration = function() {
+        $('.tabbed').each(function(){
+            if ( !$(this).find('ul:first').hasClass('nav-tabs')) {
+                $(this).find('ul:first').addClass('nav nav-tabs');
+                $(this).find('ul.nav-tabs').attr('role','tablist');
+                $(this).find('ul.nav-tabs li').attr('role','presentation');
+                $(this).find('ul.nav-tabs li a').attr({ 'role':'tab', 'data-toggle':'tab' });
+                $(this).find('div[id]').not('.tabbed ul div').wrapAll('<div class="tab-content"/>');
+                $(this).find('.tab-content div[id]').addClass('tab-pane');
+                $(this).find('.tab-pane').attr('role','tabpanel');
+                $(this).find('ul.nav-tabs li a:first').tab('show');
+            }
+        });
+
+        // Hash links and keep state to have valid identifiers
+        var linkMap = [];
+        $('.tabbed > ul > li > a').each(function () {
+            currentLink = this.getAttribute("href");
+
+            if (currentLink.substr(0, 2) === "./") {
+                hash = btoa(currentLink).replace(/=/g, "").replace(/\//, "");
+                linkMap[hash] = this.href;
+                this.href = "#" + hash;
+                this.setAttribute("jqueryui-ajaxify-migrate", "true");
+            }
+        });
+        if ( $('.tabbed ul.nav-tabs li').length == 0 ){
+            $('.tabbed .tab-content .tab-pane').css({'display':'block'});
+        }
+        $('[jqueryui-ajaxify-migrate="true"]').click(function(e) {
+            var tabDom = $('[jqueryui-ajaxify-migrate="true"]').closest(".tabbed").find(".tab-content");
+            hash = this.getAttribute("href").replace("#", "");
+            urlToLoad = linkMap[hash];
+            existingDomElement = $("#"+hash);
+            if(existingDomElement.html() == undefined) {
+                $(tabDom).append(
+                    $('<div/>')
+                        .attr("id", hash)
+                        .attr("role", "tabpanel")
+                        .append("<span/>")
+                        .html("Loading...")
+                );
+            } else {
+                existingDomElement.html("Loading...");
+            }
+            $("#" + hash).addClass("tab-pane content well jquery-ui-tab-migration");
+            $('.tabbed').tab();
+            var $link = $('li.active a[data-toggle="tab"]');
+            $link.parent().removeClass('active');
+            $("a[href='#"+hash+"']").tab('show');
+            $.get(urlToLoad).done(function(data) {
+                $("#"+hash).html(data);
+                applyCustomFormatting();
+            });
+        });
+    }
+;
+
+
+
+
+var applyCustomFormatting = function() {
 
 	/* script to center radio and checkbox column th in spage */
 	if ($('body').hasClass('spage')){
@@ -2267,7 +2328,8 @@ $('body.fixed li.list').each(function(){
     });
 
 /* tables*/
-	$('body.userhistory #subscription .content, body.statsoverview .content, body.domainstats .content,body.dbcheck .content,body.bouncerules .content,body.plugins .content,body.eventlog .content').first().addClass('table-responsive');
+
+    $('body.userhistory #subscription .content, body.statsoverview .content, body.domainstats .content,body.dbcheck .content,body.bouncerules .content,body.plugins .content,body.eventlog .content').first().addClass('table-responsive');
     $('table').not('table.table').attr('border',null);
     $('.listingelement table,body.dbcheck table, table.spageeditListing').not('table.table').addClass('table-condensed');
     $('table.spageeditListing tr:first-child,table.attributeSet tr:first-child').addClass('info');
@@ -2280,6 +2342,7 @@ $('body.fixed li.list').each(function(){
 		$(this).css({'background-color':bgcolor});
     });
     $('table').not('.home table, table.loginPassUpdate, table.table').addClass('table');
+    $(".jquery-ui-tab-migration table").parent().addClass("table-responsive");
         
 /* news widget */
     $('#newsfeed ul').addClass('well list-unstyled');
@@ -2297,17 +2360,18 @@ $('body.fixed li.list').each(function(){
 } /* ---> END MYFUNCION */
 
 
-/* fire myfunction on: */
+/* fire applyCustomFormatting on: */
 $( window ).load(function(){
-    if ( $('body').hasClass('invisible') ){ myfunction();}
- });
+    if ( $('body').hasClass('invisible') ){ applyCustomFormatting(); applyJqueryUiTabMigration();}
+});
 
-$('#dialog').not('body.templates #dialog').on('shown.bs.modal', myfunction);
+$('#dialog').not('body.templates #dialog').on('shown.bs.modal', applyCustomFormatting);
 
 $( document ).ajaxComplete(function() {
-	if ( !$('table').hasClass('table') && !$('.clearfix').hasClass('break') ){
-		myfunction();
-	}
+    if ( !$('table').hasClass('table') && !$('.clearfix').hasClass('break') ){
+        applyCustomFormatting();
+        applyJqueryUiTabMigration();
+    }
 });
 
 
@@ -2341,13 +2405,13 @@ function initialiseTranslation(text) {
 /********* progressbar ***********/
 
 $.fn.progressbar = function(ac){
-    if ( $('body').hasClass('invisible') ){ myfunction(); }
+    if ( $('body').hasClass('invisible') ){ applyJqueryUiTabMigration(); applyCustomFormatting(); }
     $('.progress').show();
     if (ac == 'destroy'){ $('.progress').hide(); }
 }
 
 $.fn.updateProgress = function() {
-    if ( $('body').hasClass('invisible') ){ myfunction(); }
+    if ( $('body').hasClass('invisible') ){ applyJqueryUiTabMigration(); applyCustomFormatting(); }
     $('.progress').show();
   if ($.isNumeric(arguments[0])) {
     var total = parseInt(arguments[1]);
