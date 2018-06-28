@@ -2236,6 +2236,7 @@ $('body.fixed li.list').each(function(){
     $('.add_member a').html('<span aria-hidden="true" class="glyphicon glyphicon-plus"/>'); 
     $('span.viewusers a').html('<span aria-hidden="true" class="glyphicon glyphicon-user"/>');
     $('span.delete a, a.del, a[title=Del]').html('<span aria-hidden="true" class="glyphicon glyphicon-trash"/>');
+    $('span.resettemplate a, a.reset, a[title=reset]').html('<span aria-hidden="true" class="glyphicon glyphicon-repeat"/>');
     $('span.view a, a.opendialog span.view').html('<span aria-hidden="true" class="glyphicon glyphicon-eye-open"/>');
     $('span.marksent a').html('<span aria-hidden="true" class="glyphicon glyphicon-ok"/>');
     $('span.resend a').html('<span aria-hidden="true" class="glyphicon glyphicon-repeat"/>');
