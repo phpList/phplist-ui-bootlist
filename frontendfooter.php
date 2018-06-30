@@ -18,7 +18,7 @@
 /* do not remove this from here */
 $(document).ready(function(){
     if ( $('body').hasClass('invisible') ){
-        myfunction();
+        applyCustomFormatting(); applyJqueryUiTabMigration();
     }
 	$('#edit_list_categories input.form-control').tagsinput('refresh');
 
