@@ -5,7 +5,7 @@
 								<?php  include 'communityfeed.php'; ?>
 		    </div>
 <?php } ?>
-	    </div> <!-- end #content -->
+	    </div> <!-- end #Wrapp -->
 	        <div id="footer">
 	            <div class="version pull-left">
 	                <a target="_blank" href="https://phplist.com">&copy; phpList ltd.</a> - v<?php echo VERSION?>               
@@ -17,9 +17,11 @@
 	                <a target="_blank" href="http://twitter.com/phplist">Twitter</a>
 	            </div>
 	        </div>
-	</div> <!-- end #container .row-->
+	</div> <!-- end #content-->
 
-</div> <!-- end .container-fluid-->
+</div> <!-- end #container-->
+</div> <!-- end .container-fluid -->
+
 <script type="text/javascript" src="ui/phplist-ui-bootlist/js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="js/phplistapp.js"></script>
 <script type="text/javascript" src="ui/phplist-ui-bootlist/js/dist/phpList_ui_bootlist.min.js"></script>
