@@ -15,14 +15,6 @@ if ( !in_array('editlist', $GLOBALS['pagecategories']['subscribers']['pages']) )
 	array_push($GLOBALS['pagecategories']['subscribers']['pages'],'editlist');
 }
 
-
-
-/* remove dashboard from info submenu */
-if ( in_array('home', $GLOBALS['pagecategories']['info']['menulinks']) ){
-		$dashk= array_search('home',$GLOBALS['pagecategories']['info']['menulinks']);
-	unset($GLOBALS['pagecategories']['info']['menulinks'][$dashk]);
-	unset($GLOBALS['pagecategories']['info']['pages'][$dashk]);
-}
 /* add dashboard to top */
 if ( !isset($GLOBALS['pagecategories']['home']) && !isset($GLOBALS['pagecategories']['dashboard']) ){
 	$pcrev = array_reverse($GLOBALS['pagecategories']);
