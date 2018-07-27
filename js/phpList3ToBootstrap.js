@@ -119,7 +119,6 @@ $('body.fixed li.list').each(function(){
     $('ul.reconcile').addClass('list-unstyled');
     $('.btn-primary.btn-default').removeClass('btn-default');
     $('a.confirm').not('.dropButton a.confirm').addClass('btn btn-default');
-    $('a.resourceslink').addClass('btn btn-link');
     $('#initialisecontinue').addClass('btn-lg');
 
 /* PAGINATION */
