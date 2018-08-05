@@ -396,13 +396,12 @@ body.fixed .content .poweredby{margin-top:15px}
 	body.fixed .content .table td:first-child{border-top-width:1px;width:100% }
 }
 
-/* fix border-radius on page=eventlog & page=listbounces&id=x */
-body.eventlog,body.listbounces{ 
-	.btn-group .dropdown-toggle:not(:first-child){
+/* fix border-radius on dropdown buttons */
+.dropButton.btn-group .dropdown-toggle:not(:first-child){
 	border-top-left-radius:5px !important;
 	border-bottom-left-radius:5px !important;
-	}
 }
+
 /* fix bug in view campaing table */
 .messageView table {
 	background-color: transparent !important;
