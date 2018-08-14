@@ -281,8 +281,10 @@ body.login {
 body.home table.listing *{white-space:normal}
 body.home td.listingname {width:200px}
 body.home td.listingelement{padding-right:20px;padding-left:20px}
-body.home .btn.btn-info{font-size:14px;display:block;padding:15px 5px;font-family:"Source Sans Pro";color:rgb(255, 255, 255);}
-body.home .btn.btn-info span{display:block;font-size:40px;margin-right:0}
+body.home .btn.btn-info:not(.back-to-top){
+	font-size:14px;display:block;padding:15px 5px;font-family:"Source Sans Pro";color:rgb(255, 255, 255);
+	span{display:block;font-size:40px;margin-right:0}
+} 
 body.home .custom-attribute .btn.btn-info span{font-size:25px}
 body.home .custom-attribute td.listingname{padding-left:40px} 
 body.dashboard h2 span.glyphicon {vertical-align:bottom}
