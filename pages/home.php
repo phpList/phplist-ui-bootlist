@@ -111,20 +111,9 @@ if ($_SESSION['logindetails']['superuser']) {
         </ul>
         <div class="row">
             <div class="col-lg-12">
-                <p><a class="btn btn-primary" href="https://phplist.com/knowledgebase/"  target="_blank">View Knowledgebase</a>
                 <a class="btn btn-primary" href="https://phplist.org/manual" target="_blank">View Manual</a></p>
             </div>
         </div>
-        <p>Search Knowledgebase</p>
-        <form method="get" target="_blank" action="https://phplist.com/blog/">
-            <div class="input-group">
-                <input type="text" class="form-control" name="s" value="" />
-                <span class="input-group-btn">
-                    <button class="btn btn-primary" type="submit">Search</button>
-                </span>
-            </div>
-            <input type="hidden" name="post_type" value="kbe_knowledgebase" />
-        </form>
     </div><!-- /well -->
 </div><!-- /col-lg-6-->
 
