@@ -111,7 +111,7 @@ if ($_SESSION['logindetails']['superuser']) {
         </ul>
         <div class="row">
             <div class="col-lg-12">
-                <a class="btn btn-primary" href="https://phplist.org/manual" target="_blank">View Manual</a></p>
+                <p><a class="btn btn-primary" href="https://phplist.org/manual" target="_blank">View Manual</a></p>
             </div>
         </div>
     </div><!-- /well -->
