@@ -2065,12 +2065,11 @@ var applyCustomFormatting = function() {
     $('body.list .rows .listingelement span.view').css({ 'width':'auto','float':'none','margin-left':'10px'});
     
     /*fix Bounce Details (?page=bounce&id=xx) */
-    $('body.bounce .content div.content').css({'min-height':'60px'}).addClass('well').removeClass('content'); 
-    $('body.bounce .content div').not('.fleft,.fleft div').addClass('col-sm-12');
-	$('body.bounce .content div.fleft div.well').css({'margin-left':'-15px','margin-right':'-15px'});
-	$('body.bounce .content div.fleft:first-child').addClass('col-sm-1').removeClass('fleft'); 
-	$('body.bounce .content div.fleft:nth-child(2)').addClass('col-sm-4 col-sm-offset-1').removeClass('fleft'); 
-	$('body.bounce .content div.fleft:nth-child(3)').addClass('col-sm-5 col-sm-offset-1').removeClass('fleft'); 
+    $('body.bounce .content div.content').css({'min-height':'45px','padding':'10px 20px 10px 10px'}).addClass('well').removeClass('content'); 
+		$('body.bounce .content div.fleft:first-child').css({'margin-left':'-15px','margin-right':'15px'}).addClass('col-sm-1').removeClass('fleft'); 
+		$('body.bounce .content div.fleft:nth-child(2)').css({'margin-left':'-15px','margin-right':'	15px'}).addClass('col-sm-5').removeClass('fleft'); 
+		$('body.bounce .content div.fleft:nth-child(3)').css({'margin-left':'-15px'}).addClass('col-sm-6').removeClass('fleft'); 
+		$('body.bounce .content div.clear').addClass('clearfix');
 
 /* subscribe page */
 $('body.fixed .required').addClass('text-danger');
