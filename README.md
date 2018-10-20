@@ -1,4 +1,4 @@
-# BootList
+# Trevelin theme (formerly 'Bootlist') 
 A bootstrap-based theme for [phpList 3](https://github.com/phpList/phplist3/)
 
 [![Build Status](https://travis-ci.org/phpList/phplist-ui-bootlist.svg?branch=master)](https://travis-ci.org/phpList/phplist-ui-bootlist)
