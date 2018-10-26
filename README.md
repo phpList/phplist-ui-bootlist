@@ -45,6 +45,10 @@ sudo npm install
 ``` 
 grunt watch
 ```
+### Minify CSS
+``` 
+grunt less
+```
 Each time a less file is changed, style.css will be generated automatically.
 
 ### Minify the javascript
