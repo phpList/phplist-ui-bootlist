@@ -334,13 +334,6 @@ $('body.fixed li.list').each(function(){
     $('span.yes').addClass('glyphicon glyphicon-ok text-success').empty();
     $('span.no').addClass('glyphicon glyphicon-ban-circle text-danger').empty();
 
-   /* modals */
-    $('.opendialog').each(function(k,val){
-        var value = $(this).attr('href');
-        $(this).attr({ 'data-target':'#mymodal'+k, 'data-toggle':'modal', 'href':value + '&embed=yes&omitall=yes'});
-        $('#footer').append('<div class="modal fade" id="mymodal'+k+'" tabindex="-1" role="dialog" aria-labelledby="mymodalLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close externo" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button><div class="modal-content well col-lg-12"></div></div></div>');
-    });
-
 /* tables*/
 
     $('body.userhistory #subscription .content, body.statsoverview .content, body.domainstats .content,body.dbcheck .content,body.bouncerules .content,body.plugins .content,body.eventlog .content').first().addClass('table-responsive');
