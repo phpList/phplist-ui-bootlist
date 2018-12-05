@@ -17,7 +17,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="License" content="GNU Affero General Public License, http://www.gnu.org/licenses/agpl.html" />
 <meta name="Author" content="Michiel Dethmers - http://www.phplist.com" />
-<meta name="Copyright" content="Michiel Dethmers, phpList Ltd - http://phplist.com" />
+<meta name="Copyright" content="Michiel Dethmers, phpList Ltd - https://phplist.com" />
 <meta name="Powered-By" content="phplist version <?php echo VERSION?>" />
 <meta property="og:title" content="phpList" />
 <meta property="og:url" content="http://phplist.com" />
@@ -27,7 +27,7 @@
 <link rel="apple-touch-icon-precomposed" href="./images/phplist-touch-icon.png" />
 
 <!-- initial styles and JS from basic application -->
-<link rel="stylesheet" href="css/app.css" />
+<link rel="stylesheet" href="css/app.css?v=<?php echo VERSION ?>" />
 <link rel="stylesheet" href="ui/phplist-ui-bootlist/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />
 
 <?php

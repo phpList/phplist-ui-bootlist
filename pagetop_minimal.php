@@ -5,7 +5,7 @@
   by the developers, but also helps build interest, traffic and use of
   phpList, which is beneficial to it's future development.
 
-  Michiel Dethmers, phpList Ltd 2003 - 2015
+  Michiel Dethmers, phpList Ltd 2003 - 2018
 */
 
 /** Purpose of this file: header with minimal styles for pages in iframes and ajaxed

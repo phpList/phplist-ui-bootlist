@@ -6,7 +6,7 @@
   by the developers, but also helps build interest, traffic and use of
   phpList, which is beneficial to it's future development.
 
-  Michiel Dethmers, phpList Ltd 2003 - 2017
+  Michiel Dethmers, phpList Ltd 2003 - 2018
 */
 ?>
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
 
 <!-- initial styles and JS from basic application -->
     <!-- the CSS is already mostly minified -->
-    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/app.css?v=<?php echo VERSION ?>" />
     <link rel="stylesheet" href="ui/phplist-ui-bootlist/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />
 
 <?php
