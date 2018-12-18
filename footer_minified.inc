@@ -11,9 +11,9 @@
                     <a target="_blank" href="https://phplist.com">&copy; phpList ltd.</a> - v<?php echo VERSION?>
                 </div>
                 <div class="ressources pull-right">
-                    <a target="_blank" href="./?page=about">About</a>&nbsp;  |
-                        <a target="_blank" href="./?page=community">Help</a>&nbsp;  |
-                    <a target="_blank" href="https://resources.phplist.com">Resources</a>&nbsp;  |
+                    <a target="_blank" href="./?page=about"><?php echo s('About'); ?></a>&nbsp;  |
+                        <a target="_blank" href="./?page=community"><?php echo ('Help'); ?></a>&nbsp;  |
+                    <a target="_blank" href="https://resources.phplist.com"><?php echo s('Resources'); ?></a>&nbsp;  |
                     <a target="_blank" href="http://twitter.com/phplist">Twitter</a>
                 </div>
             </div>
