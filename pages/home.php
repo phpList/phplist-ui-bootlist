@@ -127,7 +127,7 @@ if ($_SESSION['logindetails']['superuser']) {
             <br />';
         }
         if (!in_array('send', $GLOBALS['disallowpages'])) {
-            echo '<a class="btn btn-primary" href="./?page=send">' . s('Send a Campaign') . '</a>
+            echo '<a class="btn btn-primary" href="./?page=send">' . s('Start or continue a campaign') . '</a>
             <br />';
         }
         if  (!in_array('statsoverview', $GLOBALS['disallowpages'])) { // are we allowed to view stats
