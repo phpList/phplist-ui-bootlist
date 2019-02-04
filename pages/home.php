@@ -76,42 +76,55 @@ if ($showUpdateAvail) {
     echo '<a href="https://www.phplist.com/download?utm_source=pl'.$thisversion.'&amp;utm_medium=updatedownload&amp;utm_campaign=phpList" title="'.s('Download the new version').'" target="_blank">'.$GLOBALS['I18N']->get('Download').'</a></div>';
 }
 
+$lastCampaignID = null;
 
 if ($_SESSION['logindetails']['superuser']) {
-    $lastCampaignID = Sql_Fetch_Row_query(sprintf('select id from %s where sent is not null order by entered desc limit 1',$GLOBALS['tables']['message']));
+    $result = Sql_Query(sprintf(
+        'select id from %s where sent is not null order by entered desc limit 1',
+        $GLOBALS['tables']['message']
+    ));
+    if ($result) {
+        $row = Sql_Fetch_Assoc($result);
+        $lastCampaignID = $row['id'];
+        $lastcampaign = Sql_Fetch_Assoc_Query(sprintf(
+            'select msg.id as messageid,count(um.viewed) as views, count(um.status) as total,
+            subject,date_format(sent,"%%e %%M %%Y") as sent,bouncecount as bounced
+            from %s um
+            join %s msg on msg.id = um.messageid
+            where msg.id = %d and um.status = "sent"',
+            $GLOBALS['tables']['usermessage'], $GLOBALS['tables']['message'], $lastCampaignID
+        ));
+    }
 } else {
-    $lastCampaignID = Sql_Fetch_Row_query(sprintf('select msg.id from %s msg
+    $result = Sql_Query(sprintf(
+        'select msg.id from %s msg
         join %s lm  on lm.messageid = msg.id
         join %s list on list.id = lm.listid
-      where sent is not null
+        where sent is not null
         and list.owner = %d
        order by msg.entered desc limit 1',
-        $GLOBALS['tables']['message'],$GLOBALS['tables']['listmessage'],$GLOBALS['tables']['list'],$_SESSION['logindetails']['id']));
-}
-
-if ($_SESSION['logindetails']['superuser']) {
-    $lastcampaign = Sql_Fetch_Assoc_Query(sprintf('select msg.id as messageid,count(um.viewed) as views, count(um.status) as total,
-        subject,date_format(sent,"%%e %%M %%Y") as sent,bouncecount as bounced from %s um,%s msg
-        where um.messageid = msg.id and sent is not null and um.status = "sent"
-        group by msg.id order by msg.entered desc limit 1',
-        $GLOBALS['tables']['usermessage'], $GLOBALS['tables']['message']));
-    $subscribercountreq = Sql_Fetch_Row_Query(sprintf('select count(*) from %s', $GLOBALS['tables']['user']));
-    $subscribercount = $subscribercountreq[0];
-} else {
-    $lastcampaign = Sql_Fetch_Assoc_Query(sprintf('select msg.id as messageid,count(um.viewed) as views, count(um.status) as total,
-        subject,date_format(sent,"%%e %%b %%Y") as sent,bouncecount as bounced from
-        %s um join %s msg on um.messageid = msg.id
-        join %s lm  on lm.messageid = msg.id
-        join %s list on list.id = lm.listid
-        where sent is not null and um.status = "sent"
-        and list.owner = %d
-        group by msg.id order by msg.sent desc limit 1',
-        $GLOBALS['tables']['usermessage'], $GLOBALS['tables']['message'], $GLOBALS['tables']['listmessage'],$GLOBALS['tables']['list'],$_SESSION['logindetails']['id'] ));
-    $subscribercountreq = Sql_Fetch_Row_Query(sprintf('select count(*) from %s user
-      left join %s listuser on user.id = listuser.userid
-      left join %s list on listuser.listid = list.id
-      where list.owner = %d', $GLOBALS['tables']['user'], $GLOBALS['tables']['listuser'], $GLOBALS['tables']['list'],$_SESSION['logindetails']['id']));
-    $subscribercount = $subscribercountreq[0];
+        $GLOBALS['tables']['message'],$GLOBALS['tables']['listmessage'],$GLOBALS['tables']['list'],$_SESSION['logindetails']['id']
+    ));
+    if ($result) {
+        $row = Sql_Fetch_Assoc($result);
+        $lastCampaignID = $row['id'];
+        $lastcampaign = Sql_Fetch_Assoc_Query(sprintf(
+            'select msg.id as messageid,count(um.viewed) as views, count(um.status) as total,
+            subject,date_format(sent,"%%e %%b %%Y") as sent,bouncecount as bounced
+            from  %s um
+            join %s msg on um.messageid = msg.id
+            join %s lm  on lm.messageid = msg.id
+            join %s list on list.id = lm.listid
+            where msg.id = %d and um.status = "sent"
+            and list.owner = %d',
+            $GLOBALS['tables']['usermessage'],
+            $GLOBALS['tables']['message'],
+            $GLOBALS['tables']['listmessage'],
+            $GLOBALS['tables']['list'],
+            $lastCampaignID,
+            $_SESSION['logindetails']['id']
+        ));
+    }
 }
 
 ?>
@@ -149,7 +162,7 @@ if ($_SESSION['logindetails']['superuser']) {
 <div id="lastcampaign" class="col-sm-6 col-lg-4">
     <h3><span class="glyphicon glyphicon-signal"></span>Last Campaign Results</h3>
 		<div id="lastcampaigncontent" class="well">
-        <?php if (empty($lastcampaign['messageid'])) {
+        <?php if (empty($lastCampaignID)) {
     print '<p>' . s('There are currently no statistics available') . '</p>';
 } else {
     ?>
