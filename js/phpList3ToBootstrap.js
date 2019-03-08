@@ -368,7 +368,7 @@ $('body.fixed li.list').each(function(){
 
 
 /* fire applyCustomFormatting on: */
-$( window ).load(function(){
+$( window ).on("load", function(){
     if ( $('body').hasClass('invisible') ){ applyCustomFormatting(); applyJqueryUiTabMigration();}
 });
 
@@ -402,7 +402,7 @@ function openHelpDialog(url) {
 
 function initialiseTranslation(text) {
     $("#dialog").html('<div class="modal fade" id="mymodaltrans" tabindex="-1" role="dialog" aria-labelledby="mymodaltransLabel" aria-hidden="true"><div class="modal-dialog modal-lg"><button type="button" class="close externo" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button><div class="modal-content well col-lg-12"><div class="openhelpimage">'+text+'<br />'+busyImage+'</div></div></div></div>');
-    $("#dialog .modal-content").on('load','./?ajaxed=true&page=pageaction&action=initlanguage');
+    $("#dialog .modal-content").load('./?ajaxed=true&page=pageaction&action=initlanguage');
     $("#dialog #mymodaltrans").modal('show');
     $('#dialog #mymodaltrans').bind("DOMSubtreeModified",function(){ $('#dialog #mymodaltrans').modal('hide'); });
 }
@@ -475,9 +475,9 @@ $(document).ready(function(){
 				}
 			}
 		});
-        if ( e.target.id == "content" || $(e.target).parents("#content").size() || 
-        		e.target.id == "modal-open" || $(e.target).parents(".modal-open").size() ||
-	        	$(e.target).parents(".configValue").size() ) { 
+        if ( e.target.id == "content" || $(e.target).parents("#content").length ||
+        		e.target.id == "modal-open" || $(e.target).parents(".modal-open").length ||
+	        	$(e.target).parents(".configValue").length ) {
             var inside = 1;
         } else { 
            inside = 0;
