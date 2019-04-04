@@ -190,7 +190,6 @@ $('body.fixed li.list').each(function(){
     });
     $('body.configure div.shade1, body.configure div.shade2').addClass('form-group');
     $('div, label').removeClass('label');
-    $('#sendTest br').remove();
     if (!$('body').hasClass('modal-open')){
 	    $('.accordion label,#sendmessageform .well label').not('.checkbox label,.radio label').before('<div class="clearfix break"></div>');
     	$('label[for=htmlchoice], label[for=emaildoubleentry]').after('<div class="clearfix break"></div>');
