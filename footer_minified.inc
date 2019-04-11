@@ -24,7 +24,7 @@
 
 </div> <!-- end .container-fluid -->
 
-<script src="ui/phplist-ui-bootlist/js/jquery-3.3.1.min.js?v=<?php echo VERSION ?>"></script>
+<script src="ui/phplist-ui-bootlist/js/jquery.min.js?v=<?php echo VERSION ?>"></script>
 <script type="text/javascript" src="js/phplistapp.js?v=<?php echo VERSION ?>"></script>
 <script type="text/javascript" src="ui/phplist-ui-bootlist/js/dist/phpList_ui_bootlist.min.js?v=<?php echo VERSION ?>"></script>
 <script>
