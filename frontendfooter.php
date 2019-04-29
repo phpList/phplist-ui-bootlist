@@ -12,7 +12,7 @@
 </div>
 </div>
 
-<script src="admin/ui/phplist-ui-bootlist/js/jquery.min.js"></script>
+<script type="text/javascript" src="admin/ui/phplist-ui-bootlist/js/jquery.min.js"></script>
 <script type="text/javascript" src="admin/js/phplistapp.js"></script>
 <script type="text/javascript" src="admin/ui/phplist-ui-bootlist/js/dist/phpList_ui_bootlist.min.js"></script>
 <script>
