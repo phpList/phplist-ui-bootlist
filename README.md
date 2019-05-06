@@ -3,8 +3,8 @@ A bootstrap-based theme for [phpList 3](https://github.com/phpList/phplist3/)
 
 [![Build Status](https://travis-ci.org/phpList/phplist-ui-bootlist.svg?branch=master)](https://travis-ci.org/phpList/phplist-ui-bootlist)
 
-![alt tag](http://thumbnails117.imagebam.com/52193/c1cd67521924237.jpg)
-![alt tag](http://thumbnails117.imagebam.com/52193/063f75521924240.jpg)
+![alt tag](http://www.imagebam.com/image/637b211215543474)
+![alt tag](http://www.imagebam.com/image/9f3cac1215543494)
 
 Bootstrap class names and extra html needed, inserted by jQuery with the script:
 `js/phpList3ToBootstrap.js`
