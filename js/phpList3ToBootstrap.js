@@ -463,7 +463,6 @@ $(document).ready(function(){
 		},1000);
 	}
 
-	
     /* function to prevent leave page */
     $("body").click(function(e) {
         $(window).on('beforeunload', function() {
@@ -480,19 +479,19 @@ $(document).ready(function(){
 
         // Check for dynamic inputs
         $(document).on('change', ':input', function(){ //triggers change in all input fields including text type
-        unsaved = true;
+            unsaved = true;
+        });
+
+        if ( e.target.id == "content" || $(e.target).parents("#content").length ||
+            e.target.id == "modal-open" || $(e.target).parents(".modal-open").length ||
+            $(e.target).parents(".configValue").length ) {
+            var inside = 1;
+        } else {
+            inside = 0;
+        }
     });
 
-    if ( e.target.id == "content" || $(e.target).parents("#content").length ||
-        e.target.id == "modal-open" || $(e.target).parents(".modal-open").length ||
-        $(e.target).parents(".configValue").length ) {
-        var inside = 1;
-    } else {
-        inside = 0;
-    }
-});
-
-	/* bootstrap tags input */
+    /* bootstrap tags input */
 	$('#dontsaveitem_list_categories').click(function(){
 		if(window.location.href.indexOf("id=list_categories") > -1)
 			location.reload();
