@@ -463,6 +463,7 @@ $(document).ready(function(){
 		},1000);
 	}
 
+	
     /* function to prevent leave page */
     $("body").click(function(e) {
         $(window).on('beforeunload', function() {
