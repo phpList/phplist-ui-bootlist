@@ -2468,12 +2468,12 @@ $(document).ready(function(){
            inside = 0;
         }
     });
-
+    /* function to change font size on list of campaigns*/
     $(document).ready(function(){
         $("li").click(function(){
             var tabId = $(".current.active").prop("id");
             $this =tabId;
-            $(this, "span.title").css({"font-size": "19px", "color": "#ffbb0f"});
+            $(this, "span.title").css({"font-size": "19px"});
             $("nav.navbar-nav.li", this).css({"width": "80px", "transition": "width 3s", "-webkit-transition":"width 3s"});
 
         });
