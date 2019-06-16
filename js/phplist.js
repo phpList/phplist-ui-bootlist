@@ -33,7 +33,7 @@ $(document).ready(function() {
 	$(".dbcheck tr.row:odd").addClass("odd");
 	// make the content collapsible
 	$('.dbcheck table div.header').each(function(index) {
-		$(this).click(function () {
+		$(this).on("click",function () {
 		$(this).next("div.content").toggle("slow");
 		});
 	});
@@ -41,7 +41,7 @@ $(document).ready(function() {
     $('.sidebar li.active').parents('li').addClass('active open');
 
     // Sidebar
-    $('.navbar-toggle').click(function() {
+    $('.navbar-toggle').on("click",function() {
         if ($('#sidebar.sidebar-open').length) {
             $('#sidebar').removeClass('sidebar-open');
         } else {
@@ -55,7 +55,7 @@ $(document).ready(function() {
     $('#content').css('min-height', min_height);
 
     /* menu */
-	$('#menuTop a.level0').click(function(){
+	$('#menuTop a.level0').on("click",function(){
 		$(this).parent().toggleClass('open');
 		$('#menuTop li').not($(this).parent()).removeClass('open');
 	});
