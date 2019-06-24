@@ -27,6 +27,7 @@
 <script type="text/javascript" src="ui/phplist-ui-bootlist/js/jquery.min.js?v=<?php echo VERSION ?>"></script>
 <script type="text/javascript" src="js/phplistapp.js?v=<?php echo VERSION ?>"></script>
 <script type="text/javascript" src="ui/phplist-ui-bootlist/js/dist/phpList_ui_bootlist.min.js?v=<?php echo VERSION ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
 <script>
 /* do not remove this from here */
 $(document).ready(function(){

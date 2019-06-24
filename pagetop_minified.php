@@ -31,7 +31,7 @@
     <!-- the CSS is already mostly minified -->
     <link rel="stylesheet" href="css/app.css?v=<?php echo VERSION ?>" />
     <link rel="stylesheet" href="ui/phplist-ui-bootlist/css/style.css?v=<?php echo filemtime(dirname(__FILE__).'/css/style.css'); ?>" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css" />
 <?php
 if (isset($GLOBALS['config']['head'])) {
     foreach ($GLOBALS['config']['head'] as $sHtml) {
