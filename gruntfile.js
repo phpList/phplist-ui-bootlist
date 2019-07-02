@@ -4,21 +4,21 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     	 concat: {
-      options: {
-        separator: ';'
-      },
-      dist: {
-        src: ['js/jquery.toggleText.js'
-            ,'js/bootstrap-select.js'
-            ,'js/phpList3ToBootstrap.js'
-            ,'bootstrap/dist/js/bootstrap.min.js'
-            ,'js/bootstrap-tagsinput.js'
-            ,'js/bootstrap-dialog.js'
-            ,'js/bootstrap-toggle.js'
-            ,'js/phplist.js'],
-        dest: 'js/dist/<%= pkg.name %>.js'
-      }
-    },
+            options: {
+                separator: ';'
+            },
+            dist: {
+                src: ['js/jquery.toggleText.js'
+                    ,'js/bootstrap-select.js'
+                    ,'js/phpList3ToBootstrap.js'
+                    ,'bootstrap/dist/js/bootstrap.min.js'
+                    ,'js/bootstrap-tagsinput.js'
+                    ,'js/bootstrap-dialog.js'
+                    ,'js/bootstrap-toggle.js'
+                    ,'js/phplist.js'],
+                dest: 'js/dist/<%= pkg.name %>.js'
+            }
+        },
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
