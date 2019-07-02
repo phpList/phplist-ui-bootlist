@@ -1,6 +1,5 @@
 @import "advice";
 @import "../bootstrap/less/bootstrap.less";
-@import "../css/bootstrap-select.min.css";
 @import "bootstrap-tagsinput"; 
 @import "../css/bootstrap-toggle.min.css";
 @import "source-sans-pro";
@@ -9,3 +8,5 @@
 @import "base";
 @import "navbar";
 @import "sidebar";
+// bootstrap select goes last to avoid rules being overwritten
+@import "../css/bootstrap-select.min.css";
