@@ -49,6 +49,12 @@ $(document).ready(function() {
         }
         
     });
+    
+    // Force reloading of select picker menus to workaround missing language menu issue
+    // See:
+    //   https://stackoverflow.com/questions/34954785/bootstrap-select-didnt-show-on-page-load
+    //   https://mantis.phplist.org/view.php?id=19988
+    $(".selectpicker").selectpicker("refresh");
 
     /* Misc */
     var min_height = ($("#container").height()+15) + "px";
