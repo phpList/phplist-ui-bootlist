@@ -56,7 +56,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('mydefault', [
         'less'
         , 'watch'
-        ,'concat'
-        ,'uglify'
+        , 'concat'
+        , 'uglify'
     ]);
 };
