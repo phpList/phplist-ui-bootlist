@@ -8,7 +8,14 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['js/jquery.toggleText.js','js/bootstrap-select.js','js/phpList3ToBootstrap.js','bootstrap/dist/js/bootstrap.min.js','js/bootstrap-tagsinput.js','js/bootstrap-dialog.js','js/bootstrap-toggle.js','js/phplist.js'],
+        src: ['js/jquery.toggleText.js'
+            ,'js/bootstrap-select.js'
+            ,'js/phpList3ToBootstrap.js'
+            ,'bootstrap/dist/js/bootstrap.min.js'
+            ,'js/bootstrap-tagsinput.js'
+            ,'js/bootstrap-dialog.js'
+            ,'js/bootstrap-toggle.js'
+            ,'js/phplist.js'],
         dest: 'js/dist/<%= pkg.name %>.js'
       }
     },
