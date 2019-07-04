@@ -1,5 +1,6 @@
 # Configuration file for running the test suite. Results will be at https://travis-ci.org/phpList/phplist3
 # whitelist
+dist: trusty
 language: php
 php:
   - 7.1
