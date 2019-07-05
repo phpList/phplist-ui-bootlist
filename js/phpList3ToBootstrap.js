@@ -383,10 +383,6 @@ $( document ).ajaxComplete(function() {
 
 /**************************** INCLUDE JS AND CSS FILES RELATED ***********************/
 
-/******** SELECT TO DROPDOWN *******/
-$('.selectpicker').selectpicker();
-/**************************** ///////////////////////////// ****************************/
-
 
 
 /******** modals instead of dialog *******/
