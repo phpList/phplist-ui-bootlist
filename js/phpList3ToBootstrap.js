@@ -208,7 +208,7 @@ $('body.fixed li.list').each(function(){
 /* COLLAPSIBLE */
     if ( !$('.accordion').hasClass('panel-group') ){
         $('.accordion').addClass('panel-group').attr({ 'aria-multiselectable':'true', 'id':'accordion','role':'tablist' });
-        $('.accordion h3').addClass('panel-title').each(function(){ $(this).next('div').andSelf().wrapAll('<div class="panel panel-default"/>'); });
+        $('.accordion h3').addClass('panel-title').each(function(){ $(this).next('div').addBack().wrapAll('<div class="panel panel-default"/>'); });
         $('.accordion h3').wrap('<div class="panel-heading clickeable"/>');
         $('.accordion .panel-heading').attr({ 'id':function(i) { return 'heading'+(i+1);}, 'role':'tab' });
         $('.accordion .panel-heading').addClass('collapsed').attr({ "data-toggle":"collapse", "data-parent":"#accordion", "aria-expanded":"false", "aria-controls":function(i) { return 'collapse'+(i+1); }, "data-target":function(i) { return '#collapse'+(i+1);} });
