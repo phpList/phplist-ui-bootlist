@@ -3,8 +3,10 @@ A bootstrap-based theme for [phpList 3](https://github.com/phpList/phplist3/)
 
 [![Build Status](https://travis-ci.org/phpList/phplist-ui-bootlist.svg?branch=master)](https://travis-ci.org/phpList/phplist-ui-bootlist)
 
-![alt tag](http://thumbnails117.imagebam.com/52193/c1cd67521924237.jpg)
-![alt tag](http://thumbnails117.imagebam.com/52193/063f75521924240.jpg)
+<p float="left">
+  <img src="https://www.phplist.com/site/images/readme-images/dashboard_trevelin_theme.PNG" width="400" />
+  <img src="https://www.phplist.com/site/images/readme-images/subscribers_list_trevelin_theme.PNG" width="400" /> 
+</p>
 
 Bootstrap class names and extra html needed, inserted by jQuery with the script:
 `js/phpList3ToBootstrap.js`
