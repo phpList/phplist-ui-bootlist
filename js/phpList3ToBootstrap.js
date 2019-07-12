@@ -482,17 +482,6 @@ $(document).ready(function(){
            inside = 0;
         }
     });
-
-    /* function to increase font size of campaign tabs in onclick event*/
-    $(document).ready(function(){
-        $(".minitabs li").click(function(){
-            var tabId = $(".current.active").prop("id");
-            $this =tabId;
-            $(this, "span.title").css({"font-size": "19px", "font-weight": "500"});
-            $("nav.navbar-nav.li", this).css({"width": "80px", "transition": "width 3s", "-webkit-transition":"width 3s"});
-
-        });
-    });
 	
 	/* bootstrap tags input */
 	$('#dontsaveitem_list_categories').click(function(){
@@ -516,6 +505,17 @@ $(document).ready(function(){
 			return false;
 		});    
 		$('#back-to-top').tooltip('show');
+
+    /* function to increase font size of campaign tabs in onclick event*/
+    $(document).ready(function(){
+        $(".minitabs li").click(function(){
+            var tabId = $(".current.active").prop("id");
+            $this =tabId;
+            $(this, "span.title").css({"font-size": "19px", "font-weight": "500"});
+            $("nav.navbar-nav.li", this).css({"width": "80px", "transition": "width 3s", "-webkit-transition":"width 3s"});
+
+        });
+    });
 
 	
 }); /* <-- end document.ready */
