@@ -145,10 +145,10 @@ if ($_SESSION['logindetails']['superuser']) {
     <div class="well">
         <ul>
             <li>
-                <a href="https://www.phplist.org/manual/ch007_sending-your-first-campaign.xhtml" target="_blank">How to create a campaign</a>
+                <a href="https://www.phplist.org/manual/books/phplist-manual/page/composing-your-first-campaign" target="_blank">How to create a campaign</a>
             </li>
             <li>
-                <a href="https://www.phplist.org/manual/ch009_basic-campaign-statistics.xhtml" target="_blank">How to use statistics</a>
+                <a href="https://www.phplist.org/manual/books/phplist-manual/page/basic-campaign-statistics" target="_blank">How to use statistics</a>
             </li>
         </ul>
         <div class="row">
