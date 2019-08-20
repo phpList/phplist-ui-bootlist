@@ -205,7 +205,7 @@ $('body.fixed li.list').each(function(){
     $('#progresscount').addClass('text-warning');
     $('#processqueuecontrols a').addClass('btn-xs');
 
-/* COLLAPSIBLE */
+/* COLLAPSIBLE*/
     if ( !$('.accordion').hasClass('panel-group') ){
         $('.accordion').addClass('panel-group').attr({ 'aria-multiselectable':'true', 'id':'accordion','role':'tablist' });
         $('.accordion h3').addClass('panel-title').each(function(){ $(this).next('div').addBack().wrapAll('<div class="panel panel-default"/>'); });
