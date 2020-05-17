@@ -8,7 +8,7 @@
         </div> <!-- end #Wrapp -->
             <div id="footer">
                 <div class="version pull-left">
-                    <a target="_blank" href="/?page=about">&copy; phpList ltd.</a>
+                    <a target="_blank" href="./?page=about">&copy; phpList ltd.</a>
                     <?php if (!empty($_SESSION['adminloggedin'])) {
                          echo '- v'. VERSION;
                     } ?>
