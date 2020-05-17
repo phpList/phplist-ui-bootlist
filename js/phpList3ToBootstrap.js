@@ -459,28 +459,7 @@ $(document).ready(function(){
 		},1000);
 	}
 
-	/* function to prevent leave page */    
-    $("body").click(function(e) {
-		$(window).on('beforeunload', function() {
-			if ( inside == 0 ){
-				inside=1;
-				if ( $('#sendmessageform').length  > 0 ||
-					 $('.configEdit .configValue').length > 0 && window.location.href.indexOf("id=list_categories") == -1){
-					return "Are you sure you want to leave? ";
-				}
-			}
-		});
-        if ( e.target.id == "content" || $(e.target).parents("#content").length ||
-        		e.target.id == "modal-open" || $(e.target).parents(".modal-open").length ||
-	        	$(e.target).parents(".configValue").length ) {
-            var inside = 1;
-        } else { 
-           inside = 0;
-        }
-    });
-	
-	/* bootstrap tags input */
-	$('#dontsaveitem_list_categories').click(function(){
+    $('#dontsaveitem_list_categories').click(function(){
 		if(window.location.href.indexOf("id=list_categories") > -1)
 			location.reload();
 	});
