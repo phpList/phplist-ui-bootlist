@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="admin/ui/phplist-ui-bootlist/css/style.css" />
 </head>
 
-<body class="fixed invisible">
+<body class="fixed">
 
 <div id="container">
 
