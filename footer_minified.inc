@@ -1,7 +1,7 @@
 <?php if (empty($_GET['page']) || $_GET['page'] == 'dashboard' || $_GET['page'] == 'home') { ?>
                 <div class="clear"></div>
                 <div id="newsfeed" class="menutableright block">
-                           <h3><span class="glyphicon glyphicon-bullhorn text-danger"></span> <?php print s('<a target="_blank" href="https://www.phplist.org/newslist/">phpList community news</a>'); ?></h3>
+                           <h3><span class="glyphicon glyphicon-bullhorn text-danger"></span> <?php printf('<a target="_blank" href="https://www.phplist.org/newslist/">%s</a>', s('phpList community news')); ?></h3>
                                 <?php  include 'communityfeed.php'; ?>
             </div>
 <?php } ?>
