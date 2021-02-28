@@ -1,6 +1,4 @@
 <?php
-if ($page_title =='userclicks') $page_title = s('Click Statistics'); /* REMOVE AFTER RESOLVE MANTIS #18945 */
-
 
 /* This array is to add third level to phpList menu, adding orphan items to a menulink */
 
