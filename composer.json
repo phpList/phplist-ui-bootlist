@@ -1,5 +1,23 @@
 {
-    "require": {
-        "njoannidi/php-lint-bash": "dev-master"
-    }
+  "name": "phplist/phplist-ui-bootlist",
+  "description": "The world's most popular open source newsletter manager, bootstrap based theme",
+  "keywords": [
+    "phplist",
+    "email",
+    "newsletter",
+    "manager"
+  ],
+  "homepage": "https://www.phpList.org/",
+  "type": "project",
+  "license": "GNU Affero General Public License version 3.0 or later (AGPLv3+)",
+  "support": {
+    "issues": "https://github.com/phpList/phpList3/issues",
+    "forum": "https://discuss.phplist.org/",
+    "wiki": "http://resources.phplist.com/",
+    "source": "https://github.com/phpList/phpList3"
+  },
+  "require": {
+    "php": ">=7.0",
+    "njoannidi/php-lint-bash": "dev-master"
+  }
 }
