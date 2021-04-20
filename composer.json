@@ -8,7 +8,7 @@
     "manager"
   ],
   "homepage": "https://www.phpList.org/",
-  "type": "project",
+  "type": "phplist-theme",
   "license": "GNU Affero General Public License version 3.0 or later (AGPLv3+)",
   "support": {
     "issues": "https://github.com/phpList/phpList3/issues",
@@ -17,7 +17,9 @@
     "source": "https://github.com/phpList/phpList3"
   },
   "require": {
-    "php": ">=7.0",
+    "php": ">=7.0"
+  },
+  "require-dev": {
     "njoannidi/php-lint-bash": "dev-master"
   }
 }
