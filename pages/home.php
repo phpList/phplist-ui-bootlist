@@ -130,7 +130,7 @@ if ($_SESSION['logindetails']['superuser']) {
     </p>
 
     <p><span class="total"><?php echo number_format($lastcampaign['total']) ?></span> Messages sent on <span class="total"><?php echo $lastcampaign['sent'] ?></span>.</p>
-    <p><span class="total"><?php echo number_format($lastcampaign['views']) ?> </span> Viewed (<span class="total"><?php echo sprintf('%0.2f', ($lastcampaign['views'] / ($lastcampaign['total'] - $lastcampaign['bounced']) * 100)) ?>%</span>), and <span class="total"><?php echo $lastcampaign['bounced'] ?></span> bounced (<span class="total"><?php echo sprintf('%0.2f', ($lastcampaign['bounced'] / $lastcampaign['total'] * 100)) ?>%</span>).</p>
+    <p><span class="total"><?php echo number_format($lastcampaign['views']) ?> </span> Viewed (<span class="total"><?php echo sprintf('%0.2f', ($lastcampaign['views'] / max(1, $lastcampaign['total'] - $lastcampaign['bounced']) * 100)) ?>%</span>), and <span class="total"><?php echo $lastcampaign['bounced'] ?></span> bounced (<span class="total"><?php echo sprintf('%0.2f', ($lastcampaign['bounced'] / max(1, $lastcampaign['total']) * 100)) ?>%</span>).</p>
 
     <?php
 } ?>
