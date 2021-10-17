@@ -38,15 +38,17 @@ if ($_SESSION['logindetails']['superuser']) {
     ));
     if ($result) {
         $row = Sql_Fetch_Assoc($result);
-        $lastCampaignID = $row['id'];
-        $lastcampaign = Sql_Fetch_Assoc_Query(sprintf(
-            'select msg.id as messageid,count(um.viewed) as views, count(um.status) as total,
-            subject,date_format(sent,"%%e %%M %%Y") as sent,bouncecount as bounced
-            from %s um
-            join %s msg on msg.id = um.messageid
-            where msg.id = %d and um.status = "sent"',
-            $GLOBALS['tables']['usermessage'], $GLOBALS['tables']['message'], $lastCampaignID
-        ));
+        if (!empty($row['id'])) {
+          $lastCampaignID = $row['id'];
+          $lastcampaign = Sql_Fetch_Assoc_Query(sprintf(
+              'select msg.id as messageid,count(um.viewed) as views, count(um.status) as total,
+              subject,date_format(sent,"%%e %%M %%Y") as sent,bouncecount as bounced
+              from %s um
+              join %s msg on msg.id = um.messageid
+              where msg.id = %d and um.status = "sent"',
+              $GLOBALS['tables']['usermessage'], $GLOBALS['tables']['message'], $lastCampaignID
+          ));
+        }
     }
 } else {
     $result = Sql_Query(sprintf(
