@@ -164,7 +164,7 @@ $('body.fixed li.list').each(function(){
     $('input[type=text],input[type=password],textarea,select,input[type=email],input[type=phone],input[type=file]').addClass('form-control');
     $('#login-form td').addClass('input-group input-group-lg');
     $('div.login').addClass('input-group input-group-sm');
-    $('div.login p').contents().unwrap().wrap('<span id=helpBlock class=help-block/>');
+    $('div.login p').contents().unwrap().wrap('<span id="helpBlock" class="help-block" />');
     $('input[name=forgotpassword]').attr('aria-describedby','helpblock');
     $('#login-form input[type=submit]').addClass('btn-lg');
     $('#forgotpassword-form input[type=submit]').addClass('btn-sm');

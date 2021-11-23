@@ -2126,7 +2126,7 @@ $('body.fixed li.list').each(function(){
     $('input[type=text],input[type=password],textarea,select,input[type=email],input[type=phone],input[type=file]').addClass('form-control');
     $('#login-form td').addClass('input-group input-group-lg');
     $('div.login').addClass('input-group input-group-sm');
-    $('div.login p').contents().unwrap().wrap('<span id=helpBlock class=help-block/>');
+    $('div.login p').contents().unwrap().wrap('<span id="helpBlock" class="help-block" />');
     $('input[name=forgotpassword]').attr('aria-describedby','helpblock');
     $('#login-form input[type=submit]').addClass('btn-lg');
     $('#forgotpassword-form input[type=submit]').addClass('btn-sm');
@@ -2421,28 +2421,7 @@ $(document).ready(function(){
 		},1000);
 	}
 
-	/* function to prevent leave page */    
-    $("body").click(function(e) {
-		$(window).on('beforeunload', function() {
-			if ( inside == 0 ){
-				inside=1;
-				if ( $('#sendmessageform').length  > 0 ||
-					 $('.configEdit .configValue').length > 0 && window.location.href.indexOf("id=list_categories") == -1){
-					return "Are you sure you want to leave? ";
-				}
-			}
-		});
-        if ( e.target.id == "content" || $(e.target).parents("#content").length ||
-        		e.target.id == "modal-open" || $(e.target).parents(".modal-open").length ||
-	        	$(e.target).parents(".configValue").length ) {
-            var inside = 1;
-        } else { 
-           inside = 0;
-        }
-    });
-	
-	/* bootstrap tags input */
-	$('#dontsaveitem_list_categories').click(function(){
+    $('#dontsaveitem_list_categories').click(function(){
 		if(window.location.href.indexOf("id=list_categories") > -1)
 			location.reload();
 	});
